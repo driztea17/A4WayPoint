@@ -1,0 +1,108 @@
+{
+  "_about": "Project playbooks: learnings from projects clubs have run. The three entries below are SAMPLE content to show the format. Replace them with real playbooks and set \"sample\" to false. photos is optional: a list of { \"src\": \"assets/img/playbooks/file.jpg\", \"alt\": \"what the photo shows\" }.",
+  "items": [
+    {
+      "id": "sample-beach-clean-up",
+      "sample": true,
+      "projectName": "Beach Clean-up Drive",
+      "club": "Leo Club of Sample Coast",
+      "date": "2026-01-18",
+      "category": "Outdoor Event",
+      "objective": "Clear plastic waste from a 1 km stretch of beach and teach visitors how to segregate waste.",
+      "whatWasDone": [
+        "Took written permission from the local authority two weeks before the drive.",
+        "Split 40 volunteers into 5 teams, each with a team lead and a stretch of beach.",
+        "Weighed each bag at a collection point and handed dry waste to a recycler.",
+        "Ran a 20-minute segregation talk for families on the beach."
+      ],
+      "budget": { "total": 9500, "notes": "Gloves, bags, water, snacks, and transport for the waste." },
+      "impact": [
+        { "label": "Volunteers", "value": "40" },
+        { "label": "Waste collected", "value": "320 kg" },
+        { "label": "Visitors reached", "value": "150" }
+      ],
+      "whatWorked": [
+        "Team leads with one clear stretch each: no area was missed and no team waited.",
+        "Weighing bags on the spot gave us impact numbers for the report the same day.",
+        "Starting at 7 am, before the heat and the crowd."
+      ],
+      "doDifferently": [
+        "Check the tide table. High tide covered part of our stretch at 9 am.",
+        "Book the waste pickup vehicle in writing. Ours came two hours late.",
+        "Carry more water. We ran out by 9:30 am."
+      ],
+      "tips": [
+        "Take a before and after photo of the same spot for social media.",
+        "Keep one volunteer only for photos and impact data."
+      ],
+      "photos": []
+    },
+    {
+      "id": "sample-blood-donation-camp",
+      "sample": true,
+      "projectName": "Blood Donation Camp",
+      "club": "Leo Club of Sample City",
+      "date": "2025-12-07",
+      "category": "Service Project",
+      "objective": "Collect 100 units of blood for a partner blood bank ahead of the holiday shortage.",
+      "whatWasDone": [
+        "Partnered with a licensed blood bank that brought its own doctors and equipment.",
+        "Ran a two-week registration drive in colleges and housing societies.",
+        "Set up a waiting area with snacks and a volunteer desk for first-time donors."
+      ],
+      "budget": { "total": 12000, "notes": "Refreshments, banners, donor certificates, and volunteer T-shirts." },
+      "impact": [
+        { "label": "Donors registered", "value": "142" },
+        { "label": "Units collected", "value": "96" },
+        { "label": "First-time donors", "value": "38" }
+      ],
+      "whatWorked": [
+        "Online registration with time slots. The queue never got long.",
+        "A short WhatsApp reminder the evening before cut no-shows.",
+        "Certificates handed over on the spot made donors share photos."
+      ],
+      "doDifferently": [
+        "Explain the eligibility rules in the registration form. Many people were turned away for low haemoglobin or recent travel.",
+        "Plan for more volunteers at the snack table after donation."
+      ],
+      "tips": [
+        "Confirm the blood bank's licence and the date in writing.",
+        "Thank each donor on the club page only with their consent."
+      ],
+      "photos": []
+    },
+    {
+      "id": "sample-money-workshop",
+      "sample": true,
+      "projectName": "Money Basics Workshop",
+      "club": "Leo Club of Sample Heights",
+      "date": "2026-02-22",
+      "category": "Workshop",
+      "objective": "Teach college students how to budget, save, and stay safe from online payment fraud.",
+      "whatWasDone": [
+        "Invited a bank officer as the facilitator and briefed them on the audience.",
+        "Built a budgeting game with play money for groups of five.",
+        "Ended with a quiz and a take-home one-page budget sheet."
+      ],
+      "budget": { "total": 6000, "notes": "Printing, facilitator memento, and snacks." },
+      "impact": [
+        { "label": "Participants", "value": "65" },
+        { "label": "Quiz score before", "value": "48%" },
+        { "label": "Quiz score after", "value": "81%" }
+      ],
+      "whatWorked": [
+        "The budgeting game. Students stayed after the session to finish it.",
+        "A quiz before and after gave clear numbers for the report."
+      ],
+      "doDifferently": [
+        "Keep the talk part under 30 minutes.",
+        "Close registrations two days earlier so we can print the right number of kits."
+      ],
+      "tips": [
+        "Ask the facilitator for a short bio in advance for the emcee.",
+        "Use the AI Shortcut to write the invitation and the thank-you note."
+      ],
+      "photos": []
+    }
+  ]
+}
