@@ -44,7 +44,7 @@ It is built for one district's real project cycle, not general event planning. T
 - All content loads from JSON in `/data`. Friendly loading and error states for every fetch.
 - Mobile first, keyboard navigable, visible focus, WCAG AA contrast, respects `prefers-reduced-motion`.
 - The "Suggest a resource" form URL and social links are config values the owner fills in later.
-- SHUFFLE is a deck of creative micro-challenges for teams that are stuck. It is not a random project generator, a quiz, or a chatbot. `localStorage` remembers the last 5 cards shown.
+- SHUFFLE is a deck of 80 event ideas for clubs with a creative block: each card gives an event name, concept, twist, budget, and volunteer count. Three decks: Service (by the 8 Leo service areas), Leadership, and Fellowship. The 50 Service ideas come from the district's idea file; the 30 Leadership and Fellowship ideas are drafts for the team to review. `localStorage` remembers the last 5 cards shown.
 - Copy rule: no em dashes anywhere in site copy, code comments, or README.
 
 ## Brand Commitments

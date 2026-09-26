@@ -18,7 +18,7 @@ The site is plain HTML, CSS, and JavaScript. It has no build step and needs no n
 | Event Checklist Generator | `checklist.html` | Checklist for 7 event types. Saves on the phone, prints on A4, copies to WhatsApp |
 | Project Starter | `project-starter.html` | Guided form that builds a printable project brief |
 | AI Shortcut | `ai-shortcut.html` | 63 copy-ready prompts with fill-in blanks |
-| Shuffle | `shuffle.html` | A deck of 61 creative challenge cards for teams that are stuck |
+| Shuffle | `shuffle.html` | 80 event idea cards (Service, Leadership, Fellowship) for clubs that are stuck |
 | Project Playbooks | `playbooks.html` | Learnings from past projects |
 
 ## Deploy on GitHub Pages
@@ -190,27 +190,28 @@ Put every fill-in field in square brackets, for example `[EVENT NAME]`. The page
 
 Use `\n` for a new line inside a prompt.
 
-### Shuffle cards (`data/shuffle.json`)
+### Shuffle event ideas (`data/shuffle.json`)
 
-Each card is one block in `cards`. Give a new card the next `id` (it shows as SHUFFLE #62), and a `category` id from `categories`: `ideation`, `creative`, `pitch`, `budget`, `marketing`, `event`, `team`, `problem`, `impact`, or `wild`.
+Each card is one event idea in `cards`. Give a new card the next `id` (it shows as SHUFFLE #81).
+
+- `category` is `service`, `leadership`, or `fellowship`.
+- `area` is only for service cards. It must match a name in `serviceAreas`: Childhood Cancer, Diabetes, Disaster Relief, Environment, Humanitarian Efforts, Hunger, Vision, or Youth. Leave it `""` for leadership and fellowship cards.
+- Keep `concept` and `twist` to one short sentence each, so the card fits on a phone.
 
 ```json
 {
-  "id": 62,
-  "category": "marketing",
-  "title": "One Photo Only",
-  "description": "You can post only one photo about your event.
-Which photo is it, and why?",
-  "time": "3 min",
-  "difficulty": "Easy"
+  "id": 81,
+  "category": "service",
+  "area": "Hunger",
+  "name": "Tiffin Trail",
+  "concept": "Collect home-cooked tiffins from members' families and share them at a shelter.",
+  "twist": "Every tiffin carries a handwritten note.",
+  "budget": "₹1,000 to ₹2,500",
+  "volunteers": "8 to 12"
 }
 ```
 
-- Use `
-` to start a new line on the card.
-- `difficulty` is `Easy`, `Medium`, or `Hard`. It shows as 1, 2, or 3 dots.
-- Keep the text short: a card holds about 40 words.
-- The page remembers the last 5 cards on each phone and does not repeat them straight away.
+The page remembers the last 5 cards on each phone and does not repeat them straight away. "Plan this event" opens the Project Starter with the idea filled in.
 
 ### Playbooks (`data/playbooks.json`)
 

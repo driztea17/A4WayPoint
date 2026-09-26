@@ -2300,15 +2300,10 @@
   }
 }
 
-/* Very small phones: a slightly wider, taller card so every idea fits. */
+/* Very small phones: a slightly wider card so every idea fits. */
 @media (max-width: 359px) {
   .deck {
     --card-w: 80vw;
-    height: calc(var(--card-w) * 1.68 + 56px);
-  }
-
-  .s-card {
-    aspect-ratio: 3 / 5;
   }
 }
 
