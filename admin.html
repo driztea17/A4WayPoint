@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hub admin | A4 WAYPOINT</title>
+  <meta name="description" content="Editor tools for the A4 WAYPOINT Resource Hub.">
+  <meta name="theme-color" content="#0e1440">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/admin.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A4 WAYPOINT">
+  <meta property="og:title" content="Hub admin | A4 WAYPOINT">
+  <meta property="og:description" content="Editor tools for the A4 WAYPOINT Resource Hub.">
+  <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/admin.html">
+  <meta property="og:image" content="https://driztea17.github.io/A4WayPoint/assets/img/district-logo.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  <script type="module" src="assets/js/layout.js"></script>
+  <script type="module" src="assets/js/admin.js"></script>
+</head>
+<body data-page="admin">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="A4 WAYPOINT home">
+        <img class="brand-logo" src="assets/img/district-logo-128.png" alt="" width="42" height="42">
+        <span class="brand-text"><span class="brand-name">A4 WAYPOINT</span><span class="brand-sub">Leo District 3231 A4</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="resources.html">Resource Hub</a></li>
+          <li><a class="nav-link" href="toolkit.html">A4 Toolkit</a></li>
+          <li><a class="nav-link" href="ai-shortcut.html">AI Shortcut</a></li>
+          <li><a class="nav-link" href="playbooks.html">Project Playbooks</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="checklist.html">Build your checklist</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="icon icon-open" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-x"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+      <div class="container">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resource Hub</a>
+            <ul class="mobile-subnav"><li><a href="resources.html#venues">Venues</a></li><li><a href="resources.html#vendors">Vendors</a></li><li><a href="resources.html#banks">Banks</a></li><li><a href="resources.html#resource-bank">Resource Bank</a></li><li><a href="resources.html#csr">Industry CSR</a></li></ul></li>
+          <li><a href="toolkit.html">A4 Toolkit</a>
+            <ul class="mobile-subnav"><li><a href="checklist.html">Event Checklist</a></li><li><a href="project-starter.html">Project Starter</a></li></ul></li>
+          <li><a href="ai-shortcut.html">AI Shortcut</a></li>
+          <li><a href="playbooks.html">Project Playbooks</a></li>
+        </ul>
+        <a class="btn btn-primary" href="checklist.html">Build your checklist</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Hub admin</li>
+        </ol>
+        <h1>Hub admin</h1>
+        <p class="lede">For district editors. Update the locked Resource Hub data, or change the district passcode. Everything happens in your browser. Nothing is sent anywhere.</p>
+      </div>
+    </section>
+
+    <section class="container admin">
+      <div class="admin-card card" data-admin-unlock>
+        <h2>Step 1. Enter the current passcode</h2>
+        <form class="admin-form" data-unlock-form novalidate>
+          <div class="field">
+            <label for="admin-passcode">Current district passcode</label>
+            <input class="input" type="password" id="admin-passcode" name="passcode" autocomplete="current-password" required>
+          </div>
+          <p class="form-error" data-unlock-error role="alert"></p>
+          <button type="submit" class="btn btn-dark">Continue</button>
+        </form>
+      </div>
+
+      <div class="admin-tools" data-admin-tools hidden>
+        <div class="admin-card card">
+          <h2>Edit hub data</h2>
+          <ol class="admin-steps">
+            <li>Pick a list and select <strong>Download readable file</strong>.</li>
+            <li>Open the <code>.json</code> file in a text editor and make your changes. Keep the commas and quotes. See the README for examples.</li>
+            <li>Select the edited file below and choose <strong>Encrypt file</strong>.</li>
+            <li>On GitHub, open the <code>data</code> folder, choose <strong>Add file</strong>, then <strong>Upload files</strong>, and upload the <code>.enc.json</code> file. It replaces the old one.</li>
+          </ol>
+          <div class="admin-row">
+            <div class="field">
+              <label for="admin-list">List</label>
+              <select class="select" id="admin-list" data-list>
+                <option value="venues">Venues</option>
+                <option value="vendors">Vendors</option>
+                <option value="banks">Banks</option>
+                <option value="resource-bank">Resource Bank</option>
+                <option value="csr">Industry CSR</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-secondary" data-download-plain>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-download"></use></svg>Download readable file
+            </button>
+          </div>
+          <div class="admin-row">
+            <div class="field">
+              <label for="admin-file">Edited file (.json)</label>
+              <input class="input" type="file" id="admin-file" accept=".json,application/json" data-file>
+            </div>
+            <button type="button" class="btn btn-primary" data-encrypt>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Encrypt file
+            </button>
+          </div>
+          <p class="form-error" data-edit-error role="alert"></p>
+        </div>
+
+        <div class="admin-card card">
+          <h2>Change the district passcode</h2>
+          <p class="muted">Use a long passcode that is hard to guess, for example four random words. After the change, members must use the new passcode.</p>
+          <form class="admin-form" data-change-form novalidate>
+            <div class="field">
+              <label for="new-passcode">New passcode</label>
+              <input class="input" type="password" id="new-passcode" name="next" autocomplete="new-password" minlength="10" required aria-describedby="new-hint">
+              <p class="hint" id="new-hint">At least 10 characters.</p>
+            </div>
+            <div class="field">
+              <label for="confirm-passcode">Type the new passcode again</label>
+              <input class="input" type="password" id="confirm-passcode" name="confirm" autocomplete="new-password" required>
+            </div>
+            <p class="form-error" data-change-error role="alert"></p>
+            <button type="submit" class="btn btn-dark">Create files for the new passcode</button>
+          </form>
+          <p class="muted small">This downloads 6 files: <code>hub.lock.json</code> and one <code>.enc.json</code> file for each list. Upload all 6 to the <code>data</code> folder on GitHub at the same time. Your browser may ask to allow several downloads.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/img/district-logo-128.png" alt="Leo District 3231 A4 logo" width="72" height="72" loading="lazy">
+            <div>
+              <p class="footer-name">A4 WAYPOINT</p>
+              <p class="footer-tagline">From ideas to action. From action to excellence.</p>
+            </div>
+          </div>
+          <ul class="social-links" aria-label="Social media">
+            <li hidden><a data-social="instagram" href="#" aria-label="Instagram" rel="noopener" target="_blank"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-instagram"></use></svg></a></li>
+            <li hidden><a data-social="facebook" href="#" aria-label="Facebook" rel="noopener" target="_blank"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-facebook"></use></svg></a></li>
+            <li hidden><a data-social="linkedin" href="#" aria-label="LinkedIn" rel="noopener" target="_blank"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-linkedin"></use></svg></a></li>
+            <li hidden><a data-social="youtube" href="#" aria-label="YouTube" rel="noopener" target="_blank"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-youtube"></use></svg></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <ul class="footer-links">
+            <li><a href="resources.html">Resource Hub</a></li>
+            <li><a href="toolkit.html">A4 Toolkit</a></li>
+            <li><a href="ai-shortcut.html">AI Shortcut</a></li>
+            <li><a href="playbooks.html">Project Playbooks</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Tools</p>
+          <ul class="footer-links">
+            <li><a href="checklist.html">Event Checklist Generator</a></li>
+            <li><a href="project-starter.html">Project Starter</a></li>
+            <li><a href="resources.html#venues">Find a venue</a></li>
+            <li><a href="resources.html#csr">Industry CSR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Leo District 3231 A4, Navi Mumbai and Raigad, India.</p>
+        <p>Entries marked SAMPLE are placeholders, not real listings.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
