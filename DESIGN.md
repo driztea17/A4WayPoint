@@ -38,6 +38,10 @@ Tints (`--lime-tint`, `--orange-tint`, `--blue-tint`) back icon tiles, badges, a
 
 Buttons (primary orange, dark navy, secondary outline, ghost), chips with counts, pill tabs, cards, icon tiles (orange, blue, lime, navy), badges (SAMPLE in orange tint), inputs and selects with a 3 px blue focus ring, progress bars in lime, a navy toast, and dashed-border states for loading, empty, and error.
 
+Team cards: a 4:5 photo on a navy field (initials in lime when no photo), name, and role in orange.
+
+Breakpoints: 640 px (container padding, 2-column grids), 1024 px (desktop menu and two-panel tool pages).
+
 Icons are line icons from Lucide (1.75 stroke) in `assets/img/icons.svg`.
 
 ## Motion

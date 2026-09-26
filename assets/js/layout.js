@@ -29,7 +29,7 @@ function initMobileMenu() {
     if (event.target.closest("a")) setOpen(false);
   });
 
-  window.matchMedia("(min-width: 960px)").addEventListener("change", (event) => {
+  window.matchMedia("(min-width: 1024px)").addEventListener("change", (event) => {
     if (event.matches) setOpen(false);
   });
 }

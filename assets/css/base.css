@@ -514,7 +514,7 @@ textarea {
   margin-top: var(--space-4);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
   .site-nav {
     display: block;
   }

@@ -161,6 +161,12 @@
   overflow-x: auto;
   padding-bottom: 4px;
   scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+
+.chip-row .chip,
+.tabs .tab {
+  scroll-snap-align: start;
 }
 
 .chip {
@@ -193,8 +199,19 @@
 
 .chip .count {
   font-size: 0.75rem;
-  opacity: 0.7;
+  color: var(--ink-3);
   font-variant-numeric: tabular-nums;
+}
+
+.chip[aria-pressed="true"] .count,
+.chip[aria-selected="true"] .count {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Scrolling rows clip outlines, so their focus ring sits inside the control. */
+.chip-row .chip:focus-visible,
+.tabs .tab:focus-visible {
+  outline-offset: -3px;
 }
 
 /* Cards */
@@ -288,7 +305,7 @@
 
 .input::placeholder,
 .textarea::placeholder {
-  color: #767d97;
+  color: #687089;
 }
 
 .input:hover,
@@ -331,6 +348,7 @@
   background: var(--surface-2);
   overflow-x: auto;
   scrollbar-width: none;
+  scroll-snap-type: x proximity;
 }
 
 .tabs::-webkit-scrollbar {
