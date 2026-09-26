@@ -1,0 +1,11 @@
+{
+  "_about": "Lock file for the Resource Hub. It holds no data and no passcode. Replace it only with the admin page.",
+  "v": 1,
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 310000,
+  "salt": "LjYHplLp9L7sZqDEAcFxTA==",
+  "check": {
+    "iv": "EecF1uNzTolE+fHl",
+    "data": "ibMVFCRhFBSv5Qizq3rokAMkPeETmGJ6YZp8BIXHUcMHXDnWh9kwqR0="
+  }
+}
