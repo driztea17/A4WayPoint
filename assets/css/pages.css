@@ -189,24 +189,44 @@
   }
 }
 
-/* The arc: side cards turn toward the centre and recede. */
-.arc {
-  --w: 148px;
+/* The ring: tool cards sit on the outside of a 3D cylinder that turns slowly.
+   Side cards recede and turn edge-on; cards behind the curve hide their backs.
+   home.js places the cards and turns the ring; --R is the cylinder radius. */
+.arc-stage {
+  --R: 480px;
+  --card-scale: 0.74;
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: clamp(36px, 5vw, 56px) -16px 0;
-  padding-block: 18px 8px;
-  perspective: 1500px;
+  height: 190px;
+  margin: clamp(30px, 4.5vw, 52px) -16px 0;
+  perspective: 1100px;
+  perspective-origin: 50% 40%;
+  opacity: 0;
+  transition: opacity 0.9s ease 0.2s;
+}
+
+.arc-stage.is-placed {
+  opacity: 1;
+}
+
+.arc-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--R) * -1));
 }
 
 .arc-card {
-  flex: none;
+  --w: 158px;
+  --h: 184px;
+  position: absolute;
+  left: calc(var(--w) / -2);
+  top: calc(var(--h) / -2);
   width: var(--w);
-  height: 176px;
+  height: var(--h);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -216,31 +236,127 @@
   color: var(--navy);
   text-align: left;
   font-size: 0.75rem;
-  box-shadow: 0 10px 28px rgba(9, 40, 110, 0.22);
-  transform: translateY(var(--ty, 0)) translateZ(var(--tz, 0)) rotateY(var(--ry, 0));
-  animation: arc-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(0.25s + (var(--i) + 3) * 0.06s);
+  box-shadow: 0 12px 30px rgba(9, 40, 110, 0.2);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.arc-card:nth-child(1) { --ry: 34deg; --tz: -150px; --ty: 22px; }
-.arc-card:nth-child(2) { --ry: 23deg; --tz: -70px; --ty: 8px; }
-.arc-card:nth-child(3) { --ry: 11deg; --tz: -14px; --ty: 0px; }
-.arc-card:nth-child(4) { --tz: 40px; --ty: -6px; }
-.arc-card:nth-child(5) { --ry: -11deg; --tz: -14px; --ty: 0px; }
-.arc-card:nth-child(6) { --ry: -23deg; --tz: -70px; --ty: 8px; }
-.arc-card:nth-child(7) { --ry: -34deg; --tz: -150px; --ty: 22px; }
-
-@keyframes arc-in {
-  from {
-    opacity: 0;
-    translate: 0 40px;
+/* Wider screens: a bigger ring, so its sides bleed off both edges. */
+@media (min-width: 700px) {
+  .arc-stage {
+    --R: clamp(620px, 58vw, 900px);
+    --card-scale: 1;
+    height: 250px;
+    perspective: 2400px;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .arc-card {
-    animation: none;
+@media (min-width: 1100px) {
+  .arc-stage {
+    --card-scale: 1.1;
+    height: 270px;
   }
+}
+
+/* Dark stat card */
+.arc-stat {
+  --w: 168px;
+  --h: 178px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.arc-stat-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.arc-stat-line i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 3px rgba(132, 195, 24, 0.3);
+}
+
+.arc-stat-big {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.arc-stat-sub {
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.35;
+}
+
+/* Glass card */
+.arc-glass {
+  --w: 150px;
+  --h: 170px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.arc-plus {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.arc-plus .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.arc-glass-title {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.arc-glass-sub {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Chart card */
+.arc-chart-big {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.arc-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 58px;
+  margin-top: auto;
+}
+
+.arc-bars i {
+  flex: 1;
+  height: calc(var(--h) * 100%);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, #6aaef5, #0b63c4);
+}
+
+.arc-bars i:nth-child(4) {
+  background: var(--lime);
 }
 
 .arc-label {
@@ -376,8 +492,8 @@
 
 /* District card in the centre */
 .arc-brand {
-  --w: 184px;
-  height: 206px;
+  --w: 176px;
+  --h: 200px;
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -537,38 +653,6 @@
   height: 16px;
   color: var(--lime-ink);
   stroke-width: 2.6;
-}
-
-/* Phones: smaller cards, and only the three centre cards stay. */
-@media (max-width: 699px) {
-  .arc {
-    --w: 118px;
-    gap: 8px;
-    perspective: 1000px;
-  }
-
-  .arc-card {
-    height: 150px;
-    padding: 11px;
-    font-size: 0.6875rem;
-  }
-
-  .arc-brand {
-    --w: 150px;
-    height: 172px;
-  }
-
-  .arc-brand img {
-    width: 82px;
-    height: 82px;
-  }
-
-  .arc-card:nth-child(1),
-  .arc-card:nth-child(2),
-  .arc-card:nth-child(6),
-  .arc-card:nth-child(7) {
-    display: none;
-  }
 }
 
 /* Journey */

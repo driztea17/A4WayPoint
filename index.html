@@ -88,49 +88,66 @@
           </div>
         </div>
 
-        <div class="arc" aria-hidden="true">
-          <div class="arc-card arc-bingo" style="--i:-3">
-            <p class="arc-label">Leadership Bingo</p>
-            <div class="mini-bingo"><i class="on x"></i><i></i><i class="on"></i><i></i><i class="on x"></i><i></i></div>
-            <p class="arc-note"><strong>7</strong> of 15 done</p>
-          </div>
-          <div class="arc-card arc-hub" style="--i:-2">
-            <p class="arc-label">Resource Hub</p>
-            <ul class="arc-rows">
-              <li><span>Venues</span><b>27</b></li>
-              <li><span>Vendors</span><b>10</b></li>
-              <li><span>Banks</span><b>24</b></li>
-              <li><span>CSR</span><b>38</b></li>
-            </ul>
-          </div>
-          <div class="arc-card arc-check" style="--i:-1">
-            <div class="float-head"><span class="float-title">Before Event</span><span class="float-count">4/6</span></div>
-            <div class="progress"><div class="progress-bar" style="--p:0.67"></div></div>
-            <ul class="float-list">
-              <li class="is-done"><span class="tick"></span>Venue confirmed</li>
-              <li class="is-done"><span class="tick"></span>Permissions</li>
-              <li><span class="tick"></span>Vendor confirmed</li>
-            </ul>
-          </div>
-          <div class="arc-card arc-brand" style="--i:0">
-            <img src="assets/img/district-logo.png" alt="" width="140" height="140">
-            <p class="arc-brand-name">Leo District 3231 A4</p>
-            <p class="arc-brand-sub">Towards Excellence · 2026-27</p>
-          </div>
-          <div class="arc-card arc-shuffle" style="--i:1">
-            <p class="arc-tag"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-leaf"></use></svg>Environment</p>
-            <p class="arc-title">Pocket Forest</p>
-            <p class="arc-stub"><span>Budget</span><b>₹3,000–₹7,000</b></p>
-          </div>
-          <div class="arc-card arc-ai" style="--i:2">
-            <p class="arc-label"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-sparkles"></use></svg>AI Shortcut</p>
-            <p class="arc-prompt">Write a caption for <mark class="ph">[EVENT NAME]</mark></p>
-            <span class="arc-copy"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-copy"></use></svg>Copy</span>
-          </div>
-          <div class="arc-card arc-route" style="--i:3">
-            <p class="arc-label">Your route</p>
-            <div class="arc-steps"><i class="on"></i><i class="on"></i><i class="on now"></i><i></i><i></i><i></i><i></i></div>
-            <p class="arc-note">Step 3 of 7</p>
+        <div class="arc-stage" aria-hidden="true" data-arc>
+          <div class="arc-ring" data-ring>
+            <div class="arc-card arc-brand">
+              <img src="assets/img/district-logo.png" alt="" width="140" height="140">
+              <p class="arc-brand-name">Leo District 3231 A4</p>
+              <p class="arc-brand-sub">Towards Excellence · 2026-27</p>
+            </div>
+            <div class="arc-card arc-shuffle">
+              <p class="arc-tag"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-leaf"></use></svg>Environment</p>
+              <p class="arc-title">Pocket Forest</p>
+              <p class="arc-stub"><span>Budget</span><b>₹3,000–₹7,000</b></p>
+            </div>
+            <div class="arc-card arc-hub">
+              <p class="arc-label">Resource Hub</p>
+              <ul class="arc-rows">
+                <li><span>Venues</span><b>27</b></li>
+                <li><span>Vendors</span><b>10</b></li>
+                <li><span>Banks</span><b>24</b></li>
+                <li><span>CSR</span><b>38</b></li>
+              </ul>
+            </div>
+            <div class="arc-card arc-stat">
+              <p class="arc-stat-line"><i></i>Stuck on ideas?</p>
+              <p class="arc-stat-big">80</p>
+              <p class="arc-stat-sub">event ideas in Shuffle: Service, Leadership, Fellowship</p>
+            </div>
+            <div class="arc-card arc-ai">
+              <p class="arc-label"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-sparkles"></use></svg>AI Shortcut</p>
+              <p class="arc-prompt">Write a caption for <mark class="ph">[EVENT NAME]</mark></p>
+              <span class="arc-copy"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-copy"></use></svg>Copy</span>
+            </div>
+            <div class="arc-card arc-glass">
+              <span class="arc-plus"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-plus"></use></svg></span>
+              <p class="arc-glass-title">Suggest a resource</p>
+              <p class="arc-glass-sub">Add a venue or vendor for every club</p>
+            </div>
+            <div class="arc-card arc-bingo">
+              <p class="arc-label">Leadership Bingo</p>
+              <div class="mini-bingo"><i class="on x"></i><i></i><i class="on"></i><i></i><i class="on x"></i><i></i></div>
+              <p class="arc-note"><strong>7</strong> of 15 done</p>
+            </div>
+            <div class="arc-card arc-chart">
+              <p class="arc-label"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-sparkles"></use></svg>Ready prompts</p>
+              <p class="arc-chart-big">63</p>
+              <div class="arc-bars"><i style="--h:.5"></i><i style="--h:.8"></i><i style="--h:.6"></i><i style="--h:1"></i><i style="--h:.7"></i><i style="--h:.9"></i></div>
+            </div>
+            <div class="arc-card arc-route">
+              <p class="arc-label">Your route</p>
+              <div class="arc-steps"><i class="on"></i><i class="on"></i><i class="on now"></i><i></i><i></i><i></i><i></i></div>
+              <p class="arc-note">Step 3 of 7</p>
+            </div>
+            <div class="arc-card arc-check">
+              <div class="float-head"><span class="float-title">Before Event</span><span class="float-count">4/6</span></div>
+              <div class="progress"><div class="progress-bar" style="--p:0.67"></div></div>
+              <ul class="float-list">
+                <li class="is-done"><span class="tick"></span>Venue confirmed</li>
+                <li class="is-done"><span class="tick"></span>Permissions</li>
+                <li><span class="tick"></span>Vendor confirmed</li>
+              </ul>
+            </div>
           </div>
         </div>
 

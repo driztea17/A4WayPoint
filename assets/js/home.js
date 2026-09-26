@@ -117,7 +117,69 @@ function initSkyPhoto() {
   }
 }
 
+// Hero ring: the tool cards sit on a 3D cylinder that turns slowly, like a
+// carousel seen from the front. The ring holds as many cards (repeating the
+// set) as fit its radius with a small gap. GSAP turns it; without GSAP or with
+// reduced motion it stands still. It slows on hover and pauses when off screen.
+const CARD_PITCH = 184; // average card width plus the gap, before --card-scale
+
+function initRing() {
+  const stage = document.querySelector("[data-arc]");
+  const ring = stage?.querySelector("[data-ring]");
+  if (!ring) return;
+
+  const originals = Array.from(ring.children);
+  const state = { rot: 0 };
+
+  const apply = () => {
+    ring.style.transform = `translateZ(calc(var(--R) * -1)) rotateY(${state.rot}deg)`;
+  };
+  // The district card starts facing front, the others around it.
+  const build = () => {
+    // --R can be a clamp(), so measure it through a probe element.
+    const probe = document.createElement("i");
+    probe.style.cssText = "position:absolute;visibility:hidden;width:var(--R)";
+    stage.appendChild(probe);
+    const radius = probe.offsetWidth || 600;
+    probe.remove();
+    const scale = parseFloat(getComputedStyle(stage).getPropertyValue("--card-scale")) || 1;
+    const n = originals.length;
+    let count = Math.max(n, Math.floor((2 * Math.PI * radius) / (CARD_PITCH * scale)));
+    if (count % n === 1) count -= 1;
+    // Full sets repeat in order; a part set at the end takes the last cards of
+    // the set, so no card sits next to its own copy where the ring closes.
+    const tail = count % n;
+    const full = count - tail;
+    const pick = (i) => (i < full ? i % n : n - tail + (i - full));
+    ring.replaceChildren(...Array.from({ length: count }, (_, i) => (i < n ? originals[i] : originals[pick(i)].cloneNode(true))));
+    Array.from(ring.children).forEach((card, i) => {
+      card.style.transform = `rotateY(${(i * 360) / count}deg) translateZ(var(--R)) scale(var(--card-scale))`;
+    });
+    apply();
+  };
+  build();
+  stage.classList.add("is-placed");
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(build, 200);
+  });
+
+  if (!motionReady()) return;
+  const { gsap } = window;
+  const spin = gsap.to(state, { rot: "-=360", duration: 100, ease: "none", repeat: -1, onUpdate: apply });
+
+  const speed = (to) => gsap.to(spin, { timeScale: to, duration: 0.8, ease: "power2.out", overwrite: true });
+  stage.addEventListener("pointerenter", (e) => e.pointerType === "mouse" && speed(0.12));
+  stage.addEventListener("pointerleave", () => speed(1));
+
+  new IntersectionObserver(([entry]) => (entry.isIntersecting ? spin.play() : spin.pause())).observe(stage);
+  document.addEventListener("visibilitychange", () => (document.hidden ? spin.pause() : spin.play()));
+}
+
 initSkyPhoto();
+initRing();
 initTeamPhotos();
 revealOnScroll();
 initJourney();
