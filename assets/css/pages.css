@@ -556,7 +556,8 @@
     grid-row: span 2;
   }
 
-  .entry-toolkit {
+  .entry-toolkit,
+  .entry-ai {
     grid-column: span 2;
   }
 
