@@ -47,7 +47,7 @@ function initTeamPhotos() {
   });
 }
 
-// A small astronaut in a UFO drops in at a random moment, from a random side,
+// A small astronaut in a UFO flies in right after load, from a random side,
 // and invites members to try Shuffle. Hidden again for the visit once closed.
 const UFO_KEY = "a4wp:ufo:hidden";
 
@@ -59,7 +59,7 @@ function initUfo() {
   }
 
   const side = Math.random() < 0.5 ? "left" : "right";
-  const delay = 4000 + Math.random() * 8000;
+  const delay = 100;
 
   const wrap = document.createElement("div");
   wrap.className = `ufo is-${side}`;

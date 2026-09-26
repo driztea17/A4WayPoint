@@ -42,7 +42,7 @@ Team cards: a 300 px full-photo portrait (4:5, 28 px radius) with navy fades top
 
 Home entry cards carry a preview of their own content instead of a generic icon tile: the Resource Hub list, Toolkit pills, a mini AI prompt with a highlighted blank, and a tiny fan of Shuffle cards that spreads on hover.
 
-Home invite: an original astronaut-in-a-UFO illustration (`assets/img/ufo-astronaut.svg`, navy outline, lime light) floats in from a random side 4 to 12 seconds after load, bobs gently with a navy "Try something new!" bubble, and links to Shuffle. A close button hides it for the visit (sessionStorage); it flies off by itself after 30 seconds. Reduced motion fades it in without flight or bob.
+Home invite: an original astronaut-in-a-UFO illustration (`assets/img/ufo-astronaut.svg`, navy outline, lime light) floats in from a random side 100 ms after load, bobs gently with a navy "Try something new!" bubble, and links to Shuffle. A close button hides it for the visit (sessionStorage); it flies off by itself after 30 seconds. Reduced motion fades it in without flight or bob.
 
 Breakpoints: 640 px (container padding, 2-column grids), 1024 px (desktop menu and two-panel tool pages).
 
