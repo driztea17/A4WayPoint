@@ -42,6 +42,20 @@ function completeLines() {
   return lines().filter((line) => line.every(isDone)).length;
 }
 
+// Briefly ring the squares of any line that this tap completed.
+function flashNewLines(id) {
+  lines()
+    .filter((line) => line.includes(id) && line.every(isDone))
+    .flat()
+    .forEach((sid) => {
+      const cell = grid.querySelector(`[data-id="${sid}"]`);
+      cell.classList.remove("is-flash");
+      void cell.offsetWidth;
+      cell.classList.add("is-flash");
+      setTimeout(() => cell.classList.remove("is-flash"), 1000);
+    });
+}
+
 /* ---------- Card ---------- */
 
 const CROSS = `
@@ -58,9 +72,10 @@ function renderGrid() {
       return `
       <li>
         <button type="button" class="bingo-cell ${tone}" data-id="${sq.id}" aria-pressed="${isDone(sq.id)}">
-          <span class="bingo-num" aria-hidden="true">${pad(sq.id)}</span>
-          <span class="bingo-text">${esc(sq.text)}</span>
           ${CROSS}
+          <span class="bingo-num" aria-hidden="true">${pad(sq.id)}</span>
+          <span class="bingo-check" aria-hidden="true"><svg class="icon" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg></span>
+          <span class="bingo-text">${esc(sq.text)}</span>
         </button>
       </li>`;
     })
@@ -79,7 +94,7 @@ function updateScore(announce) {
   totalEl.textContent = String(total);
   const pct = Math.round((done / total) * 100);
   bar.setAttribute("aria-valuenow", String(pct));
-  bar.firstElementChild.style.width = `${pct}%`;
+  bar.firstElementChild.style.setProperty("--p", String(pct / 100));
   linesEl.textContent =
     done === total
       ? "Full house! Every goal is done."
@@ -173,13 +188,41 @@ async function drawCard() {
     ctx.fillStyle = lime ? INK.lime : INK.dark;
     ctx.fillRect(x, y, cw, ch);
 
-    ctx.globalAlpha = done ? 0.45 : 0.6;
-    ctx.fillStyle = lime ? INK.navy : INK.cream;
-    ctx.font = "600 20px Poppins";
-    ctx.textAlign = "left";
-    ctx.fillText(pad(sq.id), x + 18, y + 32);
+    if (done) {
+      ctx.strokeStyle = INK.orange;
+      ctx.globalAlpha = lime ? 0.85 : 0.95;
+      ctx.lineWidth = 12;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(x + 42, y + 30);
+      ctx.quadraticCurveTo(x + cw / 2, y + ch / 2 + 6, x + cw - 42, y + ch - 28);
+      ctx.moveTo(x + cw - 44, y + 28);
+      ctx.quadraticCurveTo(x + cw / 2 - 4, y + ch / 2, x + 44, y + ch - 30);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      // Check disc in place of the number
+      ctx.fillStyle = INK.orange;
+      ctx.beginPath();
+      ctx.arc(x + 30, y + 28, 15, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(x + 23, y + 28);
+      ctx.lineTo(x + 28, y + 33);
+      ctx.lineTo(x + 37, y + 23);
+      ctx.stroke();
+    } else {
+      ctx.globalAlpha = 0.6;
+      ctx.fillStyle = lime ? INK.navy : INK.cream;
+      ctx.font = "600 20px Poppins";
+      ctx.textAlign = "left";
+      ctx.fillText(pad(sq.id), x + 18, y + 32);
+      ctx.globalAlpha = 1;
+    }
 
-    ctx.globalAlpha = done ? 0.45 : 1;
+    // Text stays at full contrast so a shared card shows what was achieved.
+    ctx.fillStyle = lime ? INK.navy : INK.cream;
     ctx.textAlign = "center";
     let fs = 30;
     let textLines;
@@ -190,19 +233,14 @@ async function drawCard() {
     } while (textLines.length * fs * 1.2 > ch - 36 && fs > 18);
     const lh = (fs + 2) * 1.18;
     const startY = y + ch / 2 - ((textLines.length - 1) * lh) / 2 + (fs + 2) * 0.35;
-    textLines.forEach((t, li) => ctx.fillText(t, x + cw / 2, startY + li * lh));
-    ctx.globalAlpha = 1;
-
     if (done) {
-      ctx.strokeStyle = INK.orange;
-      ctx.lineWidth = 12;
-      ctx.lineCap = "round";
-      ctx.beginPath();
-      ctx.moveTo(x + 42, y + 28);
-      ctx.quadraticCurveTo(x + cw / 2, y + ch / 2 + 6, x + cw - 42, y + ch - 26);
-      ctx.moveTo(x + cw - 44, y + 26);
-      ctx.quadraticCurveTo(x + cw / 2 - 4, y + ch / 2, x + 44, y + ch - 28);
-      ctx.stroke();
+      ctx.save();
+      ctx.shadowColor = lime ? "rgba(158, 209, 59, 0.95)" : "rgba(26, 34, 96, 0.95)";
+      ctx.shadowBlur = 10;
+      textLines.forEach((t, li) => ctx.fillText(t, x + cw / 2, startY + li * lh));
+      ctx.restore();
+    } else {
+      textLines.forEach((t, li) => ctx.fillText(t, x + cw / 2, startY + li * lh));
     }
   });
   ctx.restore();
@@ -277,6 +315,7 @@ grid.addEventListener("click", (event) => {
   const { bingos, done, total } = updateScore();
   const text = data.squares.find((s) => s.id === id).text;
   live.textContent = `${isDone(id) ? "Crossed off" : "Undone"}: ${text}. ${done} of ${total} done.`;
+  if (bingos > before) flashNewLines(id);
   if (done === total && isDone(id)) toast("Full house! Every leadership goal done.");
   else if (bingos > before) toast("BINGO! A full line is done.");
 });

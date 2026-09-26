@@ -400,12 +400,15 @@
   overflow: hidden;
 }
 
+/* The bar scales from the left: set --p between 0 and 1. Transform keeps it off the layout path. */
 .progress-bar {
   height: 100%;
-  width: 0;
+  width: 100%;
   border-radius: inherit;
   background: var(--lime);
-  transition: width 0.45s var(--ease-out);
+  transform: scaleX(var(--p, 0));
+  transform-origin: left center;
+  transition: transform 0.45s var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {

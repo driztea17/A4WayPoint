@@ -103,7 +103,7 @@ function renderPhases() {
 function setBar(bar, done, total) {
   const pct = total ? Math.round((done / total) * 100) : 0;
   bar.setAttribute("aria-valuenow", String(pct));
-  bar.firstElementChild.style.width = `${pct}%`;
+  bar.firstElementChild.style.setProperty("--p", String(pct / 100));
   bar.classList.toggle("is-complete", total > 0 && done === total);
 }
 

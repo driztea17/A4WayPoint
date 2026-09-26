@@ -35,7 +35,7 @@ Tints (`--lime-tint`, `--orange-tint`, `--blue-tint`) back icon tiles, badges, a
 
 ## Components
 
-Buttons (primary orange, dark navy, secondary outline, ghost), chips with counts, pill tabs, cards, icon tiles (orange, blue, lime, navy), badges (SAMPLE in orange tint), inputs and selects with a 3 px blue focus ring, progress bars in lime, a navy toast, and dashed-border states for loading, empty, and error.
+Buttons (primary orange, dark navy, secondary outline, ghost), chips with counts, pill tabs, cards, icon tiles (orange, blue, lime, navy), badges (SAMPLE in orange tint), inputs and selects with a 3 px blue focus ring, progress bars in lime (they scale with `transform: scaleX(var(--p))`, never width), a navy toast, and dashed-border states for loading, empty, and error.
 
 Team cards: a 300 px full-photo portrait (4:5, 28 px radius) with navy fades top and bottom, name and role in white at the top, the district logo at bottom left, and a white CIO or COO pill at bottom right. Centred side by side on desktop, stacked and centred on phones. Initials in lime show when a photo is missing.
 
@@ -56,7 +56,7 @@ GSAP on the home page only: a light fade-up for hero and cards, and one signatur
 
 ## Leadership Bingo
 
-`bingo.html` follows the owner's bingo poster reference in brand colours: a navy poster card, a huge cream lowercase "bingo" wordmark with "leadership" curving in lime, a 3 by 5 checkerboard of lime and deep navy squares with rounded outer corners, and an outlined pill with the club name. Crossing off draws an orange hand-drawn X over the square and dims its text. The download draws the same card on a 1080 by 1350 canvas.
+`bingo.html` follows the owner's bingo poster reference in brand colours: a navy poster card, a huge cream lowercase "bingo" wordmark with "leadership" curving in lime, a 3 by 5 checkerboard of lime and deep navy squares with rounded outer corners, and an outlined pill with the club name. Crossing off draws an orange hand-drawn X behind the words (the words keep full contrast with a halo in the square's colour) and swaps the square number for an orange check disc. A newly completed row or column rings its squares in orange for a moment. The download draws the same card on a 1080 by 1350 canvas.
 
 ## Print
 

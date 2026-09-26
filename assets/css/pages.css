@@ -3290,7 +3290,7 @@
 
 .bingo-text {
   position: relative;
-  transition: opacity 0.25s;
+  z-index: 1;
   overflow-wrap: break-word;
 }
 
@@ -3301,15 +3301,73 @@
   }
 }
 
-.bingo-cell[aria-pressed="true"] .bingo-text,
+/* Done: the cross sits behind the words, a halo in the square's colour keeps them readable,
+   and an orange check replaces the number. */
+.bingo-cell.is-lime[aria-pressed="true"] .bingo-text {
+  text-shadow: 0 0 4px var(--lime), 0 0 10px var(--lime), 0 0 2px var(--lime);
+}
+
+.bingo-cell.is-dark[aria-pressed="true"] .bingo-text {
+  text-shadow: 0 0 4px #1a2260, 0 0 10px #1a2260, 0 0 2px #1a2260;
+}
+
 .bingo-cell[aria-pressed="true"] .bingo-num {
-  opacity: 0.45;
+  opacity: 0;
+}
+
+.bingo-check {
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange-bright);
+  color: #fff;
+  scale: 0;
+  transition: scale 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.bingo-check .icon {
+  width: 13px;
+  height: 13px;
+  stroke-width: 3.2;
+}
+
+.bingo-cell[aria-pressed="true"] .bingo-check {
+  scale: 1;
+}
+
+/* A new bingo rings its squares for a moment. */
+.bingo-cell.is-flash {
+  animation: bingo-flash 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes bingo-flash {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(249, 115, 22, 0);
+    scale: 1;
+  }
+
+  30% {
+    box-shadow: inset 0 0 0 5px rgba(249, 115, 22, 1);
+    scale: 0.95;
+  }
+
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(249, 115, 22, 0);
+    scale: 1;
+  }
 }
 
 /* Hand-drawn orange cross that draws itself when a square is crossed off. */
 .bingo-cross {
   position: absolute;
   inset: 12% 10%;
+  z-index: 0;
   width: 80%;
   height: 76%;
   overflow: visible;
@@ -3341,8 +3399,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .bingo-cross path,
-  .bingo-cell[aria-pressed="true"] .bingo-cross path + path {
+  .bingo-cell[aria-pressed="true"] .bingo-cross path + path,
+  .bingo-check {
     transition: none;
+  }
+
+  .bingo-cell.is-flash {
+    animation: none;
   }
 }
 
