@@ -154,6 +154,19 @@ a {
 }
 
 /* Project brief */
+.starter-layout,
+.starter-output {
+  display: block !important;
+  position: static !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+.brief-section {
+  border-top: 0.75pt solid #000 !important;
+}
+
 .brief-doc {
   display: block !important;
 }
