@@ -1,565 +1,887 @@
 {
-  "_about": "Cards for SHUFFLE. Add a card by copying one block in \"cards\", giving it the next id, and a category id from \"categories\". Use \\n for a new line. time is shown as written. difficulty is Easy, Medium, or Hard.",
+  "_about": "Event idea cards for SHUFFLE. category is service, leadership, or fellowship. For service cards, area must match a name in serviceAreas (the 8 Leo service areas). Give a new card the next id. Keep concept and twist to one short sentence each.",
   "categories": [
     {
-      "id": "ideation",
-      "name": "Ideation",
-      "icon": "bulb",
-      "color": "#F6C445",
-      "ink": "#7A4F00"
-    },
-    {
-      "id": "creative",
-      "name": "Creative",
-      "icon": "palette",
-      "color": "#A193F2",
-      "ink": "#5140B8"
-    },
-    {
-      "id": "pitch",
-      "name": "Pitch",
-      "icon": "mic",
-      "color": "#F58D6B",
-      "ink": "#A8391A"
-    },
-    {
-      "id": "budget",
-      "name": "Budget",
-      "icon": "rupee",
-      "color": "#57C98F",
-      "ink": "#1B6E44"
-    },
-    {
-      "id": "marketing",
-      "name": "Marketing",
-      "icon": "megaphone",
-      "color": "#6AAEF5",
-      "ink": "#1A5699"
-    },
-    {
-      "id": "event",
-      "name": "Event Design",
-      "icon": "party",
-      "color": "#F29BC3",
-      "ink": "#9C2B5E"
-    },
-    {
-      "id": "team",
-      "name": "Team",
-      "icon": "users",
-      "color": "#4CCBC6",
-      "ink": "#12706C"
-    },
-    {
-      "id": "problem",
-      "name": "Problem Solving",
-      "icon": "puzzle",
-      "color": "#F5A94A",
-      "ink": "#8C4B00"
-    },
-    {
-      "id": "impact",
-      "name": "Impact",
-      "icon": "sprout",
+      "id": "service",
+      "name": "Service",
+      "icon": "heart",
       "color": "#9ED13B",
       "ink": "#3D6A00"
     },
     {
-      "id": "wild",
-      "name": "Wild Card",
-      "icon": "zap",
-      "color": "#2A3585",
-      "ink": "#0E1440"
+      "id": "leadership",
+      "name": "Leadership",
+      "icon": "award",
+      "color": "#A193F2",
+      "ink": "#5140B8"
+    },
+    {
+      "id": "fellowship",
+      "name": "Fellowship",
+      "icon": "users",
+      "color": "#F58D6B",
+      "ink": "#A8391A"
     }
   ],
+  "serviceAreas": [
+    {
+      "id": "childhood-cancer",
+      "name": "Childhood Cancer",
+      "icon": "ribbon",
+      "color": "#F2B705",
+      "ink": "#7A5700"
+    },
+    {
+      "id": "diabetes",
+      "name": "Diabetes",
+      "icon": "droplet",
+      "color": "#2F8FD8",
+      "ink": "#1A5699"
+    },
+    {
+      "id": "disaster-relief",
+      "name": "Disaster Relief",
+      "icon": "storm",
+      "color": "#6B4FA0",
+      "ink": "#4E3585"
+    },
+    {
+      "id": "environment",
+      "name": "Environment",
+      "icon": "leaf",
+      "color": "#3FA34D",
+      "ink": "#276B31"
+    },
+    {
+      "id": "humanitarian-efforts",
+      "name": "Humanitarian Efforts",
+      "icon": "handshake",
+      "color": "#E8542A",
+      "ink": "#A8391A"
+    },
+    {
+      "id": "hunger",
+      "name": "Hunger",
+      "icon": "bowl",
+      "color": "#F28C28",
+      "ink": "#8C4B00"
+    },
+    {
+      "id": "vision",
+      "name": "Vision",
+      "icon": "eye",
+      "color": "#8E3A8E",
+      "ink": "#7A2B7A"
+    },
+    {
+      "id": "youth",
+      "name": "Youth",
+      "icon": "users",
+      "color": "#3E8FA3",
+      "ink": "#1F6070"
+    }
+  ],
+  "healthNote": "Diabetes, Vision, and Childhood Cancer ideas are awareness activities. Any screening, diagnosis, or medical advice needs qualified professionals and partner organisations.",
   "cards": [
     {
       "id": 1,
-      "category": "ideation",
-      "title": "Bad Ideas Only",
-      "description": "Come up with 5 terrible ideas for your event.\nThen find one useful element hidden inside them.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Childhood Cancer",
+      "name": "Brighter Days",
+      "concept": "Create personalised hope and activity kits for children.",
+      "twist": "Each kit is personalised around the child's interests.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 2,
-      "category": "ideation",
-      "title": "Steal Like a Leo",
-      "description": "Pick an event you loved that had nothing to do with service: a concert, a wedding, a match.\nBorrow one thing from it for your project.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Childhood Cancer",
+      "name": "Little Artists",
+      "concept": "Create a collaborative art activity where children and volunteers build one large artwork together.",
+      "twist": "Display the final artwork as a shared celebration piece.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 3,
-      "category": "ideation",
-      "title": "Ten in Five",
-      "description": "Write 10 event ideas in 5 minutes. Quantity beats quality here.\nCircle the two that surprise you.",
-      "time": "5 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Childhood Cancer",
+      "name": "Storytime Heroes",
+      "concept": "Organise an interactive storytelling session built around courage, imagination and friendship.",
+      "twist": "Children create their own ending to the story.",
+      "budget": "₹1,500 to ₹3,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 4,
-      "category": "ideation",
-      "title": "Flip the Audience",
-      "description": "Redesign your event for a totally different crowd: grandparents, toddlers, or board toppers.\nWhich idea from that version works for your real audience?",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Childhood Cancer",
+      "name": "Superhero Saturday",
+      "concept": "Children create superhero identities, powers and stories through art and games.",
+      "twist": "Every child receives a personalised superhero badge.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 5,
-      "category": "ideation",
-      "title": "The Headline Test",
-      "description": "Write the newspaper headline you want the day after your event.\nNow plan backwards from it.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Childhood Cancer",
+      "name": "The Joy Cart",
+      "concept": "Create a portable cart filled with books, crafts, games and creative activities.",
+      "twist": "The cart rotates through different activity themes.",
+      "budget": "₹4,000 to ₹8,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 6,
-      "category": "ideation",
-      "title": "Silent Storm",
-      "description": "Everyone writes one idea anonymously. Shuffle the papers.\nBuild on someone else's idea, not your own.",
-      "time": "5 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Diabetes",
+      "name": "Sugar Smart",
+      "concept": "Turn diabetes awareness into a quiz-based interactive experience.",
+      "twist": "Teams earn points for answering myth-vs-fact questions.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 7,
-      "category": "ideation",
-      "title": "Yes, And",
-      "description": "One person says an idea. Each next person starts with \"Yes, and...\" and adds to it.\nGo around the circle twice.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Diabetes",
+      "name": "Label Detective",
+      "concept": "Teach participants how to understand food labels.",
+      "twist": "Participants become food detectives and solve label-based challenges.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "5 to 8"
     },
     {
       "id": 8,
-      "category": "creative",
-      "title": "The 5-Word Rule",
-      "description": "Describe your entire event in exactly five words.\nNo more. No less.",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Diabetes",
+      "name": "Move 30",
+      "concept": "Organise a 30-minute community movement challenge.",
+      "twist": "Turn the activity into a team challenge.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 9,
-      "category": "creative",
-      "title": "Three Colours Only",
-      "description": "Design your event's look using only 3 colours.\nName each colour after a feeling.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Diabetes",
+      "name": "Smart Plate",
+      "concept": "Create an interactive activity around building balanced meals.",
+      "twist": "Participants build their plates under different fictional scenarios.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 10,
-      "category": "creative",
-      "title": "The No-Leo Name",
-      "description": "Name your event without the words \"Leo\", \"service\", or \"drive\".\nMake 5 options, then vote.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Diabetes",
+      "name": "Healthy Habit Bingo",
+      "concept": "Participants complete simple healthy-habit challenges.",
+      "twist": "Use a physical bingo board and team rewards.",
+      "budget": "₹1,000 to ₹2,000",
+      "volunteers": "4 to 8"
     },
     {
       "id": 11,
-      "category": "creative",
-      "title": "30-Second Sketch",
-      "description": "Draw your event concept in 30 seconds. No words allowed.\nThe team guesses what it is.",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Disaster Relief",
+      "name": "Ready in 10",
+      "concept": "Teach participants how to think through a basic emergency plan.",
+      "twist": "Give teams only 10 minutes to build their emergency plan.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 12,
-      "category": "creative",
-      "title": "Now Showing",
-      "description": "Your event is now a film.\nGive it a title, a tagline, and a poster idea.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Disaster Relief",
+      "name": "Emergency Go-Bag",
+      "concept": "Demonstrate what belongs in an emergency preparedness kit.",
+      "twist": "Teams compete to correctly build a sample go-bag.",
+      "budget": "₹5,000 to ₹10,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 13,
-      "category": "creative",
-      "title": "Emoji Brief",
-      "description": "Explain your event using only 4 emojis.\nCan the rest of the team decode it?",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Disaster Relief",
+      "name": "Disaster Bingo",
+      "concept": "Teach disaster preparedness through a game.",
+      "twist": "Each square contains a preparedness action or scenario.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "5 to 8"
     },
     {
       "id": 14,
-      "category": "pitch",
-      "title": "Explain It to a 10-Year-Old",
-      "description": "Pitch your project to a curious 10-year-old.\nNo jargon. No acronyms.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Disaster Relief",
+      "name": "Map Your Safety",
+      "concept": "Participants create simple emergency contact and safety maps.",
+      "twist": "Turn mapping into a timed team activity.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "5 to 10"
     },
     {
       "id": 15,
-      "category": "pitch",
-      "title": "The Lift Pitch",
-      "description": "You share a lift with a company CSR head for 30 seconds.\nPitch your project before the doors open.",
-      "time": "2 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Disaster Relief",
+      "name": "Preparedness Challenge",
+      "concept": "Teams solve realistic disaster-preparedness scenarios.",
+      "twist": "Each team receives a different scenario card.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 16,
-      "category": "pitch",
-      "title": "Exactly Ten Words",
-      "description": "Explain your project in exactly 10 words.\nCount them out loud.",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Environment",
+      "name": "Pocket Forest",
+      "concept": "Transform a small unused space into a green corner.",
+      "twist": "Give the space a name and create a community story around it.",
+      "budget": "₹3,000 to ₹7,000",
+      "volunteers": "8 to 15"
     },
     {
       "id": 17,
-      "category": "pitch",
-      "title": "So What?",
-      "description": "One person plays a bored stranger who keeps asking \"So what?\".\nAnswer until they stop asking.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Environment",
+      "name": "Waste to Wonder",
+      "concept": "Turn discarded materials into useful or artistic objects.",
+      "twist": "Run it as a timed maker challenge.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 18,
-      "category": "pitch",
-      "title": "Start With a Person",
-      "description": "Open your pitch with one person your project helps.\nNo numbers in the first sentence.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Environment",
+      "name": "Plastic Detective",
+      "concept": "Help participants understand their everyday plastic use.",
+      "twist": "Participants complete a one-day plastic audit challenge.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 19,
-      "category": "pitch",
-      "title": "One Post Pitch",
-      "description": "Your whole pitch must fit in one 280-character post.\nWrite it together.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Environment",
+      "name": "Clean-Up Quest",
+      "concept": "Turn a community clean-up into a team-based mission.",
+      "twist": "Teams earn points for completing different cleanup missions.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "10 to 20"
     },
     {
       "id": 20,
-      "category": "budget",
-      "title": "Think Small",
-      "description": "You have only ₹1,000.\nRedesign your event without removing its core purpose.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Environment",
+      "name": "Eco Escape Room",
+      "concept": "Build an environmental puzzle experience.",
+      "twist": "Teams must solve environmental clues to complete the mission.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 21,
-      "category": "budget",
-      "title": "Half the Money",
-      "description": "Your budget was just cut by 50%.\nWhat stays, what goes, and what gets smarter?",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Environment",
+      "name": "Seed Stories",
+      "concept": "Plant seeds alongside personal wishes or messages.",
+      "twist": "Each plant carries a story or message.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 22,
-      "category": "budget",
-      "title": "Sky's the Limit",
-      "description": "Imagine money is no problem. What would you add?\nNow find a free way to get 20% of that.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Environment",
+      "name": "Repair Café",
+      "concept": "Teach participants to repair everyday objects rather than discard them.",
+      "twist": "Participants learn one repair skill from another participant.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 23,
-      "category": "budget",
-      "title": "Borrow, Don't Buy",
-      "description": "List everything your event needs. Mark each item: buy, borrow, or sponsor.\nTry to buy fewer than half.",
-      "time": "5 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Environment",
+      "name": "Green Birthday",
+      "concept": "Demonstrate how to celebrate a birthday with less waste.",
+      "twist": "Design the entire celebration around reusable materials.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 24,
-      "category": "budget",
-      "title": "The ₹100 Question",
-      "description": "One participant's experience costs ₹100.\nWhere does every rupee go? Split it out.",
-      "time": "4 min",
-      "difficulty": "Hard"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "Kindness Café",
+      "concept": "Create a café-style experience where kindness becomes the currency.",
+      "twist": "Participants earn tokens through acts of kindness.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 25,
-      "category": "budget",
-      "title": "In-Kind Hunt",
-      "description": "Pick your biggest expense.\nName 3 local businesses that could give it in kind instead of cash.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "One Hour For Someone",
+      "concept": "Volunteers donate one hour of time to help, teach or accompany someone.",
+      "twist": "Track the total number of hours donated.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "10 to 20"
     },
     {
       "id": 26,
-      "category": "marketing",
-      "title": "Scroll Stopper",
-      "description": "Write 3 opening lines for a post that would stop a thumb mid-scroll.\nKeep the best one.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "Letters That Matter",
+      "concept": "Write handwritten appreciation letters for people whose work often goes unnoticed.",
+      "twist": "Deliver letters anonymously as surprise appreciation.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 27,
-      "category": "marketing",
-      "title": "No Poster Allowed",
-      "description": "Promote your event without a single poster.\nWhat do you do instead?",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "100 Acts of Kindness",
+      "concept": "Complete 100 small acts of kindness collectively.",
+      "twist": "Create a public impact tracker.",
+      "budget": "₹1,000 to ₹3,000",
+      "volunteers": "5 to 10"
     },
     {
       "id": 28,
-      "category": "marketing",
-      "title": "The First 3 Seconds",
-      "description": "Plan a Reel whose first 3 seconds make people stay.\nDescribe the exact shot.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "Human Library",
+      "concept": "People become “books” and share personal experiences through short conversations.",
+      "twist": "Participants choose which “book” they want to hear from.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 29,
-      "category": "marketing",
-      "title": "Who Hits Share?",
-      "description": "Name 5 people or pages who would share your post.\nWhy would each of them want to?",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Humanitarian Efforts",
+      "name": "Community Canvas",
+      "concept": "Create one large collaborative artwork with community members.",
+      "twist": "Every participant contributes one section.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 12"
     },
     {
       "id": 30,
-      "category": "marketing",
-      "title": "Countdown Plan",
-      "description": "Plan one post for each of the 3 days before your event.\nEach one must give a new reason to come.",
-      "time": "5 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Hunger",
+      "name": "Meal With Meaning",
+      "concept": "Turn food support into a community dining experience focused on dignity and connection.",
+      "twist": "Add a storytelling or conversation component.",
+      "budget": "₹5,000 to ₹10,000",
+      "volunteers": "10 to 20"
     },
     {
       "id": 31,
-      "category": "marketing",
-      "title": "The Tell-a-Friend Line",
-      "description": "Write the one sentence you want a participant to say to a friend after the event.",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Hunger",
+      "name": "Community Kitchen Day",
+      "concept": "Volunteers prepare and serve meals together.",
+      "twist": "Divide volunteers into rotating kitchen teams.",
+      "budget": "₹4,000 to ₹8,000",
+      "volunteers": "10 to 15"
     },
     {
       "id": 32,
-      "category": "event",
-      "title": "Replace One Thing",
-      "description": "Replace one part of your event with something unexpected.\nKeep it if the event gets better.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Hunger",
+      "name": "One Meal Challenge",
+      "concept": "Members collectively fund a target number of meals.",
+      "twist": "Use a visible progress tracker.",
+      "budget": "₹3,000 to ₹7,000",
+      "volunteers": "6 to 12"
     },
     {
       "id": 33,
-      "category": "event",
-      "title": "The First Five Minutes",
-      "description": "Plan exactly what a participant sees, hears, and does in the first five minutes.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Hunger",
+      "name": "Smart Food, Less Waste",
+      "concept": "Run an interactive workshop about food waste.",
+      "twist": "Teams compete to design the lowest-waste meal plan.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 34,
-      "category": "event",
-      "title": "Walk the Route",
-      "description": "Trace a participant's path from arrival to exit.\nFind one moment where they wait with nothing to do. Fix it.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Hunger",
+      "name": "Community Cookbook",
+      "concept": "Collect affordable recipes and stories from the community.",
+      "twist": "Create a digital or printed community cookbook.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 35,
-      "category": "event",
-      "title": "It's Raining",
-      "description": "It starts raining 1 hour before your event.\nWhat is your plan B?",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Hunger",
+      "name": "Nutrition Through Games",
+      "concept": "Teach children basic food and nutrition concepts through games.",
+      "twist": "Turn learning into a points-based game.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 36,
-      "category": "event",
-      "title": "The Photo Moment",
-      "description": "Design one moment that everyone will want to photograph.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Vision",
+      "name": "Vision Quest",
+      "concept": "Create interactive awareness stations around eye health.",
+      "twist": "Use a passport/stamp system for each station.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 37,
-      "category": "event",
-      "title": "Cut 30 Minutes",
-      "description": "Your event must be 30 minutes shorter.\nWhat goes? Does it get better?",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Vision",
+      "name": "Screen Smart",
+      "concept": "Create awareness around healthy screen habits.",
+      "twist": "Turn it into a challenge-based activity.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "5 to 8"
     },
     {
       "id": 38,
-      "category": "team",
-      "title": "Role Swap",
-      "description": "Everyone takes the role of the person on their left.\nPlan the next step from their point of view.",
-      "time": "5 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Vision",
+      "name": "Eye Myth Busters",
+      "concept": "Run a myth-vs-fact awareness game.",
+      "twist": "Teams compete to identify myths.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 39,
-      "category": "team",
-      "title": "Strength Map",
-      "description": "Each person names one skill of the person on their right.\nMatch one event task to it.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Vision",
+      "name": "Read Without Limits",
+      "concept": "Create accessible reading resources.",
+      "twist": "Co-create accessible reading materials with participants.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 40,
-      "category": "team",
-      "title": "The Quiet Round",
-      "description": "For 3 minutes, only the people who have spoken least may suggest ideas.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Vision",
+      "name": "See Through Their Eyes",
+      "concept": "Create an accessibility and empathy-focused experience.",
+      "twist": "Use structured perspective-taking activities.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 41,
-      "category": "team",
-      "title": "Joy Match",
-      "description": "Each person shares two things they enjoy doing.\nPick one event task that uses them.",
-      "time": "5 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Youth",
+      "name": "Skill Swap Saturday",
+      "concept": "Young participants teach one another practical skills.",
+      "twist": "Everyone must teach one skill and learn one skill.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 42,
-      "category": "team",
-      "title": "Volunteer's Shoes",
-      "description": "Plan the volunteer experience.\nWhat will they learn, enjoy, and take home?",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Youth",
+      "name": "Future Founders",
+      "concept": "Children create imaginary businesses and learn about ideas, customers and pricing.",
+      "twist": "End with a mini marketplace or pitch round.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 43,
-      "category": "team",
-      "title": "Praise First",
-      "description": "Before anyone disagrees with an idea, they must say one good thing about it.\nKeep this rule for 5 minutes.",
-      "time": "5 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Youth",
+      "name": "Career Compass",
+      "concept": "Create mini career stations hosted by professionals.",
+      "twist": "Participants collect stamps from different career stations.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "10 to 15"
     },
     {
       "id": 44,
-      "category": "problem",
-      "title": "What Could Go Wrong?",
-      "description": "Name one thing that could go wrong.\nNow design a solution before you move on.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Youth",
+      "name": "Dream Board",
+      "concept": "Youth create visual boards representing their future goals.",
+      "twist": "Add a letter-to-future-self component.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 45,
-      "category": "problem",
-      "title": "Five Whys",
-      "description": "Take your biggest problem and ask \"why?\" five times.\nSolve the last answer, not the first.",
-      "time": "5 min",
-      "difficulty": "Hard"
+      "category": "service",
+      "area": "Youth",
+      "name": "Mini Makers Lab",
+      "concept": "Build useful objects from recyclable materials.",
+      "twist": "Give every team the same materials but a different challenge.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 46,
-      "category": "problem",
-      "title": "Plan to Fail",
-      "description": "How would you make this event fail completely?\nFlip each point into a rule you will follow.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Youth",
+      "name": "Street to Stage",
+      "concept": "Create a youth talent showcase.",
+      "twist": "Let the audience vote on creative categories.",
+      "budget": "₹3,000 to ₹7,000",
+      "volunteers": "10 to 15"
     },
     {
       "id": 47,
-      "category": "problem",
-      "title": "One Phone Call",
-      "description": "You can make one call to fix your biggest problem.\nWho do you call, and what do you ask?",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "service",
+      "area": "Youth",
+      "name": "Money Matters",
+      "concept": "Teach financial literacy through games and scenarios.",
+      "twist": "Participants manage a fictional monthly budget.",
+      "budget": "₹1,500 to ₹3,500",
+      "volunteers": "6 to 10"
     },
     {
       "id": 48,
-      "category": "problem",
-      "title": "Zero Resources",
-      "description": "Solve your problem with no money, no new people, and one week.\nWhat is still possible?",
-      "time": "4 min",
-      "difficulty": "Hard"
+      "category": "service",
+      "area": "Youth",
+      "name": "Future Fair",
+      "concept": "Create interactive career and skill exploration stations.",
+      "twist": "Add unexpected careers and emerging fields.",
+      "budget": "₹3,000 to ₹7,000",
+      "volunteers": "10 to 15"
     },
     {
       "id": 49,
-      "category": "problem",
-      "title": "The Day After",
-      "description": "It is the day after your event, and it flopped.\nWrite 3 reasons why. Fix them today.",
-      "time": "5 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Youth",
+      "name": "One Day, One Skill",
+      "concept": "Professionals teach one practical skill in a short session.",
+      "twist": "Participants leave with a mini challenge to practise the skill.",
+      "budget": "₹1,000 to ₹3,000",
+      "volunteers": "5 to 8"
     },
     {
       "id": 50,
-      "category": "impact",
-      "title": "Before and After",
-      "description": "Describe one beneficiary's day before and after your project.\nWhat actually changed?",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "service",
+      "area": "Youth",
+      "name": "Youth Idea Lab",
+      "concept": "Teams solve a community problem and pitch their solution.",
+      "twist": "Give each team a random constraint they must design around.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 51,
-      "category": "impact",
-      "title": "Count What Counts",
-      "description": "Pick 3 numbers you will measure on event day.\nHow will you collect each one?",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Leader for a Day",
+      "concept": "Members take turns running a real club meeting, from agenda to minutes.",
+      "twist": "The newest member chairs the meeting.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "6 to 12"
     },
     {
       "id": 52,
-      "category": "impact",
-      "title": "Three Months Later",
-      "description": "What will still be different 3 months after your event?\nIf nothing, redesign one part.",
-      "time": "4 min",
-      "difficulty": "Hard"
+      "category": "leadership",
+      "area": "",
+      "name": "Pitch Night",
+      "concept": "Each member pitches one project idea in 3 minutes. The club votes one idea into the calendar.",
+      "twist": "A panel of past presidents asks the questions.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "8 to 15"
     },
     {
       "id": 53,
-      "category": "impact",
-      "title": "In Their Words",
-      "description": "Write one question you will ask beneficiaries to hear the impact in their own words.",
-      "time": "2 min",
-      "difficulty": "Easy"
+      "category": "leadership",
+      "area": "",
+      "name": "Mock Board Room",
+      "concept": "The board solves a made-up club crisis together, like a sponsor pulling out a week before an event.",
+      "twist": "A new twist card lands every 10 minutes.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "6 to 10"
     },
     {
       "id": 54,
-      "category": "impact",
-      "title": "The Ripple",
-      "description": "Your event helps 50 people. Who do they help next?\nDraw the ripple.",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Speak Up Circle",
+      "concept": "Public speaking practice with short, surprise topics.",
+      "twist": "Every speaker picks their topic from a jar and gets 2 minutes.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "6 to 12"
     },
     {
       "id": 55,
-      "category": "impact",
-      "title": "Dignity Check",
-      "description": "Walk through your plan as the people you serve.\nIs any moment awkward? Change it.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Mentor Match",
+      "concept": "Pair new members with experienced Leos for one month.",
+      "twist": "Each pair completes three small missions together.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "10 to 20"
     },
     {
       "id": 56,
-      "category": "wild",
-      "title": "Time Machine",
-      "description": "Plan your event as if it were 1995. Then as if it were 2050.\nBring one idea back to today.",
-      "time": "4 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Leadership Escape Room",
+      "concept": "Teams solve puzzles that need clear roles, delegation, and calm under pressure.",
+      "twist": "The team leader may not touch any clue.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "8 to 12"
     },
     {
       "id": 57,
-      "category": "wild",
-      "title": "Switch the Cause",
-      "description": "Your event is now for a different cause.\nWhich part of the plan still works perfectly?",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Plan in 60",
+      "concept": "Teams plan a complete event in 60 minutes using the A4 Toolkit.",
+      "twist": "Each team draws a random budget and audience.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "8 to 15"
     },
     {
       "id": 58,
-      "category": "wild",
-      "title": "Star Guest",
-      "description": "Any famous person agrees to attend. Who, and what would they do?\nHow can you get 10% of that effect?",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "leadership",
+      "area": "",
+      "name": "Alumni Talks",
+      "concept": "Past Leos share how their Leo years shaped their careers and choices.",
+      "twist": "The audience asks questions on cards, picked at random.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "5 to 8"
     },
     {
       "id": 59,
-      "category": "wild",
-      "title": "Add a Game",
-      "description": "Turn one part of your event into a game.\nAdd points, a timer, or a prize.",
-      "time": "4 min",
-      "difficulty": "Easy"
+      "category": "leadership",
+      "area": "",
+      "name": "Brand Sprint",
+      "concept": "Refresh the club's Instagram look and bio in one afternoon.",
+      "twist": "Show a before-and-after to the whole club at the end.",
+      "budget": "₹1,000 to ₹2,000",
+      "volunteers": "6 to 10"
     },
     {
       "id": 60,
-      "category": "wild",
-      "title": "Mystery Box",
-      "description": "Add one surprise that participants discover only on the day.",
-      "time": "3 min",
-      "difficulty": "Easy"
+      "category": "leadership",
+      "area": "",
+      "name": "Budget Masterclass",
+      "concept": "The treasurer teaches event budgeting using real past budgets.",
+      "twist": "Teams must balance a mystery budget with one surprise cost.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "5 to 8"
     },
     {
       "id": 61,
-      "category": "wild",
-      "title": "Speak Human",
-      "description": "Rewrite your event description without the words \"awareness\", \"initiative\", or \"community\".",
-      "time": "3 min",
-      "difficulty": "Medium"
+      "category": "leadership",
+      "area": "",
+      "name": "Minutes That Matter",
+      "concept": "A workshop on writing minutes, reports, and event documentation.",
+      "twist": "Teams write minutes of a live, role-played meeting.",
+      "budget": "₹500 to ₹1,000",
+      "volunteers": "5 to 8"
+    },
+    {
+      "id": 62,
+      "category": "leadership",
+      "area": "",
+      "name": "Conflict Café",
+      "concept": "Role-play common team conflicts and practise calm, fair solutions.",
+      "twist": "Everyone swaps roles halfway through.",
+      "budget": "₹1,000 to ₹2,000",
+      "volunteers": "6 to 10"
+    },
+    {
+      "id": 63,
+      "category": "leadership",
+      "area": "",
+      "name": "Shadow Board",
+      "concept": "Junior members shadow an office bearer for one month.",
+      "twist": "The shadows run one official meeting on their own.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "8 to 16"
+    },
+    {
+      "id": 64,
+      "category": "leadership",
+      "area": "",
+      "name": "Sponsor Pitch Lab",
+      "concept": "Practise sponsor calls and emails in front of a mock CSR panel.",
+      "twist": "The panel gives instant scores and one tip each.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "6 to 10"
+    },
+    {
+      "id": 65,
+      "category": "leadership",
+      "area": "",
+      "name": "Roadmap Day",
+      "concept": "The club agrees on its goals for the year and builds one shared visual roadmap.",
+      "twist": "Revisit the roadmap at the mid-year meeting.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "Whole club"
+    },
+    {
+      "id": 66,
+      "category": "fellowship",
+      "area": "",
+      "name": "Leo Olympics",
+      "concept": "An inter-club sports day with relay races, tug of war, and fun games.",
+      "twist": "Every team must include members from at least two clubs.",
+      "budget": "₹5,000 to ₹8,000",
+      "volunteers": "15 to 25"
+    },
+    {
+      "id": 67,
+      "category": "fellowship",
+      "area": "",
+      "name": "Potluck and Stories",
+      "concept": "Every member brings a home dish and the story behind it.",
+      "twist": "Everyone guesses who cooked what before the stories start.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "10 to 20"
+    },
+    {
+      "id": 68,
+      "category": "fellowship",
+      "area": "",
+      "name": "Sunrise Trek",
+      "concept": "An early-morning trek to a nearby fort or hill.",
+      "twist": "Breakfast at the top and a group photo challenge.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "10 to 20"
+    },
+    {
+      "id": 69,
+      "category": "fellowship",
+      "area": "",
+      "name": "Game Night",
+      "concept": "An evening of board games, card games, and party games.",
+      "twist": "Teams reshuffle after every round.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "8 to 15"
+    },
+    {
+      "id": 70,
+      "category": "fellowship",
+      "area": "",
+      "name": "Movie Under the Stars",
+      "concept": "An open-air movie screening with snacks and blankets.",
+      "twist": "Members vote on the movie a week before.",
+      "budget": "₹3,000 to ₹5,000",
+      "volunteers": "10 to 20"
+    },
+    {
+      "id": 71,
+      "category": "fellowship",
+      "area": "",
+      "name": "Mystery Basket Cook-Off",
+      "concept": "A cooking contest where every team gets the same surprise ingredients.",
+      "twist": "Club alumni are the judges.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "8 to 16"
+    },
+    {
+      "id": 72,
+      "category": "fellowship",
+      "area": "",
+      "name": "Karaoke Night",
+      "concept": "A relaxed karaoke evening for members and friends.",
+      "twist": "Every duet must pair people from different clubs.",
+      "budget": "₹2,000 to ₹4,000",
+      "volunteers": "10 to 25"
+    },
+    {
+      "id": 73,
+      "category": "fellowship",
+      "area": "",
+      "name": "Photo Walk",
+      "concept": "Explore a neighbourhood together with phones or cameras.",
+      "twist": "Each team gets a list of photo themes to find.",
+      "budget": "₹500 to ₹1,500",
+      "volunteers": "8 to 15"
+    },
+    {
+      "id": 74,
+      "category": "fellowship",
+      "area": "",
+      "name": "Secret Leo",
+      "concept": "A week where every member secretly does small kind things for one other member.",
+      "twist": "The big reveal happens at the next meeting.",
+      "budget": "₹1,000 to ₹2,000",
+      "volunteers": "Whole club"
+    },
+    {
+      "id": 75,
+      "category": "fellowship",
+      "area": "",
+      "name": "Beach Day",
+      "concept": "A day of beach games, food, and time together.",
+      "twist": "Start with a 30-minute beach clean-up before the fun.",
+      "budget": "₹2,000 to ₹5,000",
+      "volunteers": "10 to 20"
+    },
+    {
+      "id": 76,
+      "category": "fellowship",
+      "area": "",
+      "name": "Throwback Party",
+      "concept": "A 90s-themed evening with music, dress code, and retro games.",
+      "twist": "Best-dressed awards chosen by the guests.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "15 to 30"
+    },
+    {
+      "id": 77,
+      "category": "fellowship",
+      "area": "",
+      "name": "Quiz Night",
+      "concept": "A team quiz on pop culture, general knowledge, and Leo trivia.",
+      "twist": "One round is only about the club's own members.",
+      "budget": "₹1,000 to ₹2,500",
+      "volunteers": "10 to 20"
+    },
+    {
+      "id": 78,
+      "category": "fellowship",
+      "area": "",
+      "name": "Friendship Cup",
+      "concept": "A cricket or football tournament between clubs.",
+      "twist": "Teams are mixed, with players from different clubs.",
+      "budget": "₹4,000 to ₹8,000",
+      "volunteers": "16 to 30"
+    },
+    {
+      "id": 79,
+      "category": "fellowship",
+      "area": "",
+      "name": "Bonfire Night",
+      "concept": "An evening around a bonfire with music and snacks.",
+      "twist": "End with a gratitude round: everyone thanks one person.",
+      "budget": "₹3,000 to ₹6,000",
+      "volunteers": "10 to 25"
+    },
+    {
+      "id": 80,
+      "category": "fellowship",
+      "area": "",
+      "name": "Welcome Mixer",
+      "concept": "A welcome evening for new members with icebreaker games.",
+      "twist": "Every new member is paired with a buddy for their first month.",
+      "budget": "₹1,500 to ₹3,000",
+      "volunteers": "10 to 20"
     }
   ]
 }

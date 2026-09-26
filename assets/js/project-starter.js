@@ -148,6 +148,15 @@ document.querySelector("[data-copy]").addEventListener("click", () => {
   copyText(asText(), "Brief copied. Paste it in WhatsApp.");
 });
 
+// Links from SHUFFLE carry an idea in the URL: fill those fields to start.
+const PREFILL_FIELDS = ["name", "cause", "type", "objectives", "budgetNotes"];
+const incoming = new URLSearchParams(location.search);
+PREFILL_FIELDS.forEach((field) => {
+  const value = incoming.get(field);
+  const input = form.elements.namedItem(field);
+  if (value && input) input.value = value.slice(0, 500);
+});
+
 window.addEventListener("beforeunload", (event) => {
   if (!dirty) return;
   event.preventDefault();

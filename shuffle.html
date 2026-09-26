@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SHUFFLE | A4 WAYPOINT</title>
-  <meta name="description" content="Stuck? Shuffle it. Pick a card, take a quick creative challenge, and break the block while planning a Leo event or service project.">
+  <meta name="description" content="Stuck? Shuffle it. Pick a card and get a ready event idea for your Leo club: a name, a concept, and a budget. Service, Leadership, and Fellowship.">
   <meta name="theme-color" content="#0e1440">
   <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/shuffle.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A4 WAYPOINT">
   <meta property="og:title" content="SHUFFLE | A4 WAYPOINT">
-  <meta property="og:description" content="Stuck? Shuffle it. Pick a card, take a quick creative challenge, and break the block while planning a Leo event or service project.">
+  <meta property="og:description" content="Stuck? Shuffle it. Pick a card and get a ready event idea for your Leo club: a name, a concept, and a budget. Service, Leadership, and Fellowship.">
   <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/shuffle.html">
   <meta property="og:image" content="https://driztea17.github.io/A4WayPoint/assets/img/district-logo.png">
   <meta name="twitter:card" content="summary">
@@ -74,11 +74,11 @@
         </ol>
         <h1 class="shuffle-title">SHUFFLE</h1>
         <p class="shuffle-tagline">Stuck? Shuffle it.</p>
-        <p class="lede">Pick a card. Take the challenge. Break the block.</p>
+        <p class="lede">Out of ideas for your next club event? Pick a card and get an event to run: a name, a concept, and a budget.</p>
       </div>
     </section>
 
-    <section class="container" aria-label="Shuffle deck">
+    <section class="container" aria-label="Shuffle event deck">
       <div class="shuffle-table">
         <svg class="shuffle-route" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
           <path d="M-20 520 C 200 430, 260 250, 470 260 S 760 470, 930 330 S 1120 90, 1230 120" />
@@ -86,7 +86,8 @@
           <circle cx="930" cy="330" r="6" />
         </svg>
 
-        <div class="chip-row shuffle-filter" role="group" aria-label="Card categories" data-cats></div>
+        <div class="chip-row shuffle-filter" role="group" aria-label="Event type" data-cats></div>
+        <div class="chip-row shuffle-filter shuffle-areas" role="group" aria-label="Service area" data-areas hidden></div>
 
         <div class="deck" data-deck>
           <div class="deck-backs" data-backs aria-hidden="true"></div>
@@ -110,15 +111,20 @@
             <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-dice"></use></svg>SHUFFLE AGAIN
           </button>
         </div>
+        <a class="shuffle-plan" href="project-starter.html" data-plan hidden>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-bulb"></use></svg>Plan this event in the Project Starter
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-arrow-right"></use></svg>
+        </a>
         <p class="shuffle-done-msg" data-done-msg hidden>Nice. One creative block down.</p>
         <p class="visually-hidden" aria-live="polite" data-announce></p>
       </div>
 
       <ol class="shuffle-how">
-        <li><span>1</span><div><strong>Stuck in a meeting?</strong> Open Shuffle on one phone or the projector.</div></li>
-        <li><span>2</span><div><strong>Pick a card.</strong> Choose a category or leave it on All.</div></li>
-        <li><span>3</span><div><strong>Do the challenge together.</strong> Set a timer and take it seriously. Mostly.</div></li>
+        <li><span>1</span><div><strong>Stuck on what to do next?</strong> Open Shuffle with your team.</div></li>
+        <li><span>2</span><div><strong>Pick a deck.</strong> Service, Leadership, Fellowship, or All.</div></li>
+        <li><span>3</span><div><strong>Make it yours.</strong> Change the details to fit your club, then plan it.</div></li>
       </ol>
+      <p class="shuffle-note">Diabetes, Vision, and Childhood Cancer ideas are awareness activities. Any screening, diagnosis, or medical advice needs qualified professionals and partner organisations.</p>
     </section>
   </main>
 
