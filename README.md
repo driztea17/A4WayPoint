@@ -4,7 +4,9 @@
 
 A4 WAYPOINT is the digital resource hub for Leo members of Leo District 3231 A4 (Navi Mumbai and Raigad, India). It helps members find resources, plan projects, build event checklists, create content with AI, and learn from past projects.
 
-Live site: https://driztea17.github.io/A4WayPoint/
+Live site: https://a4waypoint.pages.dev/ (main address, on Cloudflare Pages)
+
+Copy on GitHub Pages: https://driztea17.github.io/A4WayPoint/
 
 The site is plain HTML, CSS, and JavaScript. It has no build step and needs no npm. All content lives in JSON files in the `data` folder.
 
@@ -21,6 +23,25 @@ The site is plain HTML, CSS, and JavaScript. It has no build step and needs no n
 | Leadership Bingo | `bingo.html` | A 3 by 5 bingo card of club leadership goals to cross off, download, and share |
 | Shuffle | `shuffle.html` | 80 event idea cards (Service, Leadership, Fellowship) for clubs that are stuck |
 | Project Playbooks | `playbooks.html` | Learnings from past projects |
+
+## Deploy on Cloudflare Pages (main address)
+
+The site at https://a4waypoint.pages.dev/ is the Cloudflare Pages project `a4waypoint`. It is published by direct upload with Wrangler, not from Git, so a push does not update it. Publish it again after each change:
+
+1. Sign in once on this computer: `npx wrangler login`.
+2. Make a clean copy of the committed files (this leaves out `.git` and the ignored `.xlsx` and `.pdf` files):
+
+   ```bash
+   rm -rf ../cf-site && mkdir ../cf-site && git archive HEAD | tar -x -C ../cf-site
+   ```
+
+3. Publish the copy:
+
+   ```bash
+   npx wrangler pages deploy ../cf-site --project-name a4waypoint --branch main
+   ```
+
+The site is live in less than a minute. Cloudflare serves `/bingo.html` also as `/bingo`.
 
 ## Deploy on GitHub Pages
 
