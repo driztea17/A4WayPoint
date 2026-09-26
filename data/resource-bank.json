@@ -1,0 +1,45 @@
+{
+  "_about": "Templates, guides, documents, and links. Every entry below is SAMPLE placeholder data. type must be Template, Guide, Document, or Link.",
+  "items": [
+    {
+      "id": "sample-event-report-template",
+      "title": "Event report template",
+      "type": "Template",
+      "description": "Placeholder entry. A one-page report format with sections for objective, activities, impact numbers, and photos.",
+      "link": "https://docs.google.com/",
+      "sample": true
+    },
+    {
+      "id": "sample-sponsorship-deck",
+      "title": "Sponsorship proposal deck",
+      "type": "Template",
+      "description": "Placeholder entry. Editable slides to pitch a project to sponsors and CSR teams.",
+      "link": "https://docs.google.com/",
+      "sample": true
+    },
+    {
+      "id": "sample-permissions-guide",
+      "title": "Guide to event permissions",
+      "type": "Guide",
+      "description": "Placeholder entry. Which permissions to get for public spaces, schools, and processions, and how early to apply.",
+      "link": "https://docs.google.com/",
+      "sample": true
+    },
+    {
+      "id": "sample-brand-kit",
+      "title": "District brand kit",
+      "type": "Document",
+      "description": "Placeholder entry. Logos, colours, and poster rules for district and club creatives.",
+      "link": "https://drive.google.com/",
+      "sample": true
+    },
+    {
+      "id": "sample-leo-resources",
+      "title": "Official Leo club resources",
+      "type": "Link",
+      "description": "Placeholder entry. Replace with the link your district uses for official Leo club material.",
+      "link": "https://www.lionsclubs.org/",
+      "sample": true
+    }
+  ]
+}

@@ -34,6 +34,7 @@ It is built for one district's real project cycle, not general event planning. T
 - Checklists and project briefs are printed or saved as PDF on A4 paper for club meetings and reports.
 - Content editors update JSON files in `/data` through GitHub. They need clear examples in the README.
 - No backend, no login, no database. `localStorage` holds checklist progress only.
+- The Resource Hub is public, with no passcode. The district team decided on 2026-09-26 that clubs from other districts may use it too.
 
 ## Capabilities and Constraints
 
@@ -57,8 +58,11 @@ It is built for one district's real project cycle, not general event planning. T
 
 ## Evidence on Hand
 
-- District logo (owner to add at `assets/img/district-logo.png`).
-- No real venues, vendors, resource bank items, CSR contacts, or playbooks yet. All entries ship as clearly labelled SAMPLE placeholders, with fake names and `+91 00000 00000` style numbers. Do not invent real businesses, phone numbers, testimonials, member counts, or impact figures presented as real.
+- District logo: `assets/img/district-logo.png` (trimmed from the owner's file).
+- Real venues, vendors, bank branches, and CSR companies from the district "Club Resources" sheet, in `data/*.json`. Contact names are published with the owner's approval.
+- 63 prompts from the district "Leo Prompt Bank" PDF, in `data/prompts.json`.
+- Team: Leo Drishti Sinha and Leo Lion Shubham Upadhyay (Chief Innovation Officer and Chief Operations Officer). Photos supplied by the owner.
+- The Resource Bank templates and the three playbooks are still SAMPLE placeholders. Do not invent real businesses, phone numbers, testimonials, member counts, or impact figures presented as real.
 
 ## Product Principles
 

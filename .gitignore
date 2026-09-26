@@ -1,9 +1,6 @@
 # Local working files (never publish)
 .impeccable/
 
-# Readable hub data. Only the encrypted *.enc.json copies are published.
-data/private/
-
 # Original source files from the district (kept on your computer only)
 data/*.xlsx
 data/*.pdf

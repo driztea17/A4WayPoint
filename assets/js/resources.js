@@ -1,9 +1,9 @@
-// Resource Hub: passcode unlock, then five tabs (each an encrypted JSON file)
-// with search and filters.
+// Resource Hub: five tabs, each loaded from its own JSON file, with search and filters.
 
 import {
   icon,
   esc,
+  loadData,
   renderLoading,
   renderError,
   renderEmpty,
@@ -13,7 +13,6 @@ import {
   whatsappHref,
   mailHref
 } from "./utils.js";
-import { cryptoAvailable, storedKey, unlock, forgetKey, loadSecureData, loadLock } from "./secure.js";
 
 const WA_TEXT = "Hi, I found your details on A4 WAYPOINT (Leo District 3231 A4). I would like to ask about ";
 
@@ -216,14 +215,6 @@ const CATEGORIES = {
 
 /* ---------- Elements ---------- */
 
-const lockScreen = document.querySelector("[data-lock-screen]");
-const lockForm = document.querySelector("[data-lock-form]");
-const lockError = document.querySelector("[data-lock-error]");
-const lockSubmit = document.querySelector("[data-lock-submit]");
-const lockBtn = document.querySelector("[data-lock-btn]");
-const hub = document.querySelector("[data-hub]");
-const hubStatus = document.querySelector("[data-hub-status]");
-
 const panel = document.getElementById("resource-panel");
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const form = panel.querySelector("[data-filters]");
@@ -238,7 +229,6 @@ const cache = {};
 const filterState = {};
 let active = "venues";
 let loadToken = 0;
-let hubKey = null;
 
 /* ---------- Filters and results ---------- */
 
@@ -362,7 +352,7 @@ async function show(key, { focusTab = false, updateHash = true } = {}) {
     const token = ++loadToken;
     renderLoading(results, 3);
     try {
-      const data = await loadSecureData(config.file, hubKey);
+      const data = await loadData(config.file);
       cache[key] = Array.isArray(data) ? data : data.items || [];
     } catch (error) {
       if (token === loadToken) renderError(results, error.message, () => show(key, { updateHash: false }));
@@ -374,61 +364,6 @@ async function show(key, { focusTab = false, updateHash = true } = {}) {
   buildSelects(config, cache[key]);
   render();
 }
-
-/* ---------- Lock and unlock ---------- */
-
-function showLocked() {
-  hub.hidden = true;
-  lockBtn.hidden = true;
-  lockScreen.hidden = false;
-  hubStatus.innerHTML = "";
-}
-
-function showHub(key) {
-  hubKey = key;
-  lockScreen.hidden = true;
-  lockBtn.hidden = false;
-  hub.hidden = false;
-  hubStatus.innerHTML = "";
-  show(location.hash.slice(1) || "venues", { updateHash: Boolean(location.hash) });
-}
-
-lockForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const passcode = lockForm.passcode.value.trim();
-  lockError.textContent = "";
-  if (!passcode) {
-    lockError.textContent = "Enter the district passcode.";
-    lockForm.passcode.focus();
-    return;
-  }
-  lockSubmit.disabled = true;
-  lockSubmit.textContent = "Checking...";
-  try {
-    const key = await unlock(passcode, lockForm.remember.checked);
-    if (key) {
-      lockForm.reset();
-      showHub(key);
-      tabs.find((t) => t.getAttribute("aria-selected") === "true")?.focus();
-    } else {
-      lockError.textContent = "That passcode is not right. Check it and try again.";
-      lockForm.passcode.select();
-    }
-  } catch (error) {
-    lockError.textContent = error.message;
-  } finally {
-    lockSubmit.disabled = false;
-    lockSubmit.textContent = "Unlock the hub";
-  }
-});
-
-lockBtn.addEventListener("click", () => {
-  forgetKey();
-  hubKey = null;
-  Object.keys(cache).forEach((k) => delete cache[k]);
-  showLocked();
-  lockForm.passcode.focus();
-});
 
 /* ---------- Events ---------- */
 
@@ -468,26 +403,9 @@ clearBtn.addEventListener("click", clearFilters);
 
 window.addEventListener("hashchange", () => {
   const key = location.hash.slice(1);
-  if (hubKey && CATEGORIES[key] && key !== active) show(key, { updateHash: false });
+  if (CATEGORIES[key] && key !== active) show(key, { updateHash: false });
 });
 
 /* ---------- Start ---------- */
 
-async function start() {
-  if (!cryptoAvailable()) {
-    renderError(hubStatus, "This browser cannot open the locked hub. Update your browser, or open the site with https.");
-    return;
-  }
-  renderLoading(hubStatus, 3);
-  try {
-    await loadLock();
-  } catch (error) {
-    renderError(hubStatus, error.message, start);
-    return;
-  }
-  const key = await storedKey();
-  if (key) showHub(key);
-  else showLocked();
-}
-
-start();
+show(location.hash.slice(1) || "venues", { updateHash: Boolean(location.hash) });

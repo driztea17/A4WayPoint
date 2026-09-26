@@ -13,13 +13,12 @@ The site is plain HTML, CSS, and JavaScript. It has no build step and needs no n
 | Page | File | What it does |
 | --- | --- | --- |
 | Home | `index.html` | Hero, the seven-step route, and links to every section |
-| Resource Hub | `resources.html` | Venues, vendors, banks, resource bank, and industry CSR. Locked with the district passcode |
+| Resource Hub | `resources.html` | Venues, vendors, banks, resource bank, and industry CSR |
 | A4 Toolkit | `toolkit.html` | Links to the two tools |
 | Event Checklist Generator | `checklist.html` | Checklist for 7 event types. Saves on the phone, prints on A4, copies to WhatsApp |
 | Project Starter | `project-starter.html` | Guided form that builds a printable project brief |
 | AI Shortcut | `ai-shortcut.html` | 63 copy-ready prompts with fill-in blanks |
 | Project Playbooks | `playbooks.html` | Learnings from past projects |
-| Hub admin | `admin.html` | For editors only. Not in the menu |
 
 ## Deploy on GitHub Pages
 
@@ -47,48 +46,19 @@ python -m http.server 8000
 
 Then open http://localhost:8000 in your browser.
 
-## The Resource Hub passcode
-
-The Resource Hub holds phone numbers and names, so it is locked.
-
-- The readable hub data is **not** in the repository. Only encrypted copies are published: `data/*.enc.json`.
-- `data/hub.lock.json` holds the lock details. It holds no data and no passcode.
-- Members enter the district passcode on `resources.html`. The browser makes a key from the passcode (PBKDF2) and opens the data (AES-GCM). Nothing is sent to a server.
-- "Remember on this device" keeps the key on that phone until the member selects **Lock**.
-
-### First step after you download the site: change the passcode
-
-The site was built with a temporary passcode. It is in `data/private/TEMP-PASSCODE.txt` on the computer that built the site. Git ignores that folder.
-
-1. Open `admin.html` on the live site (or on your local preview).
-2. Enter the temporary passcode.
-3. Under **Change the district passcode**, enter a new passcode two times. Use a long passcode, for example four random words.
-4. Your browser downloads 6 files: `hub.lock.json` and five `.enc.json` files.
-5. On GitHub, open the `data` folder, select **Add file**, then **Upload files**. Upload all 6 files together and commit.
-6. Share the new passcode with members in your Leo WhatsApp groups only. Delete `TEMP-PASSCODE.txt`.
-
-Change the passcode again when it leaks or at the start of each Leoistic year.
-
-### What the lock does and does not do
-
-- It keeps the contact lists unreadable for anyone who does not have the passcode, including people who download the files from GitHub.
-- It is a shared passcode, not personal accounts. Anyone who has the passcode can read the data. A short or common passcode can be guessed, so use a long one.
-
 ## Edit the content
 
 Always keep the JSON format: every text in "double quotes", a comma between items, and no comma after the last item. If a page shows "This section did not load", the JSON file usually has a missing or extra comma. You can check a file at https://jsonlint.com.
 
 Entries with `"sample": true` show a SAMPLE badge. Set it to `false` for real entries.
 
-### Venues, vendors, banks, resource bank, and industry CSR (locked data)
+### Venues, vendors, banks, resource bank, and industry CSR
 
-These lists are encrypted, so you edit them with `admin.html`:
+Each list has its own file: `data/venues.json`, `data/vendors.json`, `data/banks.json`, `data/resource-bank.json`, and `data/csr.json`. Each file has an `items` list. To add an entry, copy an existing block inside `items`, paste it after a comma, and change the values.
 
-1. Open `admin.html` and enter the passcode.
-2. Pick the list and select **Download readable file**.
-3. Edit the `.json` file in a text editor (Notepad, VS Code, or the GitHub editor on your computer).
-4. Back on `admin.html`, choose the edited file and select **Encrypt file**.
-5. Upload the downloaded `.enc.json` file to the `data` folder on GitHub. It replaces the old one.
+To edit a file on GitHub: open it, select the pencil icon (**Edit this file**), make the change, and select **Commit changes**. The site updates in about a minute.
+
+These lists are public. Anyone can read every phone number and name in them, so add only contacts that agree to be listed.
 
 Example venue (`venues`):
 
@@ -263,12 +233,12 @@ The `id` becomes the link to the playbook: `playbooks.html#tree-drive-2026`. Put
 
 ```
 index.html, resources.html, toolkit.html, checklist.html,
-project-starter.html, ai-shortcut.html, playbooks.html, admin.html, 404.html
+project-starter.html, ai-shortcut.html, playbooks.html, 404.html
 assets/css/   base.css (tokens, layout, header, footer), components.css, pages.css, print.css
 assets/js/    one file per feature, plus utils.js, layout.js, motion.js,
-              config.js (settings), crypto-core.js and secure.js (hub lock)
+              config.js (settings)
 assets/img/   logo, favicon, icons.svg
-data/         JSON content and the encrypted hub files
+data/         all JSON content
 ```
 
 The header and footer are the same in every HTML file. If you change the menu, change it in every page.
