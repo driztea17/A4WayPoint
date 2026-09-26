@@ -40,6 +40,11 @@
     grid-template-columns: 1.05fr 0.95fr;
     gap: var(--space-6);
   }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 5.4vw, 5.25rem);
+    white-space: nowrap;
+  }
 }
 
 .hero-title {
@@ -1993,4 +1998,13 @@ code {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: var(--space-5);
+}
+
+/* 404 */
+.not-found {
+  padding-block: var(--space-8);
+}
+
+.not-found h1 {
+  font-size: var(--step-4);
 }
