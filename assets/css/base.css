@@ -401,6 +401,7 @@ textarea {
 .nav-link {
   display: block;
   padding: 8px 12px;
+  white-space: nowrap;
   border-radius: 999px;
   color: var(--ink-2);
   font-weight: 500;
@@ -511,6 +512,25 @@ textarea {
 .mobile-nav .btn {
   width: 100%;
   margin-top: var(--space-4);
+}
+
+@media (min-width: 1024px) and (max-width: 1179px) {
+  .header-inner {
+    gap: var(--space-4);
+  }
+
+  .nav-list {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding: 8px 9px;
+    font-size: 0.875rem;
+  }
+
+  .site-header .header-cta {
+    padding: 0 14px;
+  }
 }
 
 @media (min-width: 1024px) {
