@@ -7,7 +7,7 @@ export const CONFIG = {
   suggestFormUrl: "",
 
   // Email that receives resource suggestions when no form URL is set.
-  suggestEmail: "a4waypoint@example.com",
+  suggestEmail: "leodistrict3231a4@gmail.com",
 
   // Social links shown in the footer of every page.
   social: {

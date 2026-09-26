@@ -255,7 +255,7 @@ The `id` becomes the link to the playbook: `playbooks.html#tree-drive-2026`. Put
 | Setting | What it does |
 | --- | --- |
 | `suggestFormUrl` | Link for **Suggest a resource**, for example a Google Form. When it is empty, the button opens an email instead |
-| `suggestEmail` | Email for resource suggestions and playbook submissions. Change it from the placeholder `a4waypoint@example.com` |
+| `suggestEmail` | Email for resource suggestions and playbook submissions. Currently `leodistrict3231a4@gmail.com` |
 | `social` | Footer links for Instagram, Facebook, LinkedIn, and YouTube. Leave a link as `""` to hide its icon |
 | `whatsappCountryCode` | Country code for 10-digit WhatsApp numbers (`91`) |
 
