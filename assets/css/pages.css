@@ -4,178 +4,334 @@
    Home
    ========================================================================== */
 
+/* Sky hero: a bright rounded panel with soft clouds, a centred headline,
+   and a curved row of tool cards in perspective. An optional photo sky
+   (assets/img/hero-sky.jpg) sits over the CSS sky when it exists. */
 .hero {
-  position: relative;
-  padding-block: var(--space-6) var(--space-8);
-  overflow: hidden;
-  isolation: isolate;
+  padding: 10px 10px 0;
 }
 
-.hero::before {
-  content: "";
+@media (min-width: 640px) {
+  .hero {
+    padding: 14px 16px 0;
+  }
+}
+
+.hero-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: clamp(48px, 7vw, 88px) 16px 28px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #0b57b5 0%, #1a72d6 34%, #4b9ff0 66%, #9fd0f8 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.sky {
   position: absolute;
-  top: -160px;
-  right: -200px;
-  width: 720px;
-  height: 720px;
+  inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(closest-side at 60% 40%, rgba(132, 195, 24, 0.2), transparent),
-    radial-gradient(closest-side at 35% 65%, rgba(11, 99, 196, 0.12), transparent);
   pointer-events: none;
 }
 
-.hero-grid {
-  display: grid;
-  gap: var(--space-7);
-  align-items: center;
+.sky-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
 }
 
-@media (min-width: 960px) {
-  .hero {
-    padding-block: var(--space-8) var(--space-9);
-  }
+.cloud {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(22px);
+  opacity: 0.55;
+}
 
-  .hero-grid {
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: var(--space-6);
-  }
+.cloud-1 {
+  width: 340px;
+  height: 90px;
+  top: 38%;
+  left: -80px;
+}
 
-  .hero-title {
-    font-size: clamp(3.5rem, 5.4vw, 5.25rem);
-    white-space: nowrap;
-  }
+.cloud-2 {
+  width: 280px;
+  height: 70px;
+  top: 30%;
+  right: -60px;
+  opacity: 0.45;
+}
+
+.cloud-3 {
+  width: 200px;
+  height: 50px;
+  top: 12%;
+  left: 62%;
+  opacity: 0.25;
+}
+
+.cloud-bank {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -70px;
+  height: 260px;
+  background:
+    radial-gradient(closest-side, #fff 55%, rgba(255, 255, 255, 0)) 0% 100% / 34% 80% no-repeat,
+    radial-gradient(closest-side, #fff 55%, rgba(255, 255, 255, 0)) 26% 90% / 30% 70% no-repeat,
+    radial-gradient(closest-side, #fff 55%, rgba(255, 255, 255, 0)) 52% 100% / 36% 76% no-repeat,
+    radial-gradient(closest-side, #fff 55%, rgba(255, 255, 255, 0)) 78% 88% / 30% 72% no-repeat,
+    radial-gradient(closest-side, #fff 55%, rgba(255, 255, 255, 0)) 100% 100% / 34% 82% no-repeat;
+  filter: blur(10px);
+  opacity: 0.92;
+}
+
+/* With a photo sky, the drawn clouds step back. */
+.sky.has-photo .cloud,
+.sky.has-photo .cloud-bank {
+  display: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 60rem;
+  margin-inline: auto;
 }
 
 .hero-title {
-  font-size: clamp(3rem, 1.9rem + 5.6vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  color: var(--navy);
+  font-size: clamp(2.125rem, 1.3rem + 3.8vw, 4rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(9, 40, 110, 0.25);
 }
 
-.hero-tagline {
-  margin-top: var(--space-4);
-  font-family: var(--font-display);
-  font-size: var(--step-3);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--ink-2);
+.hero-line {
+  display: block;
 }
 
-.hero-tagline span {
-  color: var(--orange);
+.hero-line-soft {
+  color: #cfe6ff;
 }
 
-.hero-copy .lede {
-  margin-top: var(--space-5);
+.hero-sub {
+  max-width: 34rem;
+  margin: var(--space-4) auto 0;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 10px rgba(9, 40, 110, 0.3);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: var(--space-6);
 }
 
+.hero-btn-ghost {
+  background: rgba(14, 20, 64, 0.4);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.hero-btn-ghost:hover {
+  background: rgba(14, 20, 64, 0.58);
+}
+
+.hero-btn-lime {
+  padding-right: 8px;
+  background: var(--lime);
+  color: var(--navy);
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(14, 20, 64, 0.25);
+}
+
+.hero-btn-lime:hover {
+  background: #93d22a;
+}
+
+.arrow-dot {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  transition: rotate 0.25s var(--ease-out);
+}
+
+.hero-btn-lime:hover .arrow-dot {
+  rotate: -45deg;
+}
+
+.hero-panel .btn:focus-visible {
+  outline-color: #fff;
+}
+
 @media (max-width: 479px) {
-  .hero-actions .btn,
-  .cta-actions .btn {
+  .hero-actions .btn {
     flex: 1 1 100%;
   }
 }
 
-.hero-points {
+/* The arc: side cards turn toward the centre and recede. */
+.arc {
+  --w: 148px;
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-top: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: clamp(36px, 5vw, 56px) -16px 0;
+  padding-block: 18px 8px;
+  perspective: 1500px;
+}
+
+.arc-card {
+  flex: none;
+  width: var(--w);
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--navy);
+  text-align: left;
+  font-size: 0.75rem;
+  box-shadow: 0 10px 28px rgba(9, 40, 110, 0.22);
+  transform: translateY(var(--ty, 0)) translateZ(var(--tz, 0)) rotateY(var(--ry, 0));
+  animation: arc-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(0.25s + (var(--i) + 3) * 0.06s);
+}
+
+.arc-card:nth-child(1) { --ry: 34deg; --tz: -150px; --ty: 22px; }
+.arc-card:nth-child(2) { --ry: 23deg; --tz: -70px; --ty: 8px; }
+.arc-card:nth-child(3) { --ry: 11deg; --tz: -14px; --ty: 0px; }
+.arc-card:nth-child(4) { --tz: 40px; --ty: -6px; }
+.arc-card:nth-child(5) { --ry: -11deg; --tz: -14px; --ty: 0px; }
+.arc-card:nth-child(6) { --ry: -23deg; --tz: -70px; --ty: 8px; }
+.arc-card:nth-child(7) { --ry: -34deg; --tz: -150px; --ty: 22px; }
+
+@keyframes arc-in {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arc-card {
+    animation: none;
+  }
+}
+
+.arc-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.arc-label .icon {
+  width: 14px;
+  height: 14px;
+  color: var(--orange);
+}
+
+.arc-note {
+  margin-top: auto;
+  color: var(--ink-3);
+}
+
+.arc-note strong {
+  font-size: 1.125rem;
+  color: var(--navy);
+}
+
+/* Bingo mini grid */
+.mini-bingo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mini-bingo i {
+  position: relative;
+  height: 30px;
+  background: #1a2260;
+}
+
+.mini-bingo i:nth-child(odd) {
+  background: var(--lime);
+}
+
+.mini-bingo i.x::before,
+.mini-bingo i.x::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--orange-bright);
+  translate: -50% -50%;
+  rotate: 35deg;
+}
+
+.mini-bingo i.x::after {
+  rotate: -35deg;
+}
+
+/* Resource Hub rows */
+.arc-rows {
   list-style: none;
-  font-size: 0.875rem;
+  display: grid;
+  gap: 5px;
+}
+
+.arc-rows li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: var(--surface-2);
   color: var(--ink-2);
 }
 
-.hero-points li {
+.arc-rows b {
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Checklist card */
+.float-head {
   display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.hero-points .icon {
-  width: 16px;
-  height: 16px;
-  color: var(--lime-ink);
-  stroke-width: 2.5;
-}
-
-.hero-visual {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  margin-inline: auto;
-  aspect-ratio: 1 / 0.92;
-  display: grid;
-  place-items: center;
-}
-
-.hero-badge {
-  position: relative;
-  width: 60%;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  padding: 7%;
-  border-radius: 50%;
-  background: var(--surface);
-  box-shadow: var(--shadow-lg);
-}
-
-.hero-badge::before {
-  content: "";
-  position: absolute;
-  inset: -7%;
-  border: 1.5px dashed var(--line-strong);
-  border-radius: 50%;
-}
-
-.hero-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.float-card {
-  position: absolute;
-  padding: 14px 16px;
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  font-size: 0.8125rem;
+  justify-content: space-between;
 }
 
 .float-title {
   font-weight: 700;
-  color: var(--ink);
-}
-
-.float-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-3);
-  margin-top: 2px;
-}
-
-.float-checklist {
-  left: -2%;
-  bottom: 6%;
-  width: 204px;
-}
-
-.float-head {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
 }
 
 .float-count {
@@ -188,105 +344,229 @@
   list-style: none;
   display: grid;
   gap: 6px;
-  margin-top: 10px;
   color: var(--ink-2);
 }
 
 .float-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-
-.tick {
-  width: 16px;
-  height: 16px;
-  border-radius: 5px;
-  border: 1.5px solid var(--line-strong);
-  flex: none;
-}
-
-.is-done .tick {
-  border-color: var(--lime);
-  background: var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e1440' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 11px no-repeat;
+  gap: 7px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .float-list .is-done {
   color: var(--ink-3);
 }
 
-.float-venue {
-  top: 2%;
-  right: -2%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.tick {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid var(--line-strong);
+  flex: none;
 }
 
-.float-venue .icon-tile {
-  width: 38px;
-  height: 38px;
+.is-done .tick {
+  border-color: var(--lime);
+  background: var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e1440' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 10px no-repeat;
 }
 
-.float-pill {
-  position: absolute;
-  right: 2%;
-  bottom: 4%;
-  display: flex;
+/* District card in the centre */
+.arc-brand {
+  --w: 184px;
+  height: 206px;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 999px;
+  justify-content: center;
+  gap: 6px;
   background: var(--navy);
   color: #fff;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-lg);
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(9, 30, 90, 0.4);
 }
 
-.float-pill .icon {
+.arc-brand img {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+}
+
+.arc-brand-name {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.arc-brand-sub {
+  font-size: 0.6875rem;
+  color: var(--lime);
+}
+
+/* Shuffle card */
+.arc-shuffle {
+  background: #fffaf3;
+  border: 3px solid #3fa34d;
+}
+
+.arc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #3fa34d;
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+
+.arc-tag .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.arc-title {
+  font-weight: 800;
+  font-size: 0.9375rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.arc-stub {
+  margin-top: auto;
+  display: grid;
+  padding-top: 8px;
+  border-top: 2px dashed #a8d7ae;
+  color: var(--ink-3);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.arc-stub b {
+  font-size: 0.8125rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--navy);
+}
+
+@media (max-width: 699px) {
+  .arc-stub b {
+    font-size: 0.6875rem;
+  }
+
+  .arc-title {
+    font-size: 0.8125rem;
+  }
+}
+
+/* AI card */
+.arc-prompt {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.arc-copy {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+}
+
+.arc-copy .icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* Route card */
+.arc-steps {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 14px;
+}
+
+.arc-steps i {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-2);
+}
+
+.arc-steps i.on {
+  background: var(--lime);
+}
+
+.arc-steps i.now {
+  box-shadow: 0 0 0 2px var(--navy);
+}
+
+.hero-points {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin-top: var(--space-5);
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.hero-points li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-points .icon {
   width: 16px;
   height: 16px;
-  color: var(--lime);
-  stroke-width: 2.5;
+  color: var(--lime-ink);
+  stroke-width: 2.6;
 }
 
-.float-list li {
-  white-space: nowrap;
-}
-
-/* Phones: three clear bands (venue card, badge, checklist card) with no overlap. */
-@media (max-width: 599px) {
-  .hero-visual {
-    aspect-ratio: auto;
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-4);
+/* Phones: smaller cards, and only the three centre cards stay. */
+@media (max-width: 699px) {
+  .arc {
+    --w: 118px;
+    gap: 8px;
+    perspective: 1000px;
   }
 
-  .hero-badge {
-    width: 62%;
-    margin-block: var(--space-3);
+  .arc-card {
+    height: 150px;
+    padding: 11px;
+    font-size: 0.6875rem;
   }
 
-  .float-card {
-    position: static;
+  .arc-brand {
+    --w: 150px;
+    height: 172px;
   }
 
-  .float-venue {
-    order: -1;
-    align-self: flex-end;
+  .arc-brand img {
+    width: 82px;
+    height: 82px;
   }
 
-  .float-checklist {
-    align-self: flex-start;
-    width: 220px;
-  }
-
-  .float-list li:last-child,
-  .float-pill {
+  .arc-card:nth-child(1),
+  .arc-card:nth-child(2),
+  .arc-card:nth-child(6),
+  .arc-card:nth-child(7) {
     display: none;
   }
 }

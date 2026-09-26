@@ -39,6 +39,8 @@ Buttons (primary orange, dark navy, secondary outline, ghost), chips with counts
 
 Team cards: a 300 px full-photo portrait (4:5, 28 px radius) with navy fades top and bottom, name and role in white at the top, the district logo at bottom left, and a white CIO or COO pill at bottom right. Centred side by side on desktop, stacked and centred on phones. Initials in lime show when a photo is missing.
 
+Home hero (owner's sky reference, 2026-09-26): a rounded sky-blue panel with soft CSS clouds, a centred white headline (Poppins 500) with the second line in pale blue, a translucent navy pill and a lime pill with a navy arrow disc, and a curved row of seven tool preview cards in 3D perspective (Bingo, Resource Hub, Checklist, the district logo in front, Shuffle, AI Shortcut, route) that rise in once on load. Phones show the three centre cards. An optional photo sky at `assets/img/hero-sky.jpg` replaces the CSS clouds when present.
+
 Home entry cards carry a preview of their own content instead of a generic icon tile: the Resource Hub list, Toolkit pills, a mini AI prompt with a highlighted blank, and a tiny fan of Shuffle cards that spreads on hover.
 
 Home invite: an original astronaut-in-a-UFO illustration (`assets/img/ufo-astronaut.svg`, navy outline, lime light) floats in from a random side 100 ms after load, bobs gently with a navy "Try something new!" bubble, and links to Shuffle. A close button hides it for the visit (sessionStorage); it flies off by itself after 30 seconds. Reduced motion fades it in without flight or bob.

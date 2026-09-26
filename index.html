@@ -70,49 +70,75 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy" data-reveal="children">
-          <h1 id="hero-title" class="hero-title">A4 WAYPOINT</h1>
-          <p class="hero-tagline">From ideas to action.<br>From action to <span>excellence.</span></p>
-          <p class="lede">One place for Leo members of District 3231 A4 to find venues and vendors, plan projects, build event checklists, and learn from past work.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="checklist.html">Build your checklist <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-arrow-right"></use></svg></a>
-            <a class="btn btn-secondary" href="resources.html">Explore resources</a>
-          </div>
-          <ul class="hero-points">
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Checklists for 7 event types</li>
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Print or share on WhatsApp</li>
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Free for every Leo</li>
-          </ul>
+      <div class="hero-panel">
+        <div class="sky" aria-hidden="true" data-sky>
+          <img class="sky-photo" src="assets/img/hero-sky.jpg" alt="" hidden data-sky-photo>
+          <span class="cloud cloud-1"></span>
+          <span class="cloud cloud-2"></span>
+          <span class="cloud cloud-3"></span>
+          <span class="cloud-bank"></span>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-badge">
-            <img src="assets/img/district-logo.png" alt="" width="360" height="360">
+        <div class="hero-copy" data-reveal="children">
+          <h1 id="hero-title" class="hero-title"><span class="visually-hidden">A4 WAYPOINT: </span><span class="hero-line">From ideas to action.</span> <span class="hero-line hero-line-soft">From action to excellence.</span></h1>
+          <p class="hero-sub">One place for Leo members of District 3231 A4 to find venues and vendors, plan projects, build event checklists, and learn from past work.</p>
+          <div class="hero-actions">
+            <a class="btn hero-btn-ghost" href="resources.html">Explore resources</a>
+            <a class="btn hero-btn-lime" href="checklist.html">Build your checklist <span class="arrow-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-arrow-right"></use></svg></span></a>
           </div>
-          <div class="float-card float-checklist">
-            <div class="float-head">
-              <span class="float-title">Before Event</span>
-              <span class="float-count">4/6</span>
-            </div>
+        </div>
+
+        <div class="arc" aria-hidden="true">
+          <div class="arc-card arc-bingo" style="--i:-3">
+            <p class="arc-label">Leadership Bingo</p>
+            <div class="mini-bingo"><i class="on x"></i><i></i><i class="on"></i><i></i><i class="on x"></i><i></i></div>
+            <p class="arc-note"><strong>7</strong> of 15 done</p>
+          </div>
+          <div class="arc-card arc-hub" style="--i:-2">
+            <p class="arc-label">Resource Hub</p>
+            <ul class="arc-rows">
+              <li><span>Venues</span><b>27</b></li>
+              <li><span>Vendors</span><b>10</b></li>
+              <li><span>Banks</span><b>24</b></li>
+              <li><span>CSR</span><b>38</b></li>
+            </ul>
+          </div>
+          <div class="arc-card arc-check" style="--i:-1">
+            <div class="float-head"><span class="float-title">Before Event</span><span class="float-count">4/6</span></div>
             <div class="progress"><div class="progress-bar" style="--p:0.67"></div></div>
             <ul class="float-list">
               <li class="is-done"><span class="tick"></span>Venue confirmed</li>
-              <li class="is-done"><span class="tick"></span>Permissions obtained</li>
+              <li class="is-done"><span class="tick"></span>Permissions</li>
               <li><span class="tick"></span>Vendor confirmed</li>
             </ul>
           </div>
-          <div class="float-card float-venue">
-            <span class="icon-tile is-blue"><svg class="icon" focusable="false"><use href="assets/img/icons.svg#i-building"></use></svg></span>
-            <div>
-              <p class="float-title">Banquet hall, Nerul</p>
-              <p class="float-meta">Call or WhatsApp in one tap</p>
-            </div>
+          <div class="arc-card arc-brand" style="--i:0">
+            <img src="assets/img/district-logo.png" alt="" width="140" height="140">
+            <p class="arc-brand-name">Leo District 3231 A4</p>
+            <p class="arc-brand-sub">Towards Excellence · 2026-27</p>
           </div>
-          <div class="float-pill">
-            <svg class="icon" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Copied for WhatsApp
+          <div class="arc-card arc-shuffle" style="--i:1">
+            <p class="arc-tag"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-leaf"></use></svg>Environment</p>
+            <p class="arc-title">Pocket Forest</p>
+            <p class="arc-stub"><span>Budget</span><b>₹3,000–₹7,000</b></p>
+          </div>
+          <div class="arc-card arc-ai" style="--i:2">
+            <p class="arc-label"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-sparkles"></use></svg>AI Shortcut</p>
+            <p class="arc-prompt">Write a caption for <mark class="ph">[EVENT NAME]</mark></p>
+            <span class="arc-copy"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-copy"></use></svg>Copy</span>
+          </div>
+          <div class="arc-card arc-route" style="--i:3">
+            <p class="arc-label">Your route</p>
+            <div class="arc-steps"><i class="on"></i><i class="on"></i><i class="on now"></i><i></i><i></i><i></i><i></i></div>
+            <p class="arc-note">Step 3 of 7</p>
           </div>
         </div>
+
+        <ul class="hero-points">
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Checklists for 7 event types</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Print or share on WhatsApp</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-check"></use></svg>Free for every Leo</li>
+        </ul>
       </div>
     </section>
 

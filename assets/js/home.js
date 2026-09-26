@@ -102,6 +102,22 @@ function initUfo() {
   }, delay);
 }
 
+// Optional photo sky: shown only when assets/img/hero-sky.jpg exists.
+function initSkyPhoto() {
+  const img = document.querySelector("[data-sky-photo]");
+  if (!img) return;
+  const show = () => {
+    img.hidden = false;
+    img.closest("[data-sky]").classList.add("has-photo");
+  };
+  if (img.complete && img.naturalWidth > 0) show();
+  else {
+    img.addEventListener("load", show, { once: true });
+    img.addEventListener("error", () => img.remove(), { once: true });
+  }
+}
+
+initSkyPhoto();
 initTeamPhotos();
 revealOnScroll();
 initJourney();
