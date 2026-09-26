@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Playbooks | A4 WAYPOINT</title>
-  <meta name="description" content="Learn from projects other Leo clubs have run: what worked, what to change, and tips for next time.">
+  <title>Leadership Bingo | A4 WAYPOINT</title>
+  <meta name="description" content="Cross off your Leo club's leadership goals on a 3 by 5 bingo card, then download and share it.">
   <meta name="theme-color" content="#0e1440">
-  <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/playbooks.html">
+  <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/bingo.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A4 WAYPOINT">
-  <meta property="og:title" content="Project Playbooks | A4 WAYPOINT">
-  <meta property="og:description" content="Learn from projects other Leo clubs have run: what worked, what to change, and tips for next time.">
-  <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/playbooks.html">
+  <meta property="og:title" content="Leadership Bingo | A4 WAYPOINT">
+  <meta property="og:description" content="Cross off your Leo club's leadership goals on a 3 by 5 bingo card, then download and share it.">
+  <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/bingo.html">
   <meta property="og:image" content="https://driztea17.github.io/A4WayPoint/assets/img/district-logo.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
   <script type="module" src="assets/js/layout.js"></script>
-  <script type="module" src="assets/js/playbooks.js"></script>
+  <script type="module" src="assets/js/bingo.js"></script>
 </head>
-<body data-page="playbooks">
+<body data-page="toolkit">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
@@ -36,10 +36,10 @@
       <nav class="site-nav" aria-label="Main">
         <ul class="nav-list">
           <li><a class="nav-link" href="resources.html">Resource Hub</a></li>
-          <li><a class="nav-link" href="toolkit.html">A4 Toolkit</a></li>
+          <li><a class="nav-link" href="toolkit.html" aria-current="page">A4 Toolkit</a></li>
           <li><a class="nav-link" href="ai-shortcut.html">AI Shortcut</a></li>
           <li><a class="nav-link" href="shuffle.html">Shuffle</a></li>
-          <li><a class="nav-link" href="playbooks.html" aria-current="page">Playbooks</a></li>
+          <li><a class="nav-link" href="playbooks.html">Playbooks</a></li>
         </ul>
       </nav>
       <a class="btn btn-primary btn-sm header-cta" href="checklist.html">Build your checklist</a>
@@ -53,11 +53,11 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="resources.html">Resource Hub</a>
             <ul class="mobile-subnav"><li><a href="resources.html#venues">Venues</a></li><li><a href="resources.html#vendors">Vendors</a></li><li><a href="resources.html#banks">Banks</a></li><li><a href="resources.html#resource-bank">Resource Bank</a></li><li><a href="resources.html#csr">Industry CSR</a></li></ul></li>
-          <li><a href="toolkit.html">A4 Toolkit</a>
+          <li><a href="toolkit.html" aria-current="page">A4 Toolkit</a>
             <ul class="mobile-subnav"><li><a href="checklist.html">Event Checklist</a></li><li><a href="project-starter.html">Project Starter</a></li><li><a href="shuffle.html">Shuffle</a></li><li><a href="bingo.html">Leadership Bingo</a></li></ul></li>
           <li><a href="ai-shortcut.html">AI Shortcut</a></li>
           <li><a href="shuffle.html">Shuffle</a></li>
-          <li><a href="playbooks.html" aria-current="page">Playbooks</a></li>
+          <li><a href="playbooks.html">Playbooks</a></li>
         </ul>
         <a class="btn btn-primary" href="checklist.html">Build your checklist</a>
       </div>
@@ -65,34 +65,74 @@
   </header>
 
   <main id="main">
-    <section class="page-intro" data-list-intro>
+    <section class="page-intro bingo-intro">
       <div class="container">
         <ol class="breadcrumb">
           <li><a href="index.html">Home</a></li>
-          <li aria-current="page">Project Playbooks</li>
+          <li><a href="toolkit.html">A4 Toolkit</a></li>
+          <li aria-current="page">Leadership Bingo</li>
         </ol>
-        <div class="intro-row">
-          <div>
-            <h1>Project Playbooks</h1>
-            <p class="lede">Learn from projects other clubs have run: what they did, what it cost, what worked, and what they would change.</p>
+        <h1>Leadership Bingo</h1>
+        <p class="lede">Cross off the leadership goals your club has completed this year. Then download your card and share it with your friends.</p>
+      </div>
+    </section>
+
+    <div class="container bingo-layout">
+      <section class="bingo-poster" aria-labelledby="bingo-word">
+        <header class="bingo-head">
+          <h2 class="bingo-word" id="bingo-word">bingo</h2>
+          <svg class="bingo-arc" viewBox="0 0 200 120" aria-hidden="true" focusable="false">
+            <defs><path id="bingo-arc-path" d="M20 108 A 80 80 0 0 1 180 108"/></defs>
+            <text><textPath href="#bingo-arc-path" startOffset="50%" text-anchor="middle" data-bingo-label>leadership</textPath></text>
+          </svg>
+          <p class="visually-hidden">Leadership. Tap a square to cross it off.</p>
+        </header>
+
+        <ol class="bingo-grid" data-grid>
+          <li class="bingo-loading">Loading the card...</li>
+        </ol>
+
+        <p class="bingo-tag" data-tag>LEO DISTRICT 3231 A4</p>
+      </section>
+
+      <aside class="bingo-side" aria-label="Your card">
+        <div class="card bingo-panel">
+          <div class="bingo-score">
+            <p class="bingo-count"><strong data-count>0</strong> of <span data-total>15</span> done</p>
+            <p class="bingo-lines" data-lines>No bingo yet. Complete a full row or column.</p>
+            <div class="progress progress-lg" role="progressbar" aria-label="Bingo progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-bar><div class="progress-bar"></div></div>
           </div>
-          <a class="btn btn-secondary" href="#" data-share-playbook>
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-share"></use></svg>
-            Share your playbook
-          </a>
+
+          <div class="field">
+            <label for="bingo-club">Club name <span class="optional">(shows on your card)</span></label>
+            <input class="input" id="bingo-club" type="text" maxlength="40" autocomplete="off" placeholder="Leo Club of ..." data-club>
+          </div>
+
+          <div class="bingo-actions">
+            <button type="button" class="btn btn-primary" data-download>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-download"></use></svg>Download card
+            </button>
+            <button type="button" class="btn btn-dark" data-share hidden>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-share"></use></svg>Share card
+            </button>
+            <button type="button" class="btn btn-ghost btn-sm" data-reset>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-reset"></use></svg>Start over
+            </button>
+          </div>
+          <p class="hint">Your ticks save on this phone. The download is a 1080 × 1350 image, ready for Instagram and WhatsApp.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="container playbooks" data-list-view aria-label="Playbooks">
-      <div class="chip-row" role="group" aria-label="Filter by event type" data-cats></div>
-      <div class="results-head">
-        <p class="results-count" data-count aria-live="polite"></p>
-      </div>
-      <div data-results></div>
-    </section>
-
-    <section class="container playbook-detail" data-detail-view hidden aria-live="polite"></section>
+        <div class="bingo-how">
+          <h2>How to play</h2>
+          <ol>
+            <li>Tap a square when your club completes it. Tap again to undo.</li>
+            <li>A full row or a full column is a bingo.</li>
+            <li>Download or share your card to show your progress.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+    <p class="visually-hidden" aria-live="polite" data-live></p>
   </main>
 
   <footer class="site-footer">

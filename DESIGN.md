@@ -54,6 +54,10 @@ SHUFFLE (`shuffle.html`) is the one playful surface: a navy table with a dotted 
 
 GSAP on the home page only: a light fade-up for hero and cards, and one signature moment, the journey line that draws and lights each step in lime. Tool pages have no scroll motion. `prefers-reduced-motion` turns all motion off, and content is visible without JavaScript.
 
+## Leadership Bingo
+
+`bingo.html` follows the owner's bingo poster reference in brand colours: a navy poster card, a huge cream lowercase "bingo" wordmark with "leadership" curving in lime, a 3 by 5 checkerboard of lime and deep navy squares with rounded outer corners, and an outlined pill with the club name. Crossing off draws an orange hand-drawn X over the square and dims its text. The download draws the same card on a 1080 by 1350 canvas.
+
 ## Print
 
 `assets/css/print.css`: A4 page, black on white, no header or footer, a brand line at the top, and ☐ / ☑ boxes for checklist items.

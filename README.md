@@ -18,6 +18,7 @@ The site is plain HTML, CSS, and JavaScript. It has no build step and needs no n
 | Event Checklist Generator | `checklist.html` | Checklist for 7 event types. Saves on the phone, prints on A4, copies to WhatsApp |
 | Project Starter | `project-starter.html` | Guided form that builds a printable project brief |
 | AI Shortcut | `ai-shortcut.html` | 63 copy-ready prompts with fill-in blanks |
+| Leadership Bingo | `bingo.html` | A 3 by 5 bingo card of club leadership goals to cross off, download, and share |
 | Shuffle | `shuffle.html` | 80 event idea cards (Service, Leadership, Fellowship) for clubs that are stuck |
 | Project Playbooks | `playbooks.html` | Learnings from past projects |
 
@@ -212,6 +213,16 @@ Each card is one event idea in `cards`. Give a new card the next `id` (it shows 
 ```
 
 The page remembers the last 5 cards on each phone and does not repeat them straight away. "Plan this event" opens the Project Starter with the idea filled in.
+
+### Leadership Bingo (`data/bingo.json`)
+
+The card has 15 squares in `squares`, shown 3 across and 5 down, read left to right. Change a square's `text` to change the goal. Keep each text to about 8 words so it fits the square and the downloaded image. `title` is the big word ("bingo") and `label` is the curved word ("leadership").
+
+```json
+{ "id": 10, "text": "Club conducted 1 LAS session" }
+```
+
+A full row of 3 or a full column of 5 counts as a bingo. Crossed-off squares and the club name save on each phone. "Download card" makes a 1080 by 1350 image.
 
 ### Playbooks (`data/playbooks.json`)
 

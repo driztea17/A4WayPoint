@@ -33,18 +33,19 @@ It is built for one district's real project cycle, not general event planning. T
 - Members share outputs in WhatsApp groups, so "Copy as text" matters as much as print.
 - Checklists and project briefs are printed or saved as PDF on A4 paper for club meetings and reports.
 - Content editors update JSON files in `/data` through GitHub. They need clear examples in the README.
-- No backend, no login, no database. `localStorage` holds checklist progress and the recent SHUFFLE cards only.
+- No backend, no login, no database. `localStorage` holds checklist progress, Bingo progress, and the recent SHUFFLE cards only.
 - The Resource Hub is public, with no passcode. The district team decided on 2026-09-26 that clubs from other districts may use it too.
 
 ## Capabilities and Constraints
 
-- Sections: Home, Resource Hub (Venues, Vendors, Banks, Resource Bank, Industry CSR), A4 Toolkit (Event Checklist Generator, Project Starter, Shuffle), AI Shortcut (Marketing, Reports, Communication, Events, Brainstorming, Design), Project Playbooks.
+- Sections: Home, Resource Hub (Venues, Vendors, Banks, Resource Bank, Industry CSR), A4 Toolkit (Event Checklist Generator, Project Starter, Shuffle, Leadership Bingo), AI Shortcut (Marketing, Reports, Communication, Events, Brainstorming, Design), Project Playbooks.
 - Event types: Service Project, Fundraiser, Workshop, Seminar, Awareness Campaign, Club Meeting, Outdoor Event.
 - Checklist phases: Before Event, During Event, After Event.
 - All content loads from JSON in `/data`. Friendly loading and error states for every fetch.
 - Mobile first, keyboard navigable, visible focus, WCAG AA contrast, respects `prefers-reduced-motion`.
 - The "Suggest a resource" form URL and social links are config values the owner fills in later.
 - SHUFFLE is a deck of 80 event ideas for clubs with a creative block: each card gives an event name, concept, twist, budget, and volunteer count. Three decks: Service (by the 8 Leo service areas), Leadership, and Fellowship. The 50 Service ideas come from the district's idea file; the 30 Leadership and Fellowship ideas are drafts for the team to review. `localStorage` remembers the last 5 cards shown.
+- Leadership Bingo is a 3 by 5 card of 15 club leadership goals from the district (learning paths, LLC courses, LAS session, directors, Excelsior, leadership events, Zone 1 Voice, hosting). Members cross off squares and download or share the card as an image. Progress saves in `localStorage`.
 - Copy rule: no em dashes anywhere in site copy, code comments, or README.
 
 ## Brand Commitments

@@ -1,0 +1,22 @@
+{
+  "_about": "Squares for Leadership Bingo, in grid order: 3 columns, 5 rows, read left to right. Keep each text short (about 8 words) so it fits the square and the shared image.",
+  "title": "bingo",
+  "label": "leadership",
+  "squares": [
+    { "id": 1, "text": "Leo Club Program Learning Path" },
+    { "id": 2, "text": "President Learning Path" },
+    { "id": 3, "text": "Secretary Learning Path" },
+    { "id": 4, "text": "Treasury Learning Path" },
+    { "id": 5, "text": "Membership Learning Path" },
+    { "id": 6, "text": "Leo Lion Learning Path" },
+    { "id": 7, "text": "Learning paths completed by PSTVP" },
+    { "id": 8, "text": "Learning paths completed by 5 other members (not PSTVP)" },
+    { "id": 9, "text": "Any 5 members completed all LLC courses" },
+    { "id": 10, "text": "Club conducted 1 LAS session" },
+    { "id": 11, "text": "Directors appointed for all positions" },
+    { "id": 12, "text": "5+ members registered for Excelsior" },
+    { "id": 13, "text": "Conducted 3 leadership events this year" },
+    { "id": 14, "text": "Club participation at 4 Zone 1 Voice" },
+    { "id": 15, "text": "Hosted a District or Multiple event" }
+  ]
+}
