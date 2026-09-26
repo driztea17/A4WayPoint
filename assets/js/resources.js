@@ -54,7 +54,7 @@ const CATEGORIES = {
     file: "venues",
     noun: ["venue", "venues"],
     description: "Halls, turfs, and banquet halls that district clubs have used.",
-    searchPlaceholder: "Search venues, areas, or addresses",
+    searchPlaceholder: "Search venues or areas",
     search: (v) => searchable(v.name, v.area, v.type, v.address, v.notes),
     filters: [
       { key: "area", label: "Area", get: (v) => v.area },
@@ -95,7 +95,7 @@ const CATEGORIES = {
     file: "vendors",
     noun: ["vendor", "vendors"],
     description: "Club pins, food, water, stationery, and club supplies.",
-    searchPlaceholder: "Search vendors, services, or areas",
+    searchPlaceholder: "Search vendors or services",
     search: (v) => searchable(v.name, v.contactName, v.category, v.area, v.address, v.notes),
     filters: [
       { key: "category", label: "Service", get: (v) => v.category },

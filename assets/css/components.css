@@ -159,9 +159,13 @@
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 4px;
-  scrollbar-width: thin;
+  padding: 2px 0 4px;
+  scrollbar-width: none;
   scroll-snap-type: x proximity;
+}
+
+.chip-row::-webkit-scrollbar {
+  display: none;
 }
 
 .chip-row .chip,

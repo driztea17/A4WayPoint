@@ -38,7 +38,7 @@ Tints (`--lime-tint`, `--orange-tint`, `--blue-tint`) back icon tiles, badges, a
 
 Buttons (primary orange, dark navy, secondary outline, ghost), chips with counts, pill tabs, cards, icon tiles (orange, blue, lime, navy), badges (SAMPLE in orange tint), inputs and selects with a 3 px blue focus ring, progress bars in lime, a navy toast, and dashed-border states for loading, empty, and error.
 
-Team cards: a 4:5 photo on a navy field (initials in lime when no photo), name, and role in orange.
+Team cards: a 300 px full-photo portrait (4:5, 28 px radius) with navy fades top and bottom, name and role in white at the top, the district logo at bottom left, and a white CIO or COO pill at bottom right. Centred on desktop, a swipeable snap row on phones. Initials in lime show when a photo is missing.
 
 Breakpoints: 640 px (container padding, 2-column grids), 1024 px (desktop menu and two-panel tool pages).
 
