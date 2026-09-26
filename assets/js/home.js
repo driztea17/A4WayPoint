@@ -38,5 +38,15 @@ function initJourney() {
   wide.addEventListener("change", () => render(state.progress));
 }
 
+// A missing team photo falls back to the initials behind it.
+function initTeamPhotos() {
+  document.querySelectorAll("[data-team-photo]").forEach((img) => {
+    const fail = () => img.remove();
+    if (img.complete && img.naturalWidth === 0) fail();
+    else img.addEventListener("error", fail, { once: true });
+  });
+}
+
+initTeamPhotos();
 revealOnScroll();
 initJourney();
