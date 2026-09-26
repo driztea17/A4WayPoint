@@ -1,0 +1,548 @@
+{
+  "_about": "Prompts for the AI Shortcut page, from the Leo Prompt Bank. Put fill-in fields in [SQUARE BRACKETS]. [TO BE FILLED] and [TO BE CONFIRMED] are instructions for the AI, so the page does not ask users to fill them.",
+  "rule": "Do not invent names, statistics, partnerships, achievements, quotations or facts. If information is missing, use [TO BE FILLED] or clearly state the assumption.",
+  "checklist": "Before using a prompt, replace the bracketed fields, verify dates/numbers/names, attach any relevant reference material, and tell the AI the platform or audience if it matters. For project work, always verify budgets, permissions, safeguarding requirements and impact claims before execution.",
+  "categories": [
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "description": "Instagram strategy, captions, Reels, Stories, and campaigns."
+    },
+    {
+      "id": "reports",
+      "name": "Reports",
+      "description": "Event reports, impact reports, minutes, proposals, and budgets."
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "description": "Official emails, invitations, WhatsApp messages, and sponsor outreach."
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "description": "Event plans, run sheets, volunteers, activities, and speeches."
+    },
+    {
+      "id": "brainstorming",
+      "name": "Brainstorming",
+      "description": "Project ideas, problem statements, frameworks, and fundraising."
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "description": "Canva decks and campaigns, branding, logos, photos, and video."
+    },
+    {
+      "id": "universal",
+      "name": "Universal",
+      "description": "Bonus prompts that help with any task."
+    }
+  ],
+  "prompts": [
+    {
+      "id": "p01",
+      "number": 1,
+      "category": "marketing",
+      "title": "Build a 30-Day Instagram Strategy",
+      "subcategory": "Content Strategy",
+      "prompt": "Act as a senior social media strategist for a youth-led community service organisation. I manage the Instagram account of [CLUB NAME], a Leo Club in [CITY/DISTRICT]. Our club focuses on [SERVICE AREAS] and our current campaign/theme is [THEME]. During [MONTH], we have these important dates and activities: [EVENTS/DATES]. Our target audience is [AUDIENCE]. Our goals are [GOALS: e.g. event registrations, awareness, membership, engagement, impact storytelling].\nCreate a complete 30-day content strategy. Balance service and impact, events, members, leadership, educational content, entertainment, behind-the-scenes, community stories and membership. Do not make the page feel like a notice board.\nFor every planned content item give: date, format, objective, topic, exact hook, key message, caption direction, CTA, visual concept, Story support and suggested content pillar. Also identify which items should be posted before, during or after an event. Include a weekly rhythm and explain how the content should build a consistent club identity. Use only the information provided and mark missing information as [TO BE FILLED]."
+    },
+    {
+      "id": "p02",
+      "number": 2,
+      "category": "marketing",
+      "title": "Create Our Content Pillars",
+      "subcategory": "Content Strategy",
+      "prompt": "Act as a brand and content strategist for [CLUB NAME]. Our brand personality is [3–5 WORDS], our major service areas are [AREAS], our audience is [AUDIENCE], and our current social media challenge is [CHALLENGE]. Design 10 distinct Instagram content pillars that a Leo Club can maintain throughout the year. For each pillar provide: pillar name, purpose, audience need, what type of stories belong there, 10 specific post ideas, 5 Reel ideas, 5 Story ideas, recommended frequency, ideal tone, visual direction, sample hook and sample CTA. Make sure the pillars are not repetitive. Include a mix of service, people, personality, education, community, leadership and entertainment. End with a suggested monthly percentage split across the pillars so the account feels balanced rather than promotional."
+    },
+    {
+      "id": "p03",
+      "number": 3,
+      "category": "marketing",
+      "title": "Create a Campaign Calendar",
+      "subcategory": "Content Strategy",
+      "prompt": "Build a complete social media campaign calendar for [EVENT/PROJECT] taking place on [DATE]. The objective is [OBJECTIVE], target audience is [AUDIENCE], and we currently have [AVAILABLE ASSETS: photos, videos, posters, testimonials, statistics].\nCreate a campaign from [NUMBER] days before the event through [NUMBER] days after it. Include teaser content, announcement, value/education content, registration push, countdown, behind-the-scenes, event-day coverage, impact and post-event gratitude.\nFor every item provide exact post date, format, hook, copy direction, visual idea, CTA, required asset and whether it should be a Feed post, Reel or Story. Avoid repeating the same message. Build curiosity gradually and make the final campaign feel like one connected story."
+    },
+    {
+      "id": "p04",
+      "number": 4,
+      "category": "marketing",
+      "title": "Write a High-Quality Event Caption",
+      "subcategory": "Captions",
+      "prompt": "Act as an expert Instagram copywriter for youth organisations. Write a caption for [EVENT NAME], organised by [CLUB NAME].\nFacts: Date [DATE]; Venue [VENUE]; Purpose [PURPOSE]; Participants [NUMBER/TYPE]; Beneficiaries [BENEFICIARIES]; Activities [ACTIVITIES]; Impact [IMPACT]; Special moment [MOMENT]; People/partners to acknowledge [NAMES]. Write a caption that starts with a strong, non-generic hook, explains what happened through storytelling, includes the human element, naturally incorporates verified numbers, acknowledges contributors and ends with a memorable closing line. Give me three versions: emotional, youthful and minimal/premium.\nDo not use clichés such as 'unforgettable journey' unless they genuinely fit. Do not invent quotes or emotional reactions. Keep the writing natural enough that it sounds written by a real Leo member."
+    },
+    {
+      "id": "p05",
+      "number": 5,
+      "category": "marketing",
+      "title": "Rewrite Any Caption Without Losing Facts",
+      "subcategory": "Captions",
+      "prompt": "Rewrite the following caption for [PLATFORM]: [CURRENT CAPTION].\nThe factual information must remain unchanged. Improve the hook, sentence flow, emotional connection, clarity, rhythm, readability and CTA. Remove filler, repetitive adjectives, generic AI phrases and unnecessary hashtags.\nGive me four versions: 1) warm and emotional, 2) youthful and conversational, 3) elegant and premium, 4) very short. Explain in one sentence what changed in each version. Do not add any fact that is not already in the original text."
+    },
+    {
+      "id": "p06",
+      "number": 6,
+      "category": "marketing",
+      "title": "Create an Event Reel Storyboard",
+      "subcategory": "Reels",
+      "prompt": "Act as an Instagram Reel director. Create a 30–45 second Reel for [EVENT]. The event is about [PURPOSE], took place at [VENUE] on [DATE], involved [PARTICIPANTS], and created [IMPACT]. The footage available is [LIST OF CLIPS/PHOTOS].\nCreate a shot-by-shot storyboard with timestamps. For every shot provide: what appears on screen, framing/angle, on-screen text, voiceover if required, transition, approximate duration, music mood and editing note.\nUse this storytelling arc: 0–3 sec hook; 3–10 sec context; 10–25 sec experience; 25–35 sec strongest human/impact moment; final seconds closing + CTA. Make the plan realistic for footage captured on phones. Also provide a backup version if we have mostly photographs rather than video."
+    },
+    {
+      "id": "p07",
+      "number": 7,
+      "category": "marketing",
+      "title": "Create a Funny Leo Reel Series",
+      "subcategory": "Reels",
+      "prompt": "Create 15 short-form Reel concepts about relatable Leo Club life. Base them on [SPECIFIC CLUB SITUATIONS: meetings, event chaos, designing, sponsorship, deadlines, group chats, attendance, last-minute changes].\nFor each concept provide: title, hook, situation, 3–5 shot sequence, dialogue/on-screen text, punchline, duration and caption. Keep humour friendly and suitable for an official club account. Do not target or embarrass individual members, beneficiaries or sensitive groups.\nAlso identify which concepts can become recurring series so that the club can create a recognisable format rather than one-off jokes."
+    },
+    {
+      "id": "p08",
+      "number": 8,
+      "category": "marketing",
+      "title": "Create a Full Event Story Sequence",
+      "subcategory": "Stories",
+      "prompt": "Create an Instagram Story plan for [EVENT NAME]. Event details: [DETAILS]. Target audience: [AUDIENCE]. We want to increase [GOAL].\nCreate three phases: 3–5 Stories before the event, 8–12 Stories during the event and 3–5 Stories after the event. For every frame provide exact text, suggested visual, sticker/interactive feature, CTA and what footage should be captured.\nUse countdowns, polls, quizzes, question boxes, sliders and reshares where appropriate. Keep each frame concise enough for mobile viewing. Make sure the Story sequence has a beginning, middle and end rather than becoming a random collection of clips."
+    },
+    {
+      "id": "p09",
+      "number": 9,
+      "category": "marketing",
+      "title": "Build a 14-Day Awareness Campaign",
+      "subcategory": "Campaigns",
+      "prompt": "Build a complete 14-day social media awareness campaign around [CAUSE]. Club: [CLUB NAME]. Audience: [AUDIENCE].\nObjective: [OBJECTIVE]. Key facts we know: [FACTS]. Desired action: [ACTION].\nCreate the campaign name, tagline, core message, visual identity, colour direction, content pillars, 5 Feed posts, 4 Reels, 10 Story concepts, launch idea, interactive element, CTA and closing impact post.\nClearly separate educational content from promotional content. Do not use guilt, fear or exaggerated claims. Every factual claim must come from the information provided or be marked for verification. Make the campaign cohesive enough to feel like one visual and narrative identity."
+    },
+    {
+      "id": "p10",
+      "number": 10,
+      "category": "marketing",
+      "title": "Analyse Our Social Media Performance",
+      "subcategory": "Analytics",
+      "prompt": "Act as a social media analyst. Here is our data for [MONTH]: [PASTE METRICS: reach, views, likes, comments, shares, saves, profile visits, followers, link clicks, etc.]. Here are our top posts/Reels: [DATA].\nAnalyse performance without guessing beyond the data. Identify patterns by format, topic, hook, posting time if available, and engagement type. Distinguish clearly between observations and hypotheses.\nThen give me: 1) what the data directly shows, 2) what may explain it, 3) content to repeat/test, 4) content to change, 5) five experiments for next month, and 6) a simple monthly dashboard template. Do not claim that correlation proves causation."
+    },
+    {
+      "id": "p11",
+      "number": 11,
+      "category": "reports",
+      "title": "Write a Complete Event Report",
+      "subcategory": "Event Reports",
+      "prompt": "Act as a professional documentation and impact-reporting specialist for a Leo Club. Create a complete report for [EVENT NAME].\nDetails: Date [DATE]; Venue [VENUE]; Organiser [CLUB]; Partners [PARTNERS]; Volunteers [NUMBER]; Beneficiaries/Participants [NUMBER + DESCRIPTION]; Objective [OBJECTIVE]; Activities [ACTIVITIES]; Results [RESULTS]; Challenges [CHALLENGES]; Learnings [LEARNINGS].\nStructure the report into Executive Summary, Background, Need/Problem, Objectives, Event Details, Planning, Execution, Activities, Volunteer Contribution, Beneficiary Engagement, Quantitative Impact, Qualitative Impact, Challenges and Solutions, Learnings, Future Scope and Conclusion.\nWrite professionally but avoid inflated claims. Only use supplied facts. If an impact statement is qualitative, label it as such rather than converting it into an unsupported statistic."
+    },
+    {
+      "id": "p12",
+      "number": 12,
+      "category": "reports",
+      "title": "Create a One-Page Impact Report",
+      "subcategory": "Event Reports",
+      "prompt": "Turn the following project information into a concise one-page impact report: [PROJECT DETAILS].\nInclude: project name, date, objective, problem addressed, beneficiaries, volunteers, key activities, 5–8 impact numbers, 3 qualitative outcomes, partners, one short verified testimonial if supplied, challenges, learning and next step.\nPrioritise information that a district leader, sponsor or partner can understand in under two minutes. Present statistics as clear, scannable data points and avoid paragraphs longer than 3–4 lines. Use [TO BE FILLED] wherever a key field is missing."
+    },
+    {
+      "id": "p13",
+      "number": 13,
+      "category": "reports",
+      "title": "Convert Raw Notes into Professional MOM",
+      "subcategory": "MOM",
+      "prompt": "Convert these rough meeting notes into formal Minutes of Meeting: [NOTES].\nMeeting: [NAME]; Date: [DATE]; Time: [TIME]; Venue/Platform: [VENUE]; Chairperson: [NAME]; Attendees: [NAMES/NUMBER].\nExtract: agenda, discussion points, decisions, action items, owner, deadline, dependencies, pending questions and next meeting. Do not invent decisions or assign tasks that are not supported by the notes. If ownership or deadline is unclear, write [TO BE CONFIRMED].\nReturn both a polished MOM and a separate action tracker table with Task | Owner | Deadline | Status | Dependency."
+    },
+    {
+      "id": "p14",
+      "number": 14,
+      "category": "reports",
+      "title": "Create a Complete Project Proposal",
+      "subcategory": "Proposals",
+      "prompt": "Create a formal proposal for [PROJECT NAME]. Problem: [PROBLEM]. Target beneficiaries: [BENEFICIARIES]. Proposed solution: [SOLUTION]. Location: [LOCATION]. Date/timeline: [TIMELINE]. Volunteers: [NUMBER]. Budget: ₹[AMOUNT].\nPartners: [PARTNERS].\nInclude executive summary, background, problem statement, rationale, objectives, target beneficiaries, methodology, detailed activities, participant journey, volunteer structure, timeline, resource requirements, budget, risk management, monitoring and evaluation, expected outputs, expected outcomes, sustainability/future scope and conclusion.\nMake it suitable for submission to [DISTRICT/NGO/SPONSOR/ORGANISATION]. Keep the difference between outputs and outcomes clear."
+    },
+    {
+      "id": "p15",
+      "number": 15,
+      "category": "reports",
+      "title": "Write a Sponsorship Proposal",
+      "subcategory": "Proposals",
+      "prompt": "Create a professional sponsorship proposal for [EVENT/PROJECT].\nProject overview: [OVERVIEW]\nAudience/footfall: [NUMBER/TYPE]\nBeneficiaries: [NUMBER]\nBudget required: ₹[AMOUNT]\nWhat we are requesting: [MONEY/PRODUCT/VENUE/SERVICE]\nSponsor profile: [COMPANY/INDUSTRY]\nInclude: cover message, project story, problem, solution, audience, execution, impact, budget, sponsorship requirements, proposed sponsor benefits, branding opportunities, digital deliverables, event-day visibility, reporting after the event and contact details.\nDo not promise benefits we cannot actually deliver. Create three sponsorship tiers only if the inputs support them, and leave placeholders for negotiable deliverables."
+    },
+    {
+      "id": "p16",
+      "number": 16,
+      "category": "reports",
+      "title": "Create a Detailed Event Budget",
+      "subcategory": "Budget",
+      "prompt": "Create a detailed budget for [EVENT] with a hard ceiling of ₹[BUDGET].\nExpected beneficiaries/participants: [NUMBER]. Volunteers: [NUMBER]. Activities: [ACTIVITIES]. Venue: [FREE/PAID].\nExisting resources: [RESOURCES].\nBreak costs into quantity, unit cost and total for materials, activity supplies, printing/signage, food, transport, volunteer requirements, documentation, venue/logistics and contingency. Ensure the total stays within the ceiling.\nThen create: a minimum-cost version, a standard version and a contingency plan if costs rise by 10%. Clearly label estimated figures so they are not mistaken for quotations."
+    },
+    {
+      "id": "p17",
+      "number": 17,
+      "category": "reports",
+      "title": "Create an Event SOP",
+      "subcategory": "SOP",
+      "prompt": "Create a step-by-step Standard Operating Procedure for organising [TYPE OF EVENT] in a Leo Club.\nThe SOP should cover ideation, approval, venue/permissions, budgeting, partnerships, volunteer recruitment, role allocation, procurement, registration, participant communication, event setup, event-day execution, safety, photography/privacy, social media, financial closure, feedback, reporting and archiving.\nFor each stage specify: task, responsible role, deadline relative to event date, required document/material and completion check. Design it so a new Leo member could follow it without needing verbal instructions."
+    },
+    {
+      "id": "p18",
+      "number": 18,
+      "category": "reports",
+      "title": "Create a Position Handover Document",
+      "subcategory": "Handover",
+      "prompt": "Create a comprehensive handover document for the next [POSITION] in [CLUB NAME].\nResponsibilities: [RESPONSIBILITIES]\nRecurring tasks: [TASKS]\nCurrent projects: [PROJECTS]\nImportant deadlines: [DATES]\nTools/platforms used: [TOOLS]\nTemplates/files available: [FILES]\nKey stakeholders: [STAKEHOLDERS] Include role overview, recurring calendar, workflow, approval process, important contacts, file structure, templates required, ongoing work, lessons learned, common problems and practical solutions, suggested first 30 days and items that must not be missed.\nDo not invent contacts or procedures; use [TO BE FILLED] where necessary."
+    },
+    {
+      "id": "p19",
+      "number": 19,
+      "category": "reports",
+      "title": "Build a Post-Event Evaluation System",
+      "subcategory": "Evaluation",
+      "prompt": "Design a practical evaluation system for [EVENT/PROJECT].\nObjective: [OBJECTIVE]\nBeneficiaries: [GROUP]\nVolunteers: [NUMBER]\nActivities: [ACTIVITIES] Create separate feedback questions for beneficiaries, volunteers and organisers. Include quantitative questions using simple scales, qualitative questions, one or two outcome-focused questions and questions about accessibility/safety where relevant.\nAlso provide a data collection plan: who collects what, when, how to store it, how to summarise it and how to turn responses into an impact report. Keep the system realistic for volunteers and avoid collecting unnecessary personal information."
+    },
+    {
+      "id": "p20",
+      "number": 20,
+      "category": "reports",
+      "title": "Create a Complete Annual Club Report",
+      "subcategory": "Annual / Year-End Reporting",
+      "prompt": "Create a polished annual report for [CLUB NAME] covering [LEOISTIC YEAR / PERIOD].\nClub overview: [SHORT DESCRIPTION]\nLeadership: [LEADERSHIP DETAILS]\nMajor service projects: [PROJECTS]\nTotal beneficiaries: [NUMBER]\nTotal volunteers/participation: [NUMBER]\nFundraising: [DETAILS]\nMembership: [DETAILS]\nCollaborations: [PARTNERS]\nMarketing/social media highlights: [DETAILS]\nAwards/recognition: [DETAILS]\nMajor challenges: [CHALLENGES]\nKey learnings: [LEARNINGS]\nStructure the report into: Executive Summary, Club Overview, Leadership, Year-at-a-Glance, Service Projects, Impact Statistics, Member Engagement, Fundraising, Partnerships, Marketing & Communications, Major Milestones, Challenges, Learnings, Future Recommendations and Closing.\nCreate a strong one-page 'Year in Numbers' section as well as a narrative section explaining the most meaningful work. Do not exaggerate achievements. Every statistic must come from the information supplied, and missing figures must be marked [TO BE FILLED]."
+    },
+    {
+      "id": "p21",
+      "number": 21,
+      "category": "communication",
+      "title": "Write a Formal Official Email",
+      "subcategory": "Official Emails",
+      "prompt": "Act as a professional communications officer for a Leo Club. Write an official email to [RECIPIENT/ORGANISATION] regarding [PURPOSE].\nContext: [BACKGROUND]\nInformation that must be included: [DETAILS]\nAction required: [ACTION]\nDeadline: [DEADLINE]\nAttachments/links: [ATTACHMENTS] Create a clear subject line and a concise email with greeting, context, purpose, key details, exact request, deadline, attachment/link reference and closing. Give me one formal version and one warmer version.\nDo not make the email unnecessarily long. Make the required action impossible to miss."
+    },
+    {
+      "id": "p22",
+      "number": 22,
+      "category": "communication",
+      "title": "Create an Event Invitation Email",
+      "subcategory": "Invitations",
+      "prompt": "Write an official invitation for [EVENT NAME].\nHost: [CLUB]\nGuest/recipient: [NAME/ORGANISATION]\nDate: [DATE]\nTime: [TIME]\nVenue: [VENUE]\nPurpose: [PURPOSE]\nSpecial guests/speakers: [DETAILS]\nRSVP method: [METHOD]\nRSVP deadline: [DATE] Create a polished invitation email with a subject line. Explain why the recipient's presence matters without overpraising. Include all logistical information in an easy-to-scan format and finish with a clear RSVP instruction."
+    },
+    {
+      "id": "p23",
+      "number": 23,
+      "category": "communication",
+      "title": "Write a Professional Follow-Up",
+      "subcategory": "Follow-Ups",
+      "prompt": "Write a polite follow-up to [PERSON/ORGANISATION] about [TOPIC]. My original communication was sent on [DATE], and I am waiting for [RESPONSE/APPROVAL/DOCUMENT/CONFIRMATION].\nThe current deadline or dependency is [DEADLINE/CONSTRAINT]. I want the tone to be respectful, concise and clear, not passive-aggressive.\nGive me three versions: email, WhatsApp and very short reminder. Avoid phrases that sound accusatory. If the situation is urgent, communicate urgency through the deadline rather than emotional language."
+    },
+    {
+      "id": "p24",
+      "number": 24,
+      "category": "communication",
+      "title": "Politely Decline an Invitation",
+      "subcategory": "Declines",
+      "prompt": "Write a warm and professional decline for [INVITATION/REQUEST].\nReason: [REASON]\nExisting commitment: [COMMITMENT]\nPossible future collaboration: [YES/NO/IF APPROPRIATE] The message should thank the person, clearly communicate that we cannot participate, avoid overexplaining, avoid sounding uninterested, and preserve the relationship. Give me a formal email and a WhatsApp version. Do not say 'maybe' if the decision is actually final."
+    },
+    {
+      "id": "p25",
+      "number": 25,
+      "category": "communication",
+      "title": "Create a Clear Member Announcement",
+      "subcategory": "WhatsApp",
+      "prompt": "Write a WhatsApp announcement for Leo members about [EVENT/ANNOUNCEMENT].\nEssential information: [DETAILS]\nAction members need to take: [ACTION]\nDeadline: [DEADLINE]\nContact person: [NAME]\nTone: [ENERGETIC/FORMAL/WARM] Make the first two lines communicate the key point. Use spacing and limited emojis only where they improve readability. Put date, time, venue and action in a scannable format. End with a clear confirmation/request. Give me a full version and a short reminder version."
+    },
+    {
+      "id": "p26",
+      "number": 26,
+      "category": "communication",
+      "title": "Create a Reminder Sequence",
+      "subcategory": "Reminders",
+      "prompt": "Create a reminder sequence for [EVENT/TASK] for [AUDIENCE].\nImportant details: [DETAILS]\nFirst announcement date: [DATE]\nFinal deadline/event date: [DATE]\nRequired action: [ACTION]\nCreate four messages: initial reminder, mid-way reminder, 24-hour/final reminder and last-minute urgent reminder. Each should become progressively clearer without becoming rude or repetitive. Provide both WhatsApp and email versions where appropriate."
+    },
+    {
+      "id": "p27",
+      "number": 27,
+      "category": "communication",
+      "title": "Write a Sponsor Outreach Email",
+      "subcategory": "Sponsorship",
+      "prompt": "Write a sponsorship outreach email to [COMPANY/BRAND] for [PROJECT/EVENT].\nProject purpose: [PURPOSE]\nBeneficiaries: [NUMBER/TYPE]\nExpected audience: [NUMBER/TYPE]\nDate/location: [DETAILS]\nAmount/resource requested: [REQUEST]\nWhat we can genuinely offer: [DELIVERABLES] Create a subject line and persuasive but factual email. Explain the project first, then the partnership request. Avoid sounding like we are asking only for money. End with a specific next step such as a short call or response."
+    },
+    {
+      "id": "p28",
+      "number": 28,
+      "category": "communication",
+      "title": "Write a Collaboration Proposal Message",
+      "subcategory": "Collaboration",
+      "prompt": "Write a collaboration pitch to [ORGANISATION/PERSON] for [PROJECT].\nOur club: [CLUB]\nTheir organisation: [PARTNER]\nShared area of interest: [CAUSE]\nWhat we propose: [IDEA]\nWhat we need from them: [SUPPORT]\nWhat we can contribute: [CONTRIBUTION]\nProposed date/timeline: [DATE] Make the message concise enough for WhatsApp or LinkedIn but substantial enough to show that the idea is serious. Emphasise mutual value without making unsupported promises."
+    },
+    {
+      "id": "p29",
+      "number": 29,
+      "category": "communication",
+      "title": "Write a Professional Apology",
+      "subcategory": "Apologies",
+      "prompt": "Write an apology regarding [SITUATION].\nWhat happened: [FACTS]\nWho was affected: [PERSON/GROUP]\nWhat has already been done to correct it: [ACTION]\nWhat will change next time: [PREVENTION] Take responsibility without overexplaining or making excuses. Acknowledge the impact, apologise clearly, explain the correction and, where appropriate, state the prevention step. Give me a formal email and a short WhatsApp version."
+    },
+    {
+      "id": "p30",
+      "number": 30,
+      "category": "communication",
+      "title": "Write a Leadership/Delegation Message",
+      "subcategory": "Internal Communication",
+      "prompt": "Write a clear internal message assigning the following tasks: [TASKS].\nTeam members: [NAMES/ROLES]\nDeadline: [DEADLINE]\nEvent/project: [PROJECT]\nConstraints: [CONSTRAINTS] The message should make responsibilities and deadlines unambiguous without sounding authoritarian. Use a structure that makes it easy to reply with confirmation. Include a short escalation instruction for anyone who anticipates a delay."
+    },
+    {
+      "id": "p31",
+      "number": 31,
+      "category": "events",
+      "title": "Create a Complete Event Blueprint",
+      "subcategory": "Event Planning",
+      "prompt": "Act as an experienced event manager for a youth-led community organisation.\nEvent: [EVENT NAME]\nDate: [DATE]\nVenue: [VENUE]\nAudience: [AUDIENCE]\nExpected attendance: [NUMBER]\nBudget: ₹[BUDGET]\nVolunteers: [NUMBER]\nObjective: [OBJECTIVE]\nPlanned activities: [ACTIVITIES] Create a complete blueprint covering 30 days before, 14 days before, 7 days before, 1 day before, event day and post-event. Include registrations, permissions, venue layout, procurement, volunteer roles, participant flow, activity flow, hospitality, safety, photography, social media, contingency planning, budget closure and reporting. For event day, provide a master checklist and a run-of-show table. Make the plan realistic for the stated volunteer count and budget."
+    },
+    {
+      "id": "p32",
+      "number": 32,
+      "category": "events",
+      "title": "Create a Minute-by-Minute Run Sheet",
+      "subcategory": "Event Planning",
+      "prompt": "Create a detailed run-of-show for [EVENT NAME] from [START TIME] to [END TIME].\nParticipants: [NUMBER]\nSpeakers/guests: [NAMES]\nActivities: [ACTIVITIES]\nSpecial requirements: [REQUIREMENTS]\nCreate columns: time, duration, segment, person responsible, materials, participant movement and backup note. Include realistic transition and buffer time. Flag any timing conflict or activity that appears impossible within the available window.\nAfter the table, give me a 'critical 10 things the event team must know' checklist."
+    },
+    {
+      "id": "p33",
+      "number": 33,
+      "category": "events",
+      "title": "Create a Volunteer Allocation Plan",
+      "subcategory": "Volunteer Management",
+      "prompt": "We have [NUMBER] volunteers for [EVENT]. The event expects [NUMBER] participants and contains [ACTIVITIES]. Create a volunteer structure covering event lead, registration, hospitality, activity facilitators, logistics, crowd flow, photography/video, social media, guest coordination, safety and floating support.\nFor each role specify number of people required, responsibilities, shift/timing, what they need to know and what they should do if their assigned area becomes overloaded. Avoid assigning one person to too many critical roles at the same time."
+    },
+    {
+      "id": "p34",
+      "number": 34,
+      "category": "events",
+      "title": "Design Interactive Activities",
+      "subcategory": "Activities",
+      "prompt": "Design 15 interactive activities for [EVENT/AUDIENCE].\nAge group: [AGE]\nNumber of participants: [NUMBER]\nVenue: [VENUE]\nBudget per activity: ₹[AMOUNT]\nTheme/purpose: [THEME]\nMaterials already available: [MATERIALS] For every activity provide objective, instructions, duration, group size, materials, volunteer requirement, scoring/rules if relevant, safety note and how it connects to the event purpose.\nPrioritise activities that are easy to explain, inclusive and manageable in a real event environment."
+    },
+    {
+      "id": "p35",
+      "number": 35,
+      "category": "events",
+      "title": "Write a Welcome Speech",
+      "subcategory": "Speeches",
+      "prompt": "Write a 2–3 minute welcome speech for [SPEAKER/ROLE] at [EVENT].\nAudience: [AUDIENCE]\nPurpose of event: [PURPOSE]\nKey people to acknowledge: [NAMES/ROLES]\nImportant message: [MESSAGE]\nClub values/theme: [THEME] Start with a natural hook rather than a generic greeting. Explain why the gathering matters, welcome participants, acknowledge contributors and set the tone for the event. Make it easy to deliver aloud, with short sentences and natural transitions. Avoid sounding like a written essay."
+    },
+    {
+      "id": "p36",
+      "number": 36,
+      "category": "events",
+      "title": "Write a Vote of Thanks",
+      "subcategory": "Speeches",
+      "prompt": "Write a 2-minute vote of thanks for [EVENT].\nPeople to acknowledge: [GUESTS/SPEAKERS/PARTNERS/VOLUNTEERS]\nWhat happened: [SHORT EVENT SUMMARY]\nKey impact: [IMPACT]\nSpecial contribution: [CONTRIBUTION] Make the speech warm and specific. Do not simply read a list of names. Group acknowledgements logically and explain what each group contributed. End with a memorable line connected to the event purpose."
+    },
+    {
+      "id": "p37",
+      "number": 37,
+      "category": "events",
+      "title": "Write a Complete Emcee Script",
+      "subcategory": "Emcee",
+      "prompt": "Create a complete emcee script for [EVENT].\nSchedule: [AGENDA]\nSpeaker/guest details: [BIOS]\nActivities: [ACTIVITIES]\nAudience: [AUDIENCE]\nTone: [FORMAL/WARM/YOUTHFUL]\nDuration: [DURATION] Write exact lines for welcome, introductions, transitions, activity instructions, speaker introductions, announcements, time-filling lines if there is a delay, and closing.\nAdd optional transition lines so the emcee never has to improvise awkwardly. Keep all facts tied to the information supplied."
+    },
+    {
+      "id": "p38",
+      "number": 38,
+      "category": "events",
+      "title": "Write a Natural 3-Minute PPT Speech",
+      "subcategory": "PPT",
+      "prompt": "Here is my presentation content: [PASTE SLIDE CONTENT].\nAudience: [AUDIENCE]\nObjective: [OBJECTIVE]\nTime available: 3 minutes.\nWrite a spoken script that follows the slide order without reading the slides word-for-word. For each slide, explain what the audience should understand, then transition naturally to the next slide. Mark where I should pause or emphasise a point.\nKeep the language easy to pronounce and conversational. If a slide contains too much information, tell me what should be spoken and what can be left for the audience to read."
+    },
+    {
+      "id": "p39",
+      "number": 39,
+      "category": "events",
+      "title": "Write a 3-Minute Shark-Tank Pitch",
+      "subcategory": "Pitch",
+      "prompt": "Act as a pitch writer for a youth-led social-impact competition.\nProject: [NAME]\nProblem: [PROBLEM]\nBeneficiaries: [GROUP/NUMBER]\nSolution: [SOLUTION]\nUSP: [USP]\nExecution: [EXECUTION]\nBudget: ₹[BUDGET]\nVolunteers: [NUMBER]\nImpact: [IMPACT]\nWrite a 3-minute spoken pitch with exact timing: hook, problem, why the problem matters, solution, how it works, why it is different, execution, budget/feasibility, impact and emotional closing.\nMake the language energetic but credible. Do not invent numbers. Make the project easy to understand even for someone hearing it for the first time."
+    },
+    {
+      "id": "p40",
+      "number": 40,
+      "category": "events",
+      "title": "Design a Leadership Workshop",
+      "subcategory": "Leadership",
+      "prompt": "Design a 60–90 minute leadership workshop for Leo members aged [AGE].\nTheme: [THEME]\nNumber of participants: [NUMBER]\nVenue: [VENUE]\nMaterials available: [MATERIALS]\nDesired learning outcomes: [OUTCOMES] Create an opening activity, concept explanation, interactive exercises, reflection, group discussion and closing action challenge. Give exact facilitator instructions, approximate timings, materials and debrief questions. Avoid a lecture-heavy format. Make participants do, discuss and reflect rather than simply listen."
+    },
+    {
+      "id": "p41",
+      "number": 41,
+      "category": "brainstorming",
+      "title": "Generate 30 Service Project Ideas",
+      "subcategory": "Ideation",
+      "prompt": "Act as a social-impact innovation consultant for a Leo Club. Generate 30 project ideas around [CAUSE] for [TARGET BENEFICIARIES].\nConstraints: budget ₹[BUDGET], volunteers [NUMBER], timeframe [TIMEFRAME], location [LOCATION].\nAvoid generic donation drives unless they contain a meaningful intervention. For each idea provide: project name, one-line concept, problem addressed, beneficiary experience, key activities, approximate resources, measurable output and one innovative element.\nDivide ideas into one-day, weekend, month-long, awareness-plus-action and technology-enabled concepts."
+    },
+    {
+      "id": "p42",
+      "number": 42,
+      "category": "brainstorming",
+      "title": "Turn an Issue into a Strong Problem Statement",
+      "subcategory": "Problem Solving",
+      "prompt": "Analyse this issue: [ISSUE].\nTarget population: [GROUP]\nLocation/context: [CONTEXT]\nEvidence/data available: [DATA] Create a clear problem statement that identifies who is affected, what the problem is, the gap between current and desired state, contributing factors and consequences. Then give me a 5-Whys analysis and distinguish root causes from symptoms.\nDo not assume facts that are not supplied. Mark assumptions for verification."
+    },
+    {
+      "id": "p43",
+      "number": 43,
+      "category": "brainstorming",
+      "title": "Upgrade a Basic Service Idea",
+      "subcategory": "Innovation",
+      "prompt": "My current project idea is: [IDEA].\nI want to keep the core purpose but make the project more innovative, interactive and memorable.\nCreate 5 upgraded versions. For each version provide: new name, unique mechanism, beneficiary journey, volunteer role, interactive/gamified element, required resources, budget impact, measurable impact and what makes it distinct.\nThen identify which changes can be achieved with zero or minimal additional cost."
+    },
+    {
+      "id": "p44",
+      "number": 44,
+      "category": "brainstorming",
+      "title": "Build a Complete Project Framework",
+      "subcategory": "Project Design",
+      "prompt": "Build a complete project framework for [PROJECT IDEA].\nCreate the chain: problem → target group → objective → intervention → activities → inputs → outputs → outcomes → impact.\nThen add participant journey, volunteer journey, timeline, materials, partners, budget categories, risk register, impact indicators and evaluation method.\nMake every element logically connected. If an activity does not contribute to an objective, flag it rather than forcing it into the plan."
+    },
+    {
+      "id": "p45",
+      "number": 45,
+      "category": "brainstorming",
+      "title": "Gamify Our Service Project",
+      "subcategory": "Gamification",
+      "prompt": "Gamify this service project: [PROJECT].\nBeneficiaries: [GROUP]\nAge: [AGE]\nDuration: [DURATION]\nBudget: ₹[BUDGET] Design a simple game system using points, levels, challenges, badges, team goals or rewards. Explain exactly how participants earn and use points, how volunteers administer the system, how to prevent unfairness and how to ensure the game supports the service objective instead of distracting from it.\nGive me printable/digital materials we would need."
+    },
+    {
+      "id": "p46",
+      "number": 46,
+      "category": "brainstorming",
+      "title": "Design a Project Under a Fixed Budget",
+      "subcategory": "Budget",
+      "prompt": "Design a complete service project around [CAUSE] with a maximum budget of ₹[BUDGET].\nBeneficiaries: [NUMBER/TYPE]\nVolunteers: [NUMBER]\nTime: [TIMEFRAME]\nLocation: [LOCATION] Create the project concept, activity flow, detailed budget, material quantities, volunteer allocation, partnership opportunities, cost-saving alternatives and contingency plan.\nThe final plan must remain within the budget. If a desired element cannot fit, clearly identify the trade-off rather than silently exceeding the limit."
+    },
+    {
+      "id": "p47",
+      "number": 47,
+      "category": "brainstorming",
+      "title": "Create a Partnership Map",
+      "subcategory": "Partnerships",
+      "prompt": "For [PROJECT], identify the types of organisations that could contribute venue, materials, expertise, funding, volunteers, transport, publicity or beneficiary access.\nContext: [PROJECT DETAILS]\nLocation: [LOCATION]\nTarget beneficiaries: [GROUP]\nFor each partner type explain: what they could contribute, what we could offer them, what information we need before approaching them, who in our team should approach them and what a first outreach message could say. Do not invent specific organisations unless I provide them."
+    },
+    {
+      "id": "p48",
+      "number": 48,
+      "category": "brainstorming",
+      "title": "Create a Fundraising Plan",
+      "subcategory": "Fundraising",
+      "prompt": "We need to raise ₹[TARGET] for [PROJECT] by [DEADLINE].\nCurrent resources: [RESOURCES]\nVolunteers: [NUMBER]\nAudience/network: [AUDIENCE]\nRestrictions: [RESTRICTIONS] Create a fundraising plan with 10 possible mechanisms. For each give setup effort, materials, volunteer requirement, approximate earning scenario as a range or formula rather than a guaranteed result, communication plan and risk/ethical considerations.\nThen combine the most practical mechanisms into a week-by-week campaign."
+    },
+    {
+      "id": "p49",
+      "number": 49,
+      "category": "brainstorming",
+      "title": "Create a Complete Project Risk Register",
+      "subcategory": "Risk",
+      "prompt": "Create a risk register for [PROJECT/EVENT].\nContext: [DETAILS]\nParticipants: [NUMBER]\nBeneficiaries: [GROUP]\nLocation: [LOCATION]\nBudget: ₹[BUDGET] Consider weather, venue, attendance, transport, health/medical issues, child safeguarding where relevant, crowd management, volunteer absence, supplier failure, budget overruns, technology, permissions, photography/privacy and communication.\nFor each risk provide likelihood, impact, early warning sign, preventive action, contingency action and responsible role. End with a 'top 10 event-day checks' list."
+    },
+    {
+      "id": "p50",
+      "number": 50,
+      "category": "brainstorming",
+      "title": "Build a Full Impact Measurement Framework",
+      "subcategory": "Impact",
+      "prompt": "Create an impact framework for [PROJECT].\nObjective: [OBJECTIVE]\nBeneficiaries: [GROUP]\nExpected reach: [NUMBER]\nActivities: [ACTIVITIES] Separate inputs, activities, outputs, outcomes and longer-term impact. Suggest at least 15 KPIs and explain how each can be measured using realistic volunteer-friendly methods.\nAlso create a one-page beneficiary feedback form, a volunteer feedback form and a post-event data summary template. Avoid metrics that sound impressive but cannot actually be collected reliably."
+    },
+    {
+      "id": "p51",
+      "number": 51,
+      "category": "design",
+      "title": "Create a Complete Canva Presentation",
+      "subcategory": "Canva",
+      "prompt": "Create a premium, modern, editable Canva presentation for [TOPIC].\nFormat: 16:9. Slides: [NUMBER]. Audience: [AUDIENCE]. Objective: [OBJECTIVE]. Visual style: [STYLE]. Colours: [PALETTE]. Font direction: [FONTS/STYLE]. Reference/inspiration: [REFERENCE].\nFor every slide provide exact copy, hierarchy, layout, image/illustration direction, icon use, data visualisation and animation suggestion. Keep slides visually spacious and avoid paragraphs.\nCreate a consistent design system across the entire deck: margins, title style, body style, accent treatment, card style, number style and footer treatment. Do not use generic stock imagery or decorative elements that do not communicate anything."
+    },
+    {
+      "id": "p52",
+      "number": 52,
+      "category": "design",
+      "title": "Create a Complete Canva Event Campaign",
+      "subcategory": "Canva",
+      "prompt": "Create an editable Canva design system for [EVENT].\nRequired assets: poster, Instagram post, Story, Reel cover, registration graphic, countdown graphics, event-day signage and thank-you post.\nEvent details: [DETAILS]\nTarget audience: [AUDIENCE]\nBrand colours: [COLOURS]\nStyle: [STYLE]\nLogo/assets: [ASSETS] Define one visual identity first, then give the exact content and layout for each asset. Specify typography hierarchy, colour usage, image treatment, icon/illustration style and CTA placement so every asset looks like part of the same campaign."
+    },
+    {
+      "id": "p53",
+      "number": 53,
+      "category": "design",
+      "title": "Build a Complete Campaign Brand Identity",
+      "subcategory": "Branding",
+      "prompt": "Develop a visual identity for [CAMPAIGN NAME].\nPurpose: [PURPOSE]\nAudience: [AUDIENCE]\nPersonality: [WORDS]\nExisting brand constraints: [CONSTRAINTS] Create brand story, core idea, tagline, 10 secondary tagline options, colour palette with HEX codes, typography system, graphic motifs, icon style, illustration style, photography direction, layout rules, social media style and examples of how the identity should appear on a poster, Reel cover and presentation.\nMake it distinctive and practical for Canva. Avoid generic visual symbols unless there is a strong conceptual reason to use them."
+    },
+    {
+      "id": "p54",
+      "number": 54,
+      "category": "design",
+      "title": "Generate Event Names and Taglines",
+      "subcategory": "Naming",
+      "prompt": "Generate 50 names for a Leo project based on: [CONCEPT].\nBeneficiaries: [GROUP]\nCore emotion: [EMOTION]\nLanguage preference: [ENGLISH/HINDI/HINGLISH]\nDesired personality: [MODERN/POETIC/FUN/EMOTIONAL/PREMIUM] Divide names into meaningful categories. For each name provide a short meaning and one tagline. Check that names are easy to pronounce, visually brandable and suitable for Instagram.\nAvoid names that are generic, overly long or difficult to spell. Do not claim that a name is legally available or unique unless it has actually been checked."
+    },
+    {
+      "id": "p55",
+      "number": 55,
+      "category": "design",
+      "title": "Create 10 Logo Concepts",
+      "subcategory": "Logo",
+      "prompt": "Develop 10 distinct logo concepts for [PROJECT NAME].\nMeaning: [MEANING]\nValues: [VALUES]\nAudience: [AUDIENCE]\nPreferred style: [STYLE]\nColours: [COLOURS] For each concept describe symbol, composition, typography, negative-space idea if applicable, colour treatment, hidden meaning and how it would work as a profile picture, poster mark and monochrome stamp.\nAvoid default hearts, hands, globes and lightbulbs unless they are transformed into a distinctive concept. Keep the logo simple enough to reproduce at small sizes."
+    },
+    {
+      "id": "p56",
+      "number": 56,
+      "category": "design",
+      "title": "Create an AI Illustration Prompt",
+      "subcategory": "Illustration",
+      "prompt": "Write a highly detailed image-generation prompt for an illustration representing [CONCEPT].\nSubject: [SUBJECT]\nCharacters: [CHARACTERS]\nSetting: [SETTING]\nMood: [MOOD]\nColour palette: [COLOURS]\nVisual style: [VECTOR/PAPER CUT/EDITORIAL/3D/etc.]\nAspect ratio: [RATIO]\nUsage: [POSTER/PPT/INSTAGRAM/PRINT] Describe composition, character placement, expressions, props, perspective, lighting, texture, line quality, colour balance, negative space and what must not appear.\nThe prompt should produce a clean, campaign-friendly illustration rather than a generic stock image."
+    },
+    {
+      "id": "p57",
+      "number": 57,
+      "category": "design",
+      "title": "Create an Event Photography Shot List",
+      "subcategory": "Photography",
+      "prompt": "Create a professional photography shot list for [EVENT].\nEvent purpose: [PURPOSE]\nParticipants: [NUMBER/TYPE]\nVenue: [VENUE]\nKey activities: [ACTIVITIES]\nImportant people: [GUESTS/LEADERS]\nBranding requirements: [LOGO/BANNER/etc.]\nOrganise shots into: establishing/wide shots, portraits, action shots, beneficiary interaction, volunteer teamwork, emotional candid moments, details, branding, group photos and social-media vertical shots. For every category specify must-have shots, suggested framing and the story the image should communicate. Include a final checklist so the photographer does not leave without capturing critical documentation."
+    },
+    {
+      "id": "p58",
+      "number": 58,
+      "category": "design",
+      "title": "Create an Event Aftermovie",
+      "subcategory": "Video",
+      "prompt": "Create a 60–90 second aftermovie storyboard for [EVENT].\nEvent purpose: [PURPOSE]\nKey moments: [MOMENTS]\nAvailable footage: [FOOTAGE]\nImpact statistics: [STATS]\nDesired mood: [MOOD]\nMusic style: [MUSIC] Build a beginning-middle-end story with timestamps, shot suggestions, on-screen text, voiceover where useful, transitions and ending frame.\nMake the edit feel emotional without becoming overly dramatic. Ensure every statistic used is verified and identify where it should appear visually."
+    },
+    {
+      "id": "p59",
+      "number": 59,
+      "category": "design",
+      "title": "Critique and Redesign My Canva Design",
+      "subcategory": "Design Critique",
+      "prompt": "Act as a senior graphic designer. Review this design: [UPLOAD/IMAGE/DESCRIPTION].\nEvaluate hierarchy, alignment, spacing, typography, font pairing, colour, contrast, image quality, composition, balance, consistency, branding and mobile readability.\nTell me exactly:\n1. What works\n2. What is distracting\n3. What should be removed\n4. What should move\n5. What should become larger/smaller\n6. What copy should be shortened\n7. What colours should change and why\n8. How to improve visual hierarchy\n9. How to make it look more premium\n10. Exact Canva steps to implement the redesign\nDo not redesign it by adding more elements. First consider what can be simplified."
+    },
+    {
+      "id": "p60",
+      "number": 60,
+      "category": "design",
+      "title": "Turn Information into a Visual PPT",
+      "subcategory": "Presentation",
+      "prompt": "Turn the following information into a [NUMBER]-slide presentation: [CONTENT].\nAudience: [AUDIENCE]\nPurpose: [PURPOSE]\nVisual style: [STYLE]\nBrand palette: [COLOURS]\nFor every slide give: one clear message, title, exact copy, supporting data, recommended visual, layout, hierarchy and speaker note.\nApply a 'one slide, one main idea' rule. Convert long text into diagrams, numbers, timelines, cards or process flows wherever possible. Flag any information that should be moved to speaker notes rather than placed on the slide."
+    },
+    {
+      "id": "p61",
+      "number": 61,
+      "category": "universal",
+      "title": "Build My Perfect Prompt",
+      "subcategory": "Prompt Builder",
+      "prompt": "I need AI to help me with this task: [DESCRIBE IT IN YOUR OWN WORDS].\nContext: [BACKGROUND]\nAudience: [AUDIENCE]\nConstraints: [BUDGET/TIME/PEOPLE/DEADLINE/PLATFORM]\nDesired output: [OUTPUT] First understand what I am trying to achieve. Then create one final copy-paste-ready prompt that defines the AI's role, context, objective, required inputs, exact output format, tone, constraints and quality checks. The resulting prompt should be detailed enough that another Leo member can use it by changing only the bracketed fields."
+    },
+    {
+      "id": "p62",
+      "number": 62,
+      "category": "universal",
+      "title": "Make It Better",
+      "subcategory": "Universal",
+      "prompt": "Here is my current draft/idea: [DRAFT].\nImprove it while preserving the core meaning and all factual information. First identify the objective and audience, then improve clarity, structure, tone, usefulness and presentation.\nGive me the final version first. After it, briefly list the major changes you made. Do not add facts that are not present. If something important is missing, insert [TO BE FILLED] rather than guessing."
+    },
+    {
+      "id": "p63",
+      "number": 63,
+      "category": "universal",
+      "title": "Challenge My Idea",
+      "subcategory": "Universal",
+      "prompt": "Here is my idea/plan: [IDEA].\nAct as a constructive critical reviewer rather than simply agreeing with me. Identify unclear assumptions, practical gaps, budget problems, timing issues, volunteer constraints, audience/beneficiary concerns, safety issues and measurement gaps.\nSeparate:\n1. Facts from my input\n2. Risks or weaknesses\n3. Assumptions that need verification\n4. Practical improvements\n5. Questions I should answer before execution\nDo not reject the idea simply because it could be improved; help me make it more executable."
+    }
+  ]
+}

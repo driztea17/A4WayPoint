@@ -1643,3 +1643,159 @@ code {
   font-family: var(--font-body);
   font-size: 0.8125rem;
 }
+
+/* ==========================================================================
+   AI Shortcut
+   ========================================================================== */
+
+.how-steps {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: var(--space-5);
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+}
+
+.how-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.how-steps li > span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.prompt-controls {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.prompt-rule {
+  margin-bottom: var(--space-3);
+}
+
+.prompt-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 900px) {
+  .prompt-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
+.prompt-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  min-width: 0;
+}
+
+.prompt-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.prompt-title {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.prompt-body {
+  position: relative;
+  max-height: 11.5em;
+  overflow: hidden;
+}
+
+.prompt-body.is-cut::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3.5em;
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--surface));
+  pointer-events: none;
+}
+
+.prompt-body.is-open {
+  max-height: none;
+}
+
+.prompt-body.is-open::after {
+  display: none;
+}
+
+.prompt-text {
+  white-space: pre-line;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.ph-note {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.prompt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fill-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.fill-panel {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+.fill-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 560px) {
+  .fill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.fill-grid label {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.fill-grid .input {
+  min-height: 44px;
+}
