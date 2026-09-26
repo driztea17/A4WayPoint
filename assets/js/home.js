@@ -47,6 +47,62 @@ function initTeamPhotos() {
   });
 }
 
+// A small astronaut in a UFO drops in at a random moment, from a random side,
+// and invites members to try Shuffle. Hidden again for the visit once closed.
+const UFO_KEY = "a4wp:ufo:hidden";
+
+function initUfo() {
+  try {
+    if (sessionStorage.getItem(UFO_KEY)) return;
+  } catch {
+    /* storage blocked: still show it */
+  }
+
+  const side = Math.random() < 0.5 ? "left" : "right";
+  const delay = 4000 + Math.random() * 8000;
+
+  const wrap = document.createElement("div");
+  wrap.className = `ufo is-${side}`;
+  wrap.innerHTML = `
+    <a class="ufo-link" href="shuffle.html" aria-label="Try something new: open Shuffle">
+      <span class="ufo-bubble" aria-hidden="true">Try something new!</span>
+      <img class="ufo-art" src="assets/img/ufo-astronaut.svg" alt="" width="200" height="180">
+    </a>
+    <button type="button" class="ufo-close" aria-label="Hide the astronaut">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-x"></use></svg>
+    </button>`;
+
+  const hide = (remember) => {
+    wrap.classList.remove("is-in");
+    wrap.classList.add("is-out");
+    setTimeout(() => wrap.remove(), 700);
+    if (remember) {
+      try {
+        sessionStorage.setItem(UFO_KEY, "1");
+      } catch {
+        /* nothing to remember */
+      }
+    }
+  };
+
+  wrap.querySelector(".ufo-close").addEventListener("click", () => hide(true));
+  wrap.querySelector(".ufo-link").addEventListener("click", () => {
+    try {
+      sessionStorage.setItem(UFO_KEY, "1");
+    } catch {
+      /* fine */
+    }
+  });
+
+  setTimeout(() => {
+    document.body.append(wrap);
+    requestAnimationFrame(() => requestAnimationFrame(() => wrap.classList.add("is-in")));
+    // It flies off on its own after a while, and may come back on the next visit.
+    setTimeout(() => wrap.isConnected && hide(false), 30000);
+  }, delay);
+}
+
 initTeamPhotos();
 revealOnScroll();
 initJourney();
+initUfo();
