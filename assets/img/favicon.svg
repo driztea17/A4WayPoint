@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Placeholder favicon. Replace it with a district mark when you have one. -->
+  <path d="M32 3 57 17.5v29L32 61 7 46.5v-29Z" fill="#0E1440" stroke="#84C318" stroke-width="4"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="22" fill="#fff">A4</text>
+</svg>
