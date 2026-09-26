@@ -46,7 +46,7 @@ Icons are line icons from Lucide (1.75 stroke) in `assets/img/icons.svg`.
 
 ## Motion
 
-SHUFFLE (`shuffle.html`) is the one playful surface: a navy table with a dotted route, card backs in the deck colour (Service lime, Leadership lavender, Fellowship coral) or, for Service cards, the colour and icon of the Leo service area, with white wave shapes; cream card fronts with a matching border, and a Web Animations shuffle, lift, flip, and dot burst of about one second. Deck and service-area colours and ink colours live in `data/shuffle.json`.
+SHUFFLE (`shuffle.html`) is the one playful surface: a navy table with a dotted route, card backs in the deck colour (Service lime, Leadership lavender, Fellowship coral) or, for Service cards, the colour and icon of the Leo service area, with white wave shapes, a white "SHUFFLE" tag, and the icon in a solid white disc so it reads on every colour. Card fronts are cream with a 3 px border and a colour wave header holding two white tags (area or deck with icon, and the card number), the centred idea (name, concept, waypoint dots, tinted twist box), and a ticket stub: a dashed perforation with two punched notches, then Budget and Volunteers side by side. Motion is a Web Animations shuffle, lift, flip (expo ease-out, no overshoot), and dot burst of about one second. Deck and service-area colours and ink colours live in `data/shuffle.json`.
 
 
 GSAP on the home page only: a light fade-up for hero and cards, and one signature moment, the journey line that draws and lights each step in lime. Tool pages have no scroll motion. `prefers-reduced-motion` turns all motion off, and content is visible without JavaScript.

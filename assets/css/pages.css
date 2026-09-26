@@ -2177,6 +2177,7 @@
   gap: var(--space-4);
   padding: var(--space-5) var(--space-4) var(--space-6);
   border-radius: 32px;
+  color: #fff;
   background:
     radial-gradient(closest-side at 50% 42%, rgba(132, 195, 24, 0.14), transparent),
     var(--navy);
@@ -2358,7 +2359,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.55s cubic-bezier(0.2, 0.85, 0.25, 1.15);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .s-hero.is-flipped .s-inner {
@@ -2387,7 +2388,7 @@
   display: grid;
   place-items: center;
   background: var(--c, var(--navy-700));
-  border: 6px solid rgba(255, 255, 255, 0.92);
+  border: 5px solid rgba(255, 255, 255, 0.94);
   color: #fff;
 }
 
@@ -2403,38 +2404,38 @@
   fill: #fff;
 }
 
+/* A solid white disc keeps the icon readable on light and dark colours alike. */
 .s-back-icon {
   position: relative;
   display: grid;
   place-items: center;
-  width: 38%;
+  width: 34%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 255, 255, 0.7);
+  background: #fff;
+  color: var(--ink, var(--navy));
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3), 0 8px 20px rgba(14, 20, 64, 0.18);
 }
 
 .s-back-icon .icon {
-  width: 46%;
-  height: 46%;
-  stroke-width: 1.6;
-}
-
-.s-back.is-dark .s-back-icon {
-  border-color: rgba(132, 195, 24, 0.8);
-  color: var(--lime);
+  width: 48%;
+  height: 48%;
+  stroke-width: 1.8;
 }
 
 .s-back-brand {
   position: absolute;
   top: 16px;
-  left: 0;
-  right: 0;
-  text-align: center;
+  left: 50%;
+  translate: -50% 0;
+  padding: 4px 10px 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink, var(--navy));
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.6875rem;
+  letter-spacing: 0.24em;
 }
 
 .s-route {
@@ -2453,72 +2454,88 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.75);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(14, 20, 64, 0.25);
 }
 
 .s-route b {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   background: transparent;
   border: 2px solid #fff;
 }
 
-/* Front */
+/* Front: a colour wave header echoes the back, then the idea, then a ticket stub. */
 .s-front {
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px 20px 18px;
   background: #fffaf3;
-  border: 4px solid var(--c, var(--lime));
+  border: 3px solid var(--c, var(--lime));
   color: var(--navy);
-  text-align: left;
+  text-align: center;
 }
 
-.s-front-top {
+.s-head {
+  position: relative;
+  flex: none;
+  height: 64px;
+}
+
+.s-head-wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--c, var(--lime));
+}
+
+.s-tags {
+  position: absolute;
+  inset: 12px 12px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
-.s-code {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--ink-3);
-}
-
-
-
-
-.s-cat {
+.s-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  align-self: flex-start;
-  padding: 4px 10px;
+  gap: 5px;
+  min-width: 0;
+  padding: 4px 10px 4px 8px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--c) 22%, #fff);
+  background: #fff;
   color: var(--ink, var(--navy));
   font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(14, 20, 64, 0.12);
 }
 
-.s-cat .icon {
+.s-tag .icon {
   width: 14px;
   height: 14px;
   stroke-width: 2.2;
 }
 
+.s-no {
+  padding-inline: 9px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
 .s-body {
-  display: grid;
-  gap: 10px;
-  margin-block: auto;
-  padding-block: 8px;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  padding: 6px 18px 10px;
 }
 
 .s-title {
@@ -2527,26 +2544,11 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 .s-title:focus {
   outline: none;
-}
-
-
-.s-area {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--ink, var(--ink-3));
-}
-
-.s-area .icon {
-  width: 14px;
-  height: 14px;
-  stroke-width: 2.2;
 }
 
 .s-concept {
@@ -2555,24 +2557,43 @@
   color: var(--ink-2);
 }
 
-.s-twist {
+/* Waypoint dots between the idea and its twist. */
+.s-divider {
   display: flex;
-  gap: 8px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.s-divider i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ink) 45%, transparent);
+}
+
+.s-divider b {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid var(--ink, var(--navy));
+}
+
+.s-twist {
   padding: 8px 10px;
   border-radius: 12px;
-  background: color-mix(in srgb, var(--c) 14%, #fff);
+  background: color-mix(in srgb, var(--c) 16%, #fff);
   font-size: 0.8125rem;
   line-height: 1.4;
   color: var(--ink-2);
-  text-align: left;
 }
 
 .s-twist .icon {
-  flex: none;
-  width: 16px;
-  height: 16px;
-  margin-top: 1px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  vertical-align: -3px;
   color: var(--ink, var(--navy));
 }
 
@@ -2580,59 +2601,61 @@
   color: var(--ink, var(--navy));
 }
 
-.s-facts {
+/* Ticket stub: a perforated line with two punched notches, then the facts. */
+.s-stub {
+  position: relative;
+  flex: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 11px 14px 14px;
+  border-top: 2px dashed color-mix(in srgb, var(--c) 70%, #fff);
+}
+
+.s-stub::before,
+.s-stub::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--navy);
+}
+
+.s-stub::before {
+  left: -12px;
+}
+
+.s-stub::after {
+  right: -12px;
+}
+
+.s-stub > div {
   display: grid;
   gap: 2px;
 }
 
-.s-label {
+.s-stub > div + div {
+  border-left: 1px solid color-mix(in srgb, var(--c) 45%, #fff);
+}
+
+.s-stub dt {
   font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--ink, var(--ink-3));
 }
 
-.s-budget {
+.s-stub dd {
+  margin: 0;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.125rem;
-  line-height: 1.15;
+  font-size: 1rem;
+  line-height: 1.2;
   color: var(--navy);
   font-variant-numeric: tabular-nums;
-}
-
-.s-vols {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 2px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--ink, var(--navy));
-}
-
-.s-vols .icon {
-  width: 14px;
-  height: 14px;
-  stroke-width: 2.2;
-}
-
-.s-front-foot {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-
-
-.s-big {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 2.75rem;
-  line-height: 0.8;
-  color: var(--c, var(--lime));
-  -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 30%, transparent);
 }
 
 /* Celebration dots */
@@ -2730,14 +2753,13 @@
 
 /* Phone-size cards: slightly tighter so every idea fits. */
 @media (max-width: 639px) {
-  .s-front {
-    gap: 7px;
-    padding: 16px 16px 14px;
+  .s-head {
+    height: 56px;
   }
 
   .s-body {
     gap: 7px;
-    padding-block: 4px;
+    padding: 4px 14px 8px;
   }
 
   .s-title {
@@ -2753,8 +2775,12 @@
     padding: 7px 9px;
   }
 
-  .s-big {
-    font-size: 2.25rem;
+  .s-stub {
+    padding: 9px 12px 12px;
+  }
+
+  .s-stub dd {
+    font-size: 0.9375rem;
   }
 }
 
@@ -2764,6 +2790,7 @@
   gap: 8px;
   min-height: 44px;
   padding: 0 6px;
+  white-space: nowrap;
   color: var(--lime);
   font-weight: 700;
   text-decoration: underline;

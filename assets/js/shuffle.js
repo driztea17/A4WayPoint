@@ -60,32 +60,37 @@ function backMarkup(cat) {
 
 function paintBack(el, cat) {
   el.style.setProperty("--c", cat.color);
+  el.style.setProperty("--ink", cat.ink);
   el.classList.toggle("is-dark", cat.id === "wild");
   el.innerHTML = backMarkup(cat);
 }
 
+// Shorter ranges for the card face: "₹2,000 to ₹4,000" becomes "₹2,000–₹4,000".
+const range = (text) => String(text).replace(/ to /g, "–");
+
 function frontMarkup(card) {
-  const cat = cats[card.category];
-  const vols = /^\d/.test(card.volunteers) ? `${card.volunteers} volunteers` : card.volunteers;
+  const look = theme(card);
+  const label = card.category === "service" && card.area ? card.area : cats[card.category].name;
   return `
-    <div class="s-front-top">
-      <span class="s-code">SHUFFLE #${pad(card.id)}</span>
-      ${card.area && areas[card.area] ? `<span class="s-area">${icon(areas[card.area].icon)}${esc(card.area)}</span>` : ""}
+    <div class="s-head" aria-hidden="true">
+      <svg class="s-head-wave" viewBox="0 0 300 64" preserveAspectRatio="none" focusable="false">
+        <path d="M0 0H300V44C252 62 214 34 160 46S62 66 0 48Z"/>
+      </svg>
     </div>
-    <p class="s-cat">${icon(cat.icon)}${esc(cat.name)}</p>
+    <div class="s-tags">
+      <span class="s-tag">${icon(look.icon)}${esc(label)}</span>
+      <span class="s-tag s-no">#${pad(card.id)}</span>
+    </div>
     <div class="s-body">
       <h2 class="s-title" id="s-title">${esc(card.name)}</h2>
       <p class="s-concept">${esc(card.concept)}</p>
-      <p class="s-twist">${icon("sparkles")}<span><strong>Twist:</strong> ${esc(card.twist)}</span></p>
+      <span class="s-divider" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+      <p class="s-twist">${icon("sparkles")}<strong>Twist:</strong> ${esc(card.twist)}</p>
     </div>
-    <div class="s-front-foot">
-      <div class="s-facts">
-        <span class="s-label">Budget</span>
-        <span class="s-budget">${esc(card.budget)}</span>
-        <span class="s-vols">${icon("users")}${esc(vols)}</span>
-      </div>
-      <span class="s-big" aria-hidden="true">${pad(card.id)}</span>
-    </div>`;
+    <dl class="s-stub">
+      <div><dt>Budget</dt><dd>${esc(range(card.budget))}</dd></div>
+      <div><dt>Volunteers</dt><dd>${esc(range(card.volunteers))}</dd></div>
+    </dl>`;
 }
 
 // "Plan this event" opens the Project Starter with the idea filled in.
