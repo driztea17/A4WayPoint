@@ -30,8 +30,8 @@
   --danger-tint: #fdecea;
 
   /* Type */
-  --font-display: "Urbanist", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
   --step--1: 0.8125rem;
   --step-0: 1rem;
   --step-1: 1.125rem;
@@ -97,7 +97,6 @@ body {
   font-size: var(--step-0);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "cv11", "ss01";
 }
 
 main {

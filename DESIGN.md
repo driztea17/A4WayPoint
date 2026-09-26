@@ -24,8 +24,7 @@ Tints (`--lime-tint`, `--orange-tint`, `--blue-tint`) back icon tiles, badges, a
 
 ## Type
 
-- Headings: Urbanist 700 to 800, tight tracking (`-0.02em`, hero `-0.04em`).
-- Body and UI: Inter 400 to 600.
+- One family for everything: Poppins (owner's choice, 2026-09-26). Headings 700 to 800 with tight tracking (`-0.02em`, hero `-0.04em`); body and UI 400 to 600.
 - Scale: `--step--1` to `--step-5`, fluid with `clamp()`.
 - Numbers in counts and stats use tabular figures.
 

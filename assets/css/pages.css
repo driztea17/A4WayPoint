@@ -1910,8 +1910,17 @@
   font-variant-numeric: tabular-nums;
 }
 
+.pb-card {
+  min-width: 0;
+}
+
 .pb-stats-sm {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pb-stats-sm dt,
+.pb-stats-sm dd {
+  overflow-wrap: anywhere;
 }
 
 .pb-stats-sm dt {
