@@ -1,1 +1,173 @@
-/* Print styles. Filled in with the checklist and project brief. */
+/* Print styles: clean black on white A4 pages for the checklist and the project brief. */
+
+@page {
+  size: A4;
+  margin: 14mm 14mm 16mm;
+}
+
+html,
+body {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+
+.site-header,
+.site-footer,
+.skip-link,
+.no-print,
+.toast-region,
+.breadcrumb,
+.icon-btn,
+.progress,
+.check-box,
+.check-tag,
+.next-steps {
+  display: none !important;
+}
+
+main,
+.container,
+.tool-layout,
+.tool-main {
+  display: block !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.card {
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+dt,
+dd,
+strong,
+.checklist-meta,
+.overall-count,
+.phase-count {
+  color: #000 !important;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.print-head {
+  display: block !important;
+  margin-bottom: 8mm;
+  padding-bottom: 3mm;
+  border-bottom: 1.5pt solid #000;
+}
+
+.print-brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14pt;
+  letter-spacing: 0.02em;
+}
+
+.print-brand span {
+  font-weight: 500;
+  font-size: 10pt;
+  margin-left: 6pt;
+}
+
+.print-foot {
+  display: block !important;
+  margin-top: 8mm;
+  padding-top: 3mm;
+  border-top: 0.75pt solid #000;
+  font-size: 9pt;
+}
+
+/* Checklist */
+.checklist-card,
+.checklist-head {
+  display: block !important;
+}
+
+.checklist-head {
+  margin-bottom: 6mm;
+}
+
+.checklist-head h2 {
+  font-size: 18pt;
+}
+
+.checklist-meta {
+  font-size: 11pt;
+  margin-top: 2mm;
+}
+
+.overall {
+  margin-top: 2mm;
+}
+
+.phase {
+  display: block !important;
+  padding-top: 4mm;
+  margin-top: 4mm;
+  border-top: 0.75pt solid #000 !important;
+}
+
+.phase-head h3 {
+  font-size: 13pt;
+}
+
+.check-list {
+  display: block !important;
+  margin-top: 2mm;
+}
+
+.check-item {
+  break-inside: avoid;
+}
+
+.check-label {
+  min-height: 0 !important;
+  padding: 1.2mm 0 !important;
+  gap: 3mm !important;
+}
+
+.print-box {
+  display: inline-block !important;
+  width: 5mm;
+  font-size: 13pt;
+  line-height: 1;
+  font-family: "Segoe UI Symbol", "DejaVu Sans", sans-serif;
+}
+
+.is-done .check-text {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+/* Project brief */
+.brief-doc {
+  display: block !important;
+}
+
+.brief-doc h2 {
+  font-size: 18pt;
+}
+
+.brief-doc h3 {
+  font-size: 12pt;
+  margin-top: 5mm;
+  break-after: avoid;
+}
+
+.brief-section {
+  break-inside: avoid;
+}

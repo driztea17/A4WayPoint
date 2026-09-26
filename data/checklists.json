@@ -1,0 +1,169 @@
+{
+  "_about": "Checklist items for the Event Checklist Generator. 'base' items appear for every event type. Each event type adds its own items to the right phase. Phase ids must be before, during, or after.",
+  "phases": [
+    { "id": "before", "title": "Before Event" },
+    { "id": "during", "title": "During Event" },
+    { "id": "after", "title": "After Event" }
+  ],
+  "base": {
+    "before": [
+      "Venue confirmed",
+      "Permissions obtained",
+      "Volunteers assigned",
+      "Budget approved",
+      "Vendor confirmed",
+      "Social media creatives ready"
+    ],
+    "during": [
+      "Attendance",
+      "Photography",
+      "Video",
+      "Feedback",
+      "Impact data"
+    ],
+    "after": [
+      "Vendor payments",
+      "Thank-you messages",
+      "Social media recap",
+      "Event report",
+      "Impact documentation"
+    ]
+  },
+  "eventTypes": [
+    {
+      "id": "service-project",
+      "name": "Service Project",
+      "icon": "heart",
+      "description": "Hands-on service for a community or institution.",
+      "items": {
+        "before": [
+          "Beneficiary organisation contacted and date confirmed",
+          "Materials procured",
+          "Distribution list prepared"
+        ],
+        "during": [
+          "Beneficiary count recorded"
+        ],
+        "after": [
+          "Acknowledgement received from the beneficiary organisation"
+        ]
+      }
+    },
+    {
+      "id": "fundraiser",
+      "name": "Fundraiser",
+      "icon": "wallet",
+      "description": "Raise funds for a cause or a project.",
+      "items": {
+        "before": [
+          "Fundraising target set",
+          "Donation tracking method set up (UPI, cash register, or form)"
+        ],
+        "during": [
+          "Every donation logged",
+          "Receipts issued"
+        ],
+        "after": [
+          "Funds reconciled with the treasurer",
+          "Donor thank-you messages sent"
+        ]
+      }
+    },
+    {
+      "id": "workshop",
+      "name": "Workshop",
+      "icon": "presentation",
+      "description": "Hands-on learning with a facilitator.",
+      "items": {
+        "before": [
+          "Facilitator confirmed",
+          "Materials and kits ready",
+          "Registrations closed"
+        ],
+        "during": [
+          "Participant sign-in sheet filled"
+        ],
+        "after": [
+          "Participant certificates issued",
+          "Facilitator thank-you sent"
+        ]
+      }
+    },
+    {
+      "id": "seminar",
+      "name": "Seminar",
+      "icon": "mic",
+      "description": "Talks by a speaker or a panel.",
+      "items": {
+        "before": [
+          "Speaker confirmed and briefed",
+          "AV and mic check done",
+          "Speaker memento ready"
+        ],
+        "during": [
+          "Speaker welcomed and introduced"
+        ],
+        "after": [
+          "Speaker thank-you sent"
+        ]
+      }
+    },
+    {
+      "id": "awareness-campaign",
+      "name": "Awareness Campaign",
+      "icon": "megaphone",
+      "description": "Spread a message in public places or online.",
+      "items": {
+        "before": [
+          "Key message finalised",
+          "IEC material printed",
+          "Route or location permission obtained"
+        ],
+        "during": [
+          "Reach numbers recorded"
+        ],
+        "after": [
+          "Leftover material counted and stored"
+        ]
+      }
+    },
+    {
+      "id": "club-meeting",
+      "name": "Club Meeting",
+      "icon": "calendar",
+      "description": "General, board, or committee meeting.",
+      "items": {
+        "before": [
+          "Agenda circulated",
+          "Quorum confirmed"
+        ],
+        "during": [
+          "Minutes recorded"
+        ],
+        "after": [
+          "Action items shared"
+        ]
+      }
+    },
+    {
+      "id": "outdoor-event",
+      "name": "Outdoor Event",
+      "icon": "sun",
+      "description": "Drives, walks, clean-ups, and events in the open.",
+      "items": {
+        "before": [
+          "Weather backup plan ready",
+          "First aid kit packed",
+          "Local authority or police permission obtained",
+          "Water and shade arranged"
+        ],
+        "during": [
+          "Headcount taken at start and end"
+        ],
+        "after": [
+          "Site cleaned up"
+        ]
+      }
+    }
+  ]
+}
