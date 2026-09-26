@@ -1,0 +1,565 @@
+{
+  "_about": "Cards for SHUFFLE. Add a card by copying one block in \"cards\", giving it the next id, and a category id from \"categories\". Use \\n for a new line. time is shown as written. difficulty is Easy, Medium, or Hard.",
+  "categories": [
+    {
+      "id": "ideation",
+      "name": "Ideation",
+      "icon": "bulb",
+      "color": "#F6C445",
+      "ink": "#7A4F00"
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "icon": "palette",
+      "color": "#A193F2",
+      "ink": "#5140B8"
+    },
+    {
+      "id": "pitch",
+      "name": "Pitch",
+      "icon": "mic",
+      "color": "#F58D6B",
+      "ink": "#A8391A"
+    },
+    {
+      "id": "budget",
+      "name": "Budget",
+      "icon": "rupee",
+      "color": "#57C98F",
+      "ink": "#1B6E44"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "icon": "megaphone",
+      "color": "#6AAEF5",
+      "ink": "#1A5699"
+    },
+    {
+      "id": "event",
+      "name": "Event Design",
+      "icon": "party",
+      "color": "#F29BC3",
+      "ink": "#9C2B5E"
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "icon": "users",
+      "color": "#4CCBC6",
+      "ink": "#12706C"
+    },
+    {
+      "id": "problem",
+      "name": "Problem Solving",
+      "icon": "puzzle",
+      "color": "#F5A94A",
+      "ink": "#8C4B00"
+    },
+    {
+      "id": "impact",
+      "name": "Impact",
+      "icon": "sprout",
+      "color": "#9ED13B",
+      "ink": "#3D6A00"
+    },
+    {
+      "id": "wild",
+      "name": "Wild Card",
+      "icon": "zap",
+      "color": "#2A3585",
+      "ink": "#0E1440"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "category": "ideation",
+      "title": "Bad Ideas Only",
+      "description": "Come up with 5 terrible ideas for your event.\nThen find one useful element hidden inside them.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 2,
+      "category": "ideation",
+      "title": "Steal Like a Leo",
+      "description": "Pick an event you loved that had nothing to do with service: a concert, a wedding, a match.\nBorrow one thing from it for your project.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 3,
+      "category": "ideation",
+      "title": "Ten in Five",
+      "description": "Write 10 event ideas in 5 minutes. Quantity beats quality here.\nCircle the two that surprise you.",
+      "time": "5 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 4,
+      "category": "ideation",
+      "title": "Flip the Audience",
+      "description": "Redesign your event for a totally different crowd: grandparents, toddlers, or board toppers.\nWhich idea from that version works for your real audience?",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 5,
+      "category": "ideation",
+      "title": "The Headline Test",
+      "description": "Write the newspaper headline you want the day after your event.\nNow plan backwards from it.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 6,
+      "category": "ideation",
+      "title": "Silent Storm",
+      "description": "Everyone writes one idea anonymously. Shuffle the papers.\nBuild on someone else's idea, not your own.",
+      "time": "5 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 7,
+      "category": "ideation",
+      "title": "Yes, And",
+      "description": "One person says an idea. Each next person starts with \"Yes, and...\" and adds to it.\nGo around the circle twice.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 8,
+      "category": "creative",
+      "title": "The 5-Word Rule",
+      "description": "Describe your entire event in exactly five words.\nNo more. No less.",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 9,
+      "category": "creative",
+      "title": "Three Colours Only",
+      "description": "Design your event's look using only 3 colours.\nName each colour after a feeling.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 10,
+      "category": "creative",
+      "title": "The No-Leo Name",
+      "description": "Name your event without the words \"Leo\", \"service\", or \"drive\".\nMake 5 options, then vote.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 11,
+      "category": "creative",
+      "title": "30-Second Sketch",
+      "description": "Draw your event concept in 30 seconds. No words allowed.\nThe team guesses what it is.",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 12,
+      "category": "creative",
+      "title": "Now Showing",
+      "description": "Your event is now a film.\nGive it a title, a tagline, and a poster idea.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 13,
+      "category": "creative",
+      "title": "Emoji Brief",
+      "description": "Explain your event using only 4 emojis.\nCan the rest of the team decode it?",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 14,
+      "category": "pitch",
+      "title": "Explain It to a 10-Year-Old",
+      "description": "Pitch your project to a curious 10-year-old.\nNo jargon. No acronyms.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 15,
+      "category": "pitch",
+      "title": "The Lift Pitch",
+      "description": "You share a lift with a company CSR head for 30 seconds.\nPitch your project before the doors open.",
+      "time": "2 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 16,
+      "category": "pitch",
+      "title": "Exactly Ten Words",
+      "description": "Explain your project in exactly 10 words.\nCount them out loud.",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 17,
+      "category": "pitch",
+      "title": "So What?",
+      "description": "One person plays a bored stranger who keeps asking \"So what?\".\nAnswer until they stop asking.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 18,
+      "category": "pitch",
+      "title": "Start With a Person",
+      "description": "Open your pitch with one person your project helps.\nNo numbers in the first sentence.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 19,
+      "category": "pitch",
+      "title": "One Post Pitch",
+      "description": "Your whole pitch must fit in one 280-character post.\nWrite it together.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 20,
+      "category": "budget",
+      "title": "Think Small",
+      "description": "You have only ₹1,000.\nRedesign your event without removing its core purpose.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 21,
+      "category": "budget",
+      "title": "Half the Money",
+      "description": "Your budget was just cut by 50%.\nWhat stays, what goes, and what gets smarter?",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 22,
+      "category": "budget",
+      "title": "Sky's the Limit",
+      "description": "Imagine money is no problem. What would you add?\nNow find a free way to get 20% of that.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 23,
+      "category": "budget",
+      "title": "Borrow, Don't Buy",
+      "description": "List everything your event needs. Mark each item: buy, borrow, or sponsor.\nTry to buy fewer than half.",
+      "time": "5 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 24,
+      "category": "budget",
+      "title": "The ₹100 Question",
+      "description": "One participant's experience costs ₹100.\nWhere does every rupee go? Split it out.",
+      "time": "4 min",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 25,
+      "category": "budget",
+      "title": "In-Kind Hunt",
+      "description": "Pick your biggest expense.\nName 3 local businesses that could give it in kind instead of cash.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 26,
+      "category": "marketing",
+      "title": "Scroll Stopper",
+      "description": "Write 3 opening lines for a post that would stop a thumb mid-scroll.\nKeep the best one.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 27,
+      "category": "marketing",
+      "title": "No Poster Allowed",
+      "description": "Promote your event without a single poster.\nWhat do you do instead?",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 28,
+      "category": "marketing",
+      "title": "The First 3 Seconds",
+      "description": "Plan a Reel whose first 3 seconds make people stay.\nDescribe the exact shot.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 29,
+      "category": "marketing",
+      "title": "Who Hits Share?",
+      "description": "Name 5 people or pages who would share your post.\nWhy would each of them want to?",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 30,
+      "category": "marketing",
+      "title": "Countdown Plan",
+      "description": "Plan one post for each of the 3 days before your event.\nEach one must give a new reason to come.",
+      "time": "5 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 31,
+      "category": "marketing",
+      "title": "The Tell-a-Friend Line",
+      "description": "Write the one sentence you want a participant to say to a friend after the event.",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 32,
+      "category": "event",
+      "title": "Replace One Thing",
+      "description": "Replace one part of your event with something unexpected.\nKeep it if the event gets better.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 33,
+      "category": "event",
+      "title": "The First Five Minutes",
+      "description": "Plan exactly what a participant sees, hears, and does in the first five minutes.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 34,
+      "category": "event",
+      "title": "Walk the Route",
+      "description": "Trace a participant's path from arrival to exit.\nFind one moment where they wait with nothing to do. Fix it.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 35,
+      "category": "event",
+      "title": "It's Raining",
+      "description": "It starts raining 1 hour before your event.\nWhat is your plan B?",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 36,
+      "category": "event",
+      "title": "The Photo Moment",
+      "description": "Design one moment that everyone will want to photograph.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 37,
+      "category": "event",
+      "title": "Cut 30 Minutes",
+      "description": "Your event must be 30 minutes shorter.\nWhat goes? Does it get better?",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 38,
+      "category": "team",
+      "title": "Role Swap",
+      "description": "Everyone takes the role of the person on their left.\nPlan the next step from their point of view.",
+      "time": "5 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 39,
+      "category": "team",
+      "title": "Strength Map",
+      "description": "Each person names one skill of the person on their right.\nMatch one event task to it.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 40,
+      "category": "team",
+      "title": "The Quiet Round",
+      "description": "For 3 minutes, only the people who have spoken least may suggest ideas.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 41,
+      "category": "team",
+      "title": "Joy Match",
+      "description": "Each person shares two things they enjoy doing.\nPick one event task that uses them.",
+      "time": "5 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 42,
+      "category": "team",
+      "title": "Volunteer's Shoes",
+      "description": "Plan the volunteer experience.\nWhat will they learn, enjoy, and take home?",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 43,
+      "category": "team",
+      "title": "Praise First",
+      "description": "Before anyone disagrees with an idea, they must say one good thing about it.\nKeep this rule for 5 minutes.",
+      "time": "5 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 44,
+      "category": "problem",
+      "title": "What Could Go Wrong?",
+      "description": "Name one thing that could go wrong.\nNow design a solution before you move on.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 45,
+      "category": "problem",
+      "title": "Five Whys",
+      "description": "Take your biggest problem and ask \"why?\" five times.\nSolve the last answer, not the first.",
+      "time": "5 min",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 46,
+      "category": "problem",
+      "title": "Plan to Fail",
+      "description": "How would you make this event fail completely?\nFlip each point into a rule you will follow.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 47,
+      "category": "problem",
+      "title": "One Phone Call",
+      "description": "You can make one call to fix your biggest problem.\nWho do you call, and what do you ask?",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 48,
+      "category": "problem",
+      "title": "Zero Resources",
+      "description": "Solve your problem with no money, no new people, and one week.\nWhat is still possible?",
+      "time": "4 min",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 49,
+      "category": "problem",
+      "title": "The Day After",
+      "description": "It is the day after your event, and it flopped.\nWrite 3 reasons why. Fix them today.",
+      "time": "5 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 50,
+      "category": "impact",
+      "title": "Before and After",
+      "description": "Describe one beneficiary's day before and after your project.\nWhat actually changed?",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 51,
+      "category": "impact",
+      "title": "Count What Counts",
+      "description": "Pick 3 numbers you will measure on event day.\nHow will you collect each one?",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 52,
+      "category": "impact",
+      "title": "Three Months Later",
+      "description": "What will still be different 3 months after your event?\nIf nothing, redesign one part.",
+      "time": "4 min",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 53,
+      "category": "impact",
+      "title": "In Their Words",
+      "description": "Write one question you will ask beneficiaries to hear the impact in their own words.",
+      "time": "2 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 54,
+      "category": "impact",
+      "title": "The Ripple",
+      "description": "Your event helps 50 people. Who do they help next?\nDraw the ripple.",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 55,
+      "category": "impact",
+      "title": "Dignity Check",
+      "description": "Walk through your plan as the people you serve.\nIs any moment awkward? Change it.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 56,
+      "category": "wild",
+      "title": "Time Machine",
+      "description": "Plan your event as if it were 1995. Then as if it were 2050.\nBring one idea back to today.",
+      "time": "4 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 57,
+      "category": "wild",
+      "title": "Switch the Cause",
+      "description": "Your event is now for a different cause.\nWhich part of the plan still works perfectly?",
+      "time": "3 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 58,
+      "category": "wild",
+      "title": "Star Guest",
+      "description": "Any famous person agrees to attend. Who, and what would they do?\nHow can you get 10% of that effect?",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 59,
+      "category": "wild",
+      "title": "Add a Game",
+      "description": "Turn one part of your event into a game.\nAdd points, a timer, or a prize.",
+      "time": "4 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 60,
+      "category": "wild",
+      "title": "Mystery Box",
+      "description": "Add one surprise that participants discover only on the day.",
+      "time": "3 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 61,
+      "category": "wild",
+      "title": "Speak Human",
+      "description": "Rewrite your event description without the words \"awareness\", \"initiative\", or \"community\".",
+      "time": "3 min",
+      "difficulty": "Medium"
+    }
+  ]
+}

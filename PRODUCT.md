@@ -33,17 +33,18 @@ It is built for one district's real project cycle, not general event planning. T
 - Members share outputs in WhatsApp groups, so "Copy as text" matters as much as print.
 - Checklists and project briefs are printed or saved as PDF on A4 paper for club meetings and reports.
 - Content editors update JSON files in `/data` through GitHub. They need clear examples in the README.
-- No backend, no login, no database. `localStorage` holds checklist progress only.
+- No backend, no login, no database. `localStorage` holds checklist progress and the recent SHUFFLE cards only.
 - The Resource Hub is public, with no passcode. The district team decided on 2026-09-26 that clubs from other districts may use it too.
 
 ## Capabilities and Constraints
 
-- Sections: Home, Resource Hub (Venues, Vendors, Resource Bank, Industry CSR), A4 Toolkit (Event Checklist Generator, Project Starter), AI Shortcut (Marketing, Reports, Communication, Events, Brainstorming, Design), Project Playbooks.
+- Sections: Home, Resource Hub (Venues, Vendors, Banks, Resource Bank, Industry CSR), A4 Toolkit (Event Checklist Generator, Project Starter, Shuffle), AI Shortcut (Marketing, Reports, Communication, Events, Brainstorming, Design), Project Playbooks.
 - Event types: Service Project, Fundraiser, Workshop, Seminar, Awareness Campaign, Club Meeting, Outdoor Event.
 - Checklist phases: Before Event, During Event, After Event.
 - All content loads from JSON in `/data`. Friendly loading and error states for every fetch.
 - Mobile first, keyboard navigable, visible focus, WCAG AA contrast, respects `prefers-reduced-motion`.
 - The "Suggest a resource" form URL and social links are config values the owner fills in later.
+- SHUFFLE is a deck of creative micro-challenges for teams that are stuck. It is not a random project generator, a quiz, or a chatbot. `localStorage` remembers the last 5 cards shown.
 - Copy rule: no em dashes anywhere in site copy, code comments, or README.
 
 ## Brand Commitments

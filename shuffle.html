@@ -3,19 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    document.write('<base href="' + (location.pathname.indexOf('/A4WayPoint/') === 0 ? '/A4WayPoint/' : '/') + '">');
-  </script>
-  <title>Page not found | A4 WAYPOINT</title>
-  <meta name="description" content="This page is not on A4 WAYPOINT.">
+  <title>SHUFFLE | A4 WAYPOINT</title>
+  <meta name="description" content="Stuck? Shuffle it. Pick a card, take a quick creative challenge, and break the block while planning a Leo event or service project.">
   <meta name="theme-color" content="#0e1440">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/404.html">
+  <link rel="canonical" href="https://driztea17.github.io/A4WayPoint/shuffle.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A4 WAYPOINT">
-  <meta property="og:title" content="Page not found | A4 WAYPOINT">
-  <meta property="og:description" content="This page is not on A4 WAYPOINT.">
-  <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/404.html">
+  <meta property="og:title" content="SHUFFLE | A4 WAYPOINT">
+  <meta property="og:description" content="Stuck? Shuffle it. Pick a card, take a quick creative challenge, and break the block while planning a Leo event or service project.">
+  <meta property="og:url" content="https://driztea17.github.io/A4WayPoint/shuffle.html">
   <meta property="og:image" content="https://driztea17.github.io/A4WayPoint/assets/img/district-logo.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -27,8 +23,9 @@
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
   <script type="module" src="assets/js/layout.js"></script>
+  <script type="module" src="assets/js/shuffle.js"></script>
 </head>
-<body data-page="404">
+<body data-page="shuffle">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
@@ -41,7 +38,7 @@
           <li><a class="nav-link" href="resources.html">Resource Hub</a></li>
           <li><a class="nav-link" href="toolkit.html">A4 Toolkit</a></li>
           <li><a class="nav-link" href="ai-shortcut.html">AI Shortcut</a></li>
-          <li><a class="nav-link" href="shuffle.html">Shuffle</a></li>
+          <li><a class="nav-link" href="shuffle.html" aria-current="page">Shuffle</a></li>
           <li><a class="nav-link" href="playbooks.html">Playbooks</a></li>
         </ul>
       </nav>
@@ -59,7 +56,7 @@
           <li><a href="toolkit.html">A4 Toolkit</a>
             <ul class="mobile-subnav"><li><a href="checklist.html">Event Checklist</a></li><li><a href="project-starter.html">Project Starter</a></li><li><a href="shuffle.html">Shuffle</a></li></ul></li>
           <li><a href="ai-shortcut.html">AI Shortcut</a></li>
-          <li><a href="shuffle.html">Shuffle</a></li>
+          <li><a href="shuffle.html" aria-current="page">Shuffle</a></li>
           <li><a href="playbooks.html">Playbooks</a></li>
         </ul>
         <a class="btn btn-primary" href="checklist.html">Build your checklist</a>
@@ -68,16 +65,60 @@
   </header>
 
   <main id="main">
-    <section class="container not-found">
-      <div class="state">
-        <span class="icon-tile is-blue"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-route"></use></svg></span>
-        <h1>This page is off the route</h1>
-        <p>The link may be old or mistyped. Pick up the route from one of these.</p>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="index.html">Go to the home page</a>
-          <a class="btn btn-secondary" href="checklist.html">Build your checklist</a>
-        </div>
+    <section class="page-intro shuffle-intro">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="toolkit.html">A4 Toolkit</a></li>
+          <li aria-current="page">Shuffle</li>
+        </ol>
+        <h1 class="shuffle-title">SHUFFLE</h1>
+        <p class="shuffle-tagline">Stuck? Shuffle it.</p>
+        <p class="lede">Pick a card. Take the challenge. Break the block.</p>
       </div>
+    </section>
+
+    <section class="container" aria-label="Shuffle deck">
+      <div class="shuffle-table">
+        <svg class="shuffle-route" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M-20 520 C 200 430, 260 250, 470 260 S 760 470, 930 330 S 1120 90, 1230 120" />
+          <circle cx="470" cy="260" r="6" />
+          <circle cx="930" cy="330" r="6" />
+        </svg>
+
+        <div class="chip-row shuffle-filter" role="group" aria-label="Card categories" data-cats></div>
+
+        <div class="deck" data-deck>
+          <div class="deck-backs" data-backs aria-hidden="true"></div>
+          <article class="s-card s-hero" data-hero aria-hidden="true" aria-labelledby="s-title" tabindex="-1">
+            <div class="s-inner">
+              <div class="s-face s-back" data-hero-back></div>
+              <div class="s-face s-front" data-front></div>
+            </div>
+          </article>
+          <div class="burst" data-burst aria-hidden="true"></div>
+        </div>
+
+        <p class="shuffle-line" data-line>Your next idea is hiding in the deck.</p>
+
+        <div class="shuffle-actions">
+          <button type="button" class="btn btn-shuffle" data-shuffle>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-dice"></use></svg>SHUFFLE
+          </button>
+          <button type="button" class="btn btn-done" data-done hidden>DONE <span aria-hidden="true">&#10003;</span></button>
+          <button type="button" class="btn btn-again" data-again hidden>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-dice"></use></svg>SHUFFLE AGAIN
+          </button>
+        </div>
+        <p class="shuffle-done-msg" data-done-msg hidden>Nice. One creative block down.</p>
+        <p class="visually-hidden" aria-live="polite" data-announce></p>
+      </div>
+
+      <ol class="shuffle-how">
+        <li><span>1</span><div><strong>Stuck in a meeting?</strong> Open Shuffle on one phone or the projector.</div></li>
+        <li><span>2</span><div><strong>Pick a card.</strong> Choose a category or leave it on All.</div></li>
+        <li><span>3</span><div><strong>Do the challenge together.</strong> Set a timer and take it seriously. Mostly.</div></li>
+      </ol>
     </section>
   </main>
 

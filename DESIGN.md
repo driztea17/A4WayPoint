@@ -46,6 +46,9 @@ Icons are line icons from Lucide (1.75 stroke) in `assets/img/icons.svg`.
 
 ## Motion
 
+SHUFFLE (`shuffle.html`) is the one playful surface: a navy table with a dotted route, pastel category colours for card backs (with white wave shapes), cream card fronts with a category border, and a Web Animations shuffle, lift, flip, and dot burst of about one second. Category colours and ink colours live in `data/shuffle.json`.
+
+
 GSAP on the home page only: a light fade-up for hero and cards, and one signature moment, the journey line that draws and lights each step in lime. Tool pages have no scroll motion. `prefers-reduced-motion` turns all motion off, and content is visible without JavaScript.
 
 ## Print
