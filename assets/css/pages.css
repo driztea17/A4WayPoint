@@ -2080,26 +2080,16 @@
   box-shadow: 0 4px 14px rgba(14, 20, 64, 0.25);
 }
 
-/* Phones: a swipeable row, so each card keeps a comfortable size. */
+/* Phones: the cards stack one below the other, centred. */
 @media (max-width: 639px) {
   .team-grid {
-    justify-content: flex-start;
-    gap: var(--space-4);
-    margin-inline: -16px;
-    padding: 4px 16px 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 16px;
-    scrollbar-width: none;
-  }
-
-  .team-grid::-webkit-scrollbar {
-    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-5);
   }
 
   .team-card {
-    width: min(280px, 78vw);
-    scroll-snap-align: start;
+    width: min(300px, 100%);
   }
 
   .team-top h3 {
